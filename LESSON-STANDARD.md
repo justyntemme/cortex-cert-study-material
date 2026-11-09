@@ -2,6 +2,8 @@
 
 This is our study-design agreement, based on your requirement for documentation-driven lessons. It is not a Palo Alto Networks exam policy or an assertion that every existing exercise has passed the review below.
 
+Your clarified meeting guidance prioritizes application and analysis; [the learning profile](notes/LEARNING-PROFILE.md) distinguishes the presenters' guidance from Louise's CLI/Cytool advice. Start weak topics early, pair each technical concept with a practice step, and revisit it through changed-condition questions. Preserve the full blueprint and the original labs.
+
 ## Required lesson structure
 
 1. **Exam objective and lesson outcome.** Identify the exact blueprint objective/sub-objective. State what you should be able to explain, configure, verify, and diagnose after the lesson.

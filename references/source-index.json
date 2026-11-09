@@ -658,5 +658,47 @@
     "title": "Cytool for Windows 9.4",
     "url": "https://cortex-docs.paloaltonetworks.com/cortex-xdr-agent/9.4-cortex-xdr-agent-admin-guide/cortex-xdr-agent-for-windows/troubleshooting-resources-for-windows/cytool-for-windows",
     "accessed": "2026-11-09"
+  },
+  {
+    "id": "K01",
+    "title": "Kubernetes components",
+    "url": "https://kubernetes.io/docs/concepts/overview/components/",
+    "accessed": "2026-11-09"
+  },
+  {
+    "id": "K02",
+    "title": "Kubeconfig contexts",
+    "url": "https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/",
+    "accessed": "2026-11-09"
+  },
+  {
+    "id": "K03",
+    "title": "Deployments",
+    "url": "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/",
+    "accessed": "2026-11-09"
+  },
+  {
+    "id": "K04",
+    "title": "DaemonSets",
+    "url": "https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/",
+    "accessed": "2026-11-09"
+  },
+  {
+    "id": "K05",
+    "title": "Kubernetes RBAC",
+    "url": "https://kubernetes.io/docs/reference/access-authn-authz/rbac/",
+    "accessed": "2026-11-09"
+  },
+  {
+    "id": "K06",
+    "title": "Admission controllers",
+    "url": "https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/",
+    "accessed": "2026-11-09"
+  },
+  {
+    "id": "K07",
+    "title": "kubectl quick reference",
+    "url": "https://kubernetes.io/docs/reference/kubectl/quick-reference/",
+    "accessed": "2026-11-09"
   }
 ]

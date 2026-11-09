@@ -16,7 +16,7 @@ Checked November 9, 2026. The supplied blueprint remains our topic-coverage refe
 3. What are this exam's question count, answering time, total appointment length, and item types? The public sources reviewed here do not establish these exam-specific details. The Pearson exam-list link returned an inactive-session page, so they remain unverified.
 4. Which current official lesson and technical procedure cover **5.2.2 AI-recommended guardrails**? We need the actual workflow and prerequisites before writing its implementation lab.
 5. Is an official practice assessment included in the assigned learning path, and what coverage does it claim? No availability or predictive value is assumed.
-6. Are the application/analysis descriptions in your notes from an official exam/course source or Louise's study advice? We can use both kinds of exercises without claiming a verified distribution of question difficulty.
+6. **Provenance resolved:** You clarified that the application/analysis descriptions came from the presentation with exam creators; Louise, a successful candidate rather than an author, separately suggested Cortex CLI and Cytool. See [learning profile](LEARNING-PROFILE.md). No numerical question distribution was supplied.
 
 These are questions to clarify scope and preparation, not requests for confidential exam questions. Nothing has been sent to a training contact.
 
@@ -27,4 +27,4 @@ These are questions to clarify scope and preparation, not requests for confident
 - AWS account-only versus sandbox Organization/OU access. The environment worksheet records other integrations and spending limits.
 - Assigned lesson/learning-path links or local files beyond the supplied PDF and notes; any release guidance from your training contact.
 
-The current six-week recommendation remains a planning estimate until these details are known. Your answers tailor execution and pace; they do not remove blueprint objectives.
+The current eight-week recommendation remains a planning estimate until these details are known. Your answers tailor execution and pace; they do not remove blueprint objectives.

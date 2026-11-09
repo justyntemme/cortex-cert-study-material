@@ -2,6 +2,8 @@
 
 **Review status:** This is a curriculum draft with references grouped primarily by objective. Before treating a section as a completed lesson, apply [the lesson standard](LESSON-STANDARD.md): source each factual explanation and procedural step, teach its concepts first, and map the lab to those concepts. No claim-level audit or live execution of the complete guide is asserted.
 
+**Personalized study order:** Keep the objective numbering below as a reference, but follow the revised [study plan](STUDY-PLAN.md). Add the [CLI and Cytool lessons](COMMAND-LINE-LAB.md) to 5.5/4.1/6.2 and the [Kubernetes bridge](KUBERNETES-BRIDGE.md) to 3.7/4.1/3.4/6.2. Use [application and analysis practice](APPLICATION-ANALYSIS.md) throughout, beginning with unfamiliar topics in week 1. These additions preserve every original walkthrough.
+
 This guide covers all **35 primary objectives and 11 numbered sub-objectives** in your July 2026 Cloud Security Engineer PDF. The PDF contains objectives rather than sample exam questions. Each section below turns one primary objective and its children into an implementation exercise, an observable result, and an explanation you should be able to give without notes.
 
 Use [the weekly schedule](STUDY-PLAN.md) and [the objective tracker](objective-tracker.csv) together. Read the linked technical procedures **before** doing the exercise. The numbered steps are study exercises adapted from those procedures; lab names, fixtures, scheduling, and readiness thresholds are proposed study choices. Exact UI names and supported capabilities may differ with your tenant release. Sources were retrieved on **November 9, 2026**.

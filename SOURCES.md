@@ -443,3 +443,34 @@ Objective 5.2.2 names AI-recommended guardrails. The reviewed documentation supp
 [Cytool for Linux 9.4](https://cortex-docs.paloaltonetworks.com/cortex-xdr-agent/9.4-cortex-xdr-agent-admin-guide/cortex-xdr-agent-for-linux/troubleshooting-resources-for-linux/cytool-for-linux)
 
 [Cytool for Windows 9.4](https://cortex-docs.paloaltonetworks.com/cortex-xdr-agent/9.4-cortex-xdr-agent-admin-guide/cortex-xdr-agent-for-windows/troubleshooting-resources-for-windows/cytool-for-windows)
+
+## Kubernetes foundations added November 9 2026
+
+### K01 Kubernetes components
+
+[Kubernetes components](https://kubernetes.io/docs/concepts/overview/components/)
+
+### K02 Kubeconfig contexts
+
+[Kubeconfig contexts](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/)
+
+### K03 Deployments
+
+[Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
+
+### K04 DaemonSets
+
+[DaemonSets](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/)
+
+### K05 Kubernetes RBAC
+
+[Kubernetes RBAC](https://kubernetes.io/docs/reference/access-authn-authz/rbac/)
+
+### K06 Admission controllers
+
+[Admission controllers](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/)
+
+### K07 kubectl quick reference
+
+[kubectl quick reference](https://kubernetes.io/docs/reference/kubectl/quick-reference/)
+

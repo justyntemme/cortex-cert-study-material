@@ -2,6 +2,8 @@
 
 These are original study questions, not exam items or a vendor practice test. Answer without notes, then compare with the rubric and read the supporting source. Score 0 for an unsupported guess, 1 for a partly correct diagnosis, and 2 for a correct answer with evidence and verification. Use different scenarios for the second readiness check rather than memorizing these answers.
 
+Keep these 18 questions and add the 12 in [APPLICATION-ANALYSIS.md](APPLICATION-ANALYSIS.md). The added set uses a separate 0–3 reasoning rubric; normalize scores before comparing totals. For each original question, also ask one changed-input application question and one cross-feature analysis question using its linked sources. This supports the meeting guidance without claiming an exact exam difficulty distribution.
+
 ## Question 1 Objective 1.2
 
 Your tenant login works, but an AppSec exercise is unavailable. What do you check?

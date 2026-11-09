@@ -20,6 +20,9 @@ Copy this template for each objective or related group of objectives. Keep crede
 - Failure, root cause, and repair:
 - Cleanup or restoration performed:
 - What I can now explain without notes:
+- Application attempt: requirement, chosen action, observed result, source:
+- Analysis attempt: connected features, competing causes, discriminating evidence, repair:
+- Next review date and remaining weak point:
 - What remains unverified:
 
 Do not mark the objective Verified unless the observed result supports it. For a walkthrough, include every input, permission, deployment step, expected result, and diagnostic check; leave live verification blank.

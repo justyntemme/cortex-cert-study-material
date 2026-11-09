@@ -1,16 +1,20 @@
 # Cortex Cloud certification studies
 
-Start with [STUDY-PLAN.md](STUDY-PLAN.md). The recommended route is **six weeks**, one exam domain per week, with about **12–14 hours weekly**. A complete four-week route is included for an **18–20 hour weekly** schedule. At 8–10 hours weekly, allow about eight to eleven weeks for the same work. These are study estimates.
+Start with [STUDY-PLAN.md](STUDY-PLAN.md). The expanded route is **eight weeks at 12–14 hours weekly**, with a primary module each week. Organization onboarding, Kubernetes, CLI diagnostics and AppSec receive early exposure and repeated practice; familiar container work receives a short baseline and later validation. Six-week (16–19 hours weekly) and four-week (24–28 hours weekly) routes retain all material. These are study estimates.
 
 This package follows your July 2026 Cloud Security Engineer PDF and includes all **46 numbered objectives/sub-objectives**, grouped into **35 implementation walkthroughs**. Product procedures are linked to current official documentation retrieved on November 9, 2026. Your CWP experience is treated as a strength, while the plan retains the full exam scope.
 
 | File | Use |
 | --- | --- |
-| [STUDY-PLAN.md](STUDY-PLAN.md) | Six-week schedule, four-week accelerated route, readiness checks |
+| [STUDY-PLAN.md](STUDY-PLAN.md) | Eight-week schedule, six/four-week alternatives, weak-area review and readiness checks |
 | [IMPLEMENTATION-GUIDE.md](IMPLEMENTATION-GUIDE.md) | Objective-by-objective reading, implementation, verification and recall |
 | [objective-tracker.csv](objective-tracker.csv) | Track all 46 numbered items separately |
 | [PRACTICE-SCENARIOS.md](PRACTICE-SCENARIOS.md) | 18 original scenarios with source-linked answer rubrics |
 | [COMMAND-LINE-LAB.md](COMMAND-LINE-LAB.md) | Cortex CLI arguments/exit codes and Cytool diagnostics from your notes |
+| [KUBERNETES-BRIDGE.md](KUBERNETES-BRIDGE.md) | Cluster concepts, connector, permissions, runtime coverage and admission labs |
+| [APPLICATION-ANALYSIS.md](APPLICATION-ANALYSIS.md) | 12 additional sourced scenarios with implementation and reasoning rubrics |
+| [practice-progress.csv](practice-progress.csv) | Separate attempts and evidence for the added labs and scenarios |
+| [notes/LEARNING-PROFILE.md](notes/LEARNING-PROFILE.md) | Meeting attribution, your experience, baseline and weekly prioritization |
 | [SOURCES.md](SOURCES.md) | Official technical reference register |
 | [LESSON-STANDARD.md](LESSON-STANDARD.md) | Required claim-level sourcing and lesson-to-lab alignment; current review limitations |
 | [notes/LESSON-TEMPLATE.md](notes/LESSON-TEMPLATE.md) | Teach concepts, justify choices, and map each lab step to its lesson and procedure |
@@ -20,7 +24,7 @@ This package follows your July 2026 Cloud Security Engineer PDF and includes all
 | [examples/cli-and-xql.md](examples/cli-and-xql.md) | Documented command patterns and synthetic lab fixtures |
 | [references/exam-blueprint.pdf](references/exam-blueprint.pdf) | Copy of the PDF you supplied |
 
-Begin by filling in the environment worksheet and rating each objective from 0 (unfamiliar) to 3 (can implement, verify and troubleshoot). Read an objective’s sources, perform its exercise, and save evidence before moving its tracker status from Not started to Read, Configured, Verified, or Walkthrough. Keep unavailable capabilities visible in the tracker.
+Begin with the baseline in your learning profile and fill in the environment worksheet. Rate knowledge separately from live completion. The objective tracker now records primary week, first exposure, review weeks and priority rationale. Existing progress is preserved. Read an objective’s sources, perform its exercise, and save evidence before moving its tracker status from Not started to Read, Configured, Verified, or Walkthrough. Keep unavailable capabilities visible in the tracker.
 
 **Open item:** Objective **5.2.2, AI-recommended guardrails**, is retained as a documentation gap because an exact public implementation procedure was not verified. Obtain the current official procedure/learning-path lesson for your tenant before marking it complete. All other objectives have implementation steps and references; access-dependent walkthroughs are clearly distinguished from live labs. No cloud changes or live tenant validation were performed while creating this package.
 

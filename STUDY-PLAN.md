@@ -1,33 +1,55 @@
 # Cloud Security Engineer study plan
 
-Use **six weeks**, with one primary exam domain per week and roughly **12–14 hours weekly** for the broad implementation coverage you requested. Runtime may take less time because you already focus on CWP. At 8–10 hours weekly, spread the same sessions across about eight to eleven weeks. These are planning estimates, not a vendor-required duration or a prediction of passing.
+Start unfamiliar skills early and revisit them throughout the course. Your Docker contribution and container-security work justify a shorter baseline review of those skills; Kubernetes, organization onboarding, and the two command-line tools receive early practice. AppSec, posture, and non-container runtime topics are provisionally high priority until the baseline shows otherwise. See [your learning profile](notes/LEARNING-PROFILE.md).
 
-A four-week route is included below. It requires roughly **18–20 hours weekly** and still covers every domain; it does not omit AppSec or troubleshooting to fit the calendar.
+The expanded route is **eight weeks at 12–14 hours weekly**, about **96–112 hours**. A six-week route takes about **16–19 hours weekly**; a four-week route takes **24–28 hours weekly**. At 8–10 hours weekly, allow roughly 10–14 weeks. These are our planning estimates for the original coverage plus extra practice, not vendor requirements. No objectives or existing labs have been removed.
 
-## Exam scope
+## Exam scope and study order
 
-Your PDF identifies the **Palo Alto Networks Cloud Security Engineer** certification and these six weighted domains. Keep this blueprint as the scope reference even when current documentation changes a feature name. [Official exam blueprint](https://www.paloaltonetworks.com/content/dam/pan/en_US/assets/pdf/datasheets/palo-alto-networks-cloudsec-engineer.pdf).
+The six domain weights remain those in your supplied PDF. Study order changes to reflect your experience rather than the order printed in the blueprint. [Official exam blueprint](https://www.paloaltonetworks.com/content/dam/pan/en_US/assets/pdf/datasheets/palo-alto-networks-cloudsec-engineer.pdf).
 
-| Week | Primary module | Exam weight | Objectives | Practical result |
-| --- | --- | --- | --- | --- |
-| 1 | Planning and Installation | 12% | 1.1–1.5 | Deployment design, license/IAM/network matrices, scoped access |
-| 2 | Integration | 16% | 2.1–2.6 and children | Verified AWS integration and rehearsed multicloud/data/development integrations |
-| 3 | Posture Security | 22% | 3.1–3.8 | Rules, scoped policies, compliance report, data classification, Kubernetes connector |
-| 4 | Runtime Security | 18% | 4.1–4.4 and children | Agents, endpoint policies, API ingestion, detections, tested response workflow |
-| 5 | Application Security | 16% | 5.1–5.5 and children | Application context, repository/IDE/CLI scans, policy tests and drift exercise |
-| 6 | Troubleshooting | 16% | 6.1–6.7 | Fault diagnosis, recovery evidence, full-scope review |
+| Week | Primary module | Coverage | Why here |
+| --- | --- | --- | --- |
+| 1 | Planning and access | 1.1–1.5; initial CLI and Kubernetes exercises | Establish dependencies and expose gaps immediately |
+| 2 | Integration | 2.1–2.6 and children; first organization and connector rehearsals | Organization onboarding is a known gap |
+| 3 | Application Security | 5.1–5.5 and children; Cortex CLI | Earlier than before, allowing five further weeks of review |
+| 4 | Kubernetes and agent diagnostics | Deep practice for 3.7, Kubernetes part of 4.1, 3.4, 6.2; Cytool | Dedicated time for your stated Kubernetes gap |
+| 5 | Posture Security | 3.1–3.8; repeat Kubernetes policy tests | Build on the deployed environment and earlier concepts |
+| 6 | Runtime Security | 4.1–4.4 and children | Familiar container work later; preserve non-container runtime coverage |
+| 7 | Troubleshooting | 6.1–6.7 | Diagnose without being told the cause |
+| 8 | Application and analysis review | All 46 objectives; capstone and weak-area retests | Additional practice, not replacement coverage |
 
-The weighting is from the PDF. Session order and time allocations below are the proposed study method. The implementation guide supplies the technical sources and procedures for every session.
+| Exam domain | Weight |
+| --- | --- |
+| Planning and Installation | 12% |
+| Integration | 16% |
+| Posture Security | 22% |
+| Runtime Security | 18% |
+| Application Security | 16% |
+| Troubleshooting | 16% |
 
 ## How to use each session
 
-Reserve about two hours per session: 25 minutes for the relevant documentation sections, 70 minutes for configuration and verification, 15 minutes for retrieval practice, and 10 minutes for evidence and cleanup. Some deployments span sessions. Read only the assigned sections first; use the full linked pages as references when a prerequisite or failure requires them.
+Use a two-hour session: 10 minutes of recall from an earlier weak topic, 25 minutes of linked documentation and lesson explanation, 55 minutes of implementation, 20 minutes of application/analysis questions, and 10 minutes for evidence and cleanup. Six sessions provide 12 hours; the optional two hours are for failed checks and deployment delays.
 
-For each objective, answer: What problem does it solve? What are the prerequisites? How do I configure it? How do I prove it works? What commonly prevents it from working? Record your answer and supporting source in [the evidence template](evidence/TEMPLATE.md).
+For every objective, first explain the concept with its technical source. Then perform its lab, predict the result, compare the observation, and diagnose a changed condition. Follow [the lesson standard](LESSON-STANDARD.md); legacy sections with grouped references still require paragraph/step-level review before being treated as fully audited lessons.
 
-Use [the command-line lab](COMMAND-LINE-LAB.md) for Louise’s Cortex CLI/Cytool suggestions: week 4 for agent diagnostics, week 5 for CLI arguments and exit codes, and week 6 for fault analysis.
+Use two single-feature application prompts for each cross-feature analysis prompt as our starting exercise mix. This ratio is a study choice, not a claimed exam percentage. Your meeting notes identify application as the bulk of the exam and describe analysis questions; Louise separately recommends Cortex CLI and Cytool. [Meeting provenance and learner profile](notes/LEARNING-PROFILE.md).
 
-Revisit earlier material for ten minutes at the start of each session. Write original scenario questions from your labs; do not rely on memorizing interface positions.
+## Early practice and repeated review
+
+These exercises occupy the retrieval, practice, and review periods above. If setup consumes that time, extend the schedule rather than omit a topic.
+
+| Topic | First exposure | Implementation | Later review |
+| --- | --- | --- | --- |
+| AWS organization, IAM and Outpost | Week 1 architecture/permissions | Week 2 | Weeks 3, 5, 7, 8 |
+| Cortex CLI arguments and error evidence | Week 1 CLI A | Week 3 CLI B and C | Weeks 4, 5, 7, 8 |
+| Kubernetes concepts | Week 1 K1 | Week 2 K2 rehearsal; week 4 K2–K4 execution | Weeks 5, 6, 7, 8 |
+| Cytool arguments and diagnostics | Week 1 CY A reading/help if agent available | Week 4 CY A and B on disposable VM | Weeks 5, 6, 7, 8 |
+| AppSec and code-to-cloud | Week 2 repository integration | Week 3 | Weeks 4, 5, 7, 8 |
+| Docker and familiar container security | Week 1 short diagnostic | Week 2 registry integration; week 6 validation | Week 8 and whenever a gap appears |
+
+Use [COMMAND-LINE-LAB.md](COMMAND-LINE-LAB.md), [KUBERNETES-BRIDGE.md](KUBERNETES-BRIDGE.md), and [APPLICATION-ANALYSIS.md](APPLICATION-ANALYSIS.md). Begin each week with the weakest unresolved evidence-backed gap. A high confidence rating alone does not remove a lab.
 
 ## Week 1 Planning and Installation
 
@@ -41,7 +63,6 @@ Revisit earlier material for ten minutes at the start of each session. Write ori
 | 6 | Rebuild the deployment design from memory; explain it; resolve prerequisite gaps | One coherent deployment worksheet and weak-topic list |
 
 **Exit check:** Explain how your design meets its coverage, IAM, connectivity, retention, and cost requirements. Demonstrate a scoped user and a revoked API key. Sources and steps: implementation guide 1.1–1.5.
-
 ## Week 2 Integration
 
 | Session | Work | Evidence to keep |
@@ -54,34 +75,7 @@ Revisit earlier material for ten minutes at the start of each session. Write ori
 | 6 | 2.6: Broker VM deployment/configuration; review an integration failure | Registration, collector data, integration health checklist |
 
 **Exit check:** Explain every example provider and integration named in the blueprint. For systems you can access, prove fresh data arrival. For unavailable systems, show complete configuration and troubleshooting worksheets. A single-account lab does not satisfy the organization deployment check.
-
-## Week 3 Posture Security
-
-| Session | Work | Evidence to keep |
-| --- | --- | --- |
-| 1 | 3.2 and 3.7: asset groups and Kubernetes connector | Membership, connector health, discovered workloads |
-| 2 | 3.3: configuration, identity and network rules | Tested rule logic and scoped policy |
-| 3 | 3.3: data, AI and attack-path rules; 3.8 classification | Remaining rule worksheets and synthetic classification |
-| 4 | 3.4–3.5: workload rules/policies, trusted images and vulnerability policies | Positive/negative policy tests; admission result |
-| 5 | 3.6: standards, controls, assessment and reporting | Custom control chain and compliance report |
-| 6 | 3.1: XQL dashboard; explain and remediate selected findings | Working dashboard and before/after findings |
-
-**Exit check:** Demonstrate rule → policy → scope → result, and standard → control → rule → assessment. Explain the difference between an issue and a blocked action. Leave positive-result tests pending if the sandbox lacks the required data.
-
-## Week 4 Runtime Security
-
-| Session | Work | Evidence to keep |
-| --- | --- | --- |
-| 1 | 4.1: VM and Kubernetes deployment | Registration, operational state, coverage |
-| 2 | 4.1: CaaS and serverless deployment variants | Build/deployment records and runtime evidence |
-| 3 | 4.2: endpoint groups, prevention, extension and exception | Effective policy and harmless FIM event |
-| 4 | 4.3: AWS API Gateway and APIM/Apigee walkthroughs | Request-to-Cortex trace and provider worksheets |
-| 5 | 4.4.1: IOC, BIOC, correlation and analytics | Rule tests and telemetry prerequisites |
-| 6 | 4.4.2: build/debug a playbook and validate its result | Detection-to-remediation evidence |
-
-**Exit check:** Show coverage for all four workload deployment forms, effective policy assignment, an API ingestion path, and a tested response. Spend saved CWP review time on any weak posture/integration topic.
-
-## Week 5 Application Security
+## Week 3 Application Security
 
 | Session | Work | Evidence to keep |
 | --- | --- | --- |
@@ -93,8 +87,44 @@ Revisit earlier material for ten minutes at the start of each session. Write ori
 | 6 | 5.2.2: resolve exact AI-recommended guardrails documentation; review all AppSec flows | Vendor-supported procedure or explicitly open gap; full application trace |
 
 **Exit check:** Follow a finding from developer tooling through CI and a deployed asset, fix it, and confirm the outcome. Distinguish scanner configuration from policy enforcement. Do not close 5.2.2 by substituting an ordinary policy for its named feature.
+## Week 4 Kubernetes and agent diagnostics
 
-## Week 6 Troubleshooting and exam readiness
+| Session | Work | Evidence to keep |
+| --- | --- | --- |
+| 1 | K1: context, control plane, nodes, Pods, Deployments and DaemonSets | Explain each object and inspect an existing application |
+| 2 | K2: permissions and Cortex connector; finish 3.7 implementation | Generated installer review, deployed objects and connector status |
+| 3 | K3: Kubernetes runtime coverage from 4.1; CY A on separate Linux VM | Eligible-node comparison and diagnostic baseline |
+| 4 | K4: admission and trusted-image policy from 3.4 | New permitted/denied deployment evidence and restored policy |
+| 5 | CY B and 6.2: correlate connectivity, check-in and collection evidence | Root-cause hypotheses, correction and retest |
+| 6 | Solve Kubernetes and CLI analysis cases; repeat failed checks | Commands selected from the symptom, explanations and source links |
+
+**Exit check:** Explain what each component proves and what it leaves unproven. Docker image familiarity does not exempt cluster permissions, scheduling, admission, or telemetry validation. Use the linked Kubernetes and command-line lessons for procedures.
+
+## Week 5 Posture Security
+
+| Session | Work | Evidence to keep |
+| --- | --- | --- |
+| 1 | 3.2 and 3.7: asset groups and Kubernetes connector | Membership, connector health, discovered workloads |
+| 2 | 3.3: configuration, identity and network rules | Tested rule logic and scoped policy |
+| 3 | 3.3: data, AI and attack-path rules; 3.8 classification | Remaining rule worksheets and synthetic classification |
+| 4 | 3.4–3.5: workload rules/policies, trusted images and vulnerability policies | Positive/negative policy tests; admission result |
+| 5 | 3.6: standards, controls, assessment and reporting | Custom control chain and compliance report |
+| 6 | 3.1: XQL dashboard; explain and remediate selected findings | Working dashboard and before/after findings |
+
+**Exit check:** Demonstrate rule → policy → scope → result, and standard → control → rule → assessment. Explain the difference between an issue and a blocked action. Leave positive-result tests pending if the sandbox lacks the required data.
+## Week 6 Runtime Security
+
+| Session | Work | Evidence to keep |
+| --- | --- | --- |
+| 1 | 4.1: VM and Kubernetes deployment | Registration, operational state, coverage |
+| 2 | 4.1: CaaS and serverless deployment variants | Build/deployment records and runtime evidence |
+| 3 | 4.2: endpoint groups, prevention, extension and exception | Effective policy and harmless FIM event |
+| 4 | 4.3: AWS API Gateway and APIM/Apigee walkthroughs | Request-to-Cortex trace and provider worksheets |
+| 5 | 4.4.1: IOC, BIOC, correlation and analytics | Rule tests and telemetry prerequisites |
+| 6 | 4.4.2: build/debug a playbook and validate its result | Detection-to-remediation evidence |
+
+**Exit check:** Show coverage for all four workload deployment forms, effective policy assignment, an API ingestion path, and a tested response. Spend saved CWP review time on any weak posture/integration topic.
+## Week 7 Troubleshooting and exam readiness
 
 | Session | Work | Evidence to keep |
 | --- | --- | --- |
@@ -106,23 +136,44 @@ Revisit earlier material for ten minutes at the start of each session. Write ori
 | 6 | Revisit every unchecked item; use the official learning path and current exam registration information | Final gap list and go/defer decision |
 
 **Exit check:** For each fault, identify evidence that supports the diagnosis, make a minimal correction, prove recovery, and preserve the intended access/security boundary.
+## Week 8 Application and analysis review
+
+| Session | Work | Evidence to keep |
+| --- | --- | --- |
+| 1 | Diagnose all CLI and Cytool cases without the answer rubrics | Raw status/log evidence and justified command selection |
+| 2 | Retest organization onboarding and Kubernetes weak points | Fresh verification or explicit access-dependent walkthrough |
+| 3 | Complete original scenarios 1–9 plus analysis cases A1–A3 | Correct answer, rejected alternatives, supporting docs |
+| 4 | Complete original scenarios 10–18 plus analysis cases A4–A6 | Correct answer, rejected alternatives, supporting docs |
+| 5 | Repeat the capstone with a different controlled fault | Timeline, causal explanation, minimal fix and recovery |
+| 6 | Review all 46 IDs and new exercise tracker; retest weakest areas | Readiness decision with any gaps still visible |
+
+**Exit check:** A correct answer must include why it fits the evidence and which next observation could disprove it. Carry unresolved areas into additional sessions.
 
 ## Capstone
 
 Using the same lab application, explain its deployment design, integrations, scope, policies, runtime protection, and developer controls. Demonstrate one code or dependency finding, one posture result, one runtime event, one compliance assessment, and one tested remediation. Select one reversible fault and diagnose it without being told its cause. Record missing links instead of claiming a complete trace where correlation is absent. Technical procedures: implementation objectives 2.1, 2.3, 3.3–3.7, 4.1–4.4, 5.1–5.5, and 6.1–6.6.
 
-## Four week accelerated route
+## Compressed routes
 
-Use this only if you can reserve roughly 18–20 focused hours weekly and prerequisites are ready. It rearranges the same implementation guide rather than removing objectives.
+Use the same lessons and exercises in the same dependency order. Extra sessions remain required when a check fails.
 
-| Week | Theme | Coverage |
-| --- | --- | --- |
-| 1 | Platform deployment and integration | All domain 1 and 2 objectives; troubleshoot 6.1 and 6.3 while deploying |
-| 2 | Posture security | All domain 3 objectives; reinforce 6.6 and 6.7 |
-| 3 | Runtime security | All domain 4 objectives; implement 6.2; review integration failures |
-| 4 | Application security and final validation | All domain 5 objectives; implement 6.4 and 6.5; capstone and all-domain review |
+| Six-week route at 16–19 hours weekly | Eight-week material to complete |
+| --- | --- |
+| 1 | Week 1 planning plus early tool/Kubernetes practice |
+| 2 | Week 2 integration |
+| 3 | Week 3 AppSec and first half of week 4 |
+| 4 | Finish week 4 and week 5 posture |
+| 5 | Week 6 runtime and first half of week 7 |
+| 6 | Finish week 7 and week 8 review |
 
-If a lab or exit check is incomplete, add time. A calendar deadline is not evidence of exam readiness.
+| Four-week route at 24–28 hours weekly | Eight-week material to complete |
+| --- | --- |
+| 1 | Weeks 1–2 |
+| 2 | Weeks 3–4 |
+| 3 | Weeks 5–6 |
+| 4 | Weeks 7–8 |
+
+A month is now an intensive option, not the default recommendation. Preserve time for repetition by starting unfamiliar skills immediately.
 
 ## Readiness criteria
 
