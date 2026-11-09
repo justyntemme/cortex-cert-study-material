@@ -1,33 +1,24 @@
-# Cortex Cloud certification studies
+# Start your Cortex certification course here
 
-Start with [STUDY-PLAN.md](STUDY-PLAN.md). The expanded route is **eight weeks at 12–14 hours weekly**, with a primary module each week. Organization onboarding, Kubernetes, CLI diagnostics and AppSec receive early exposure and repeated practice; familiar container work receives a short baseline and later validation. Six-week (16–19 hours weekly) and four-week (24–28 hours weekly) routes retain all material. These are study estimates.
+This is your single starting point. Open Lesson 1 using the link at the bottom, then use **Next lesson** at the bottom of each lesson. Each numbered file contains its lesson/lab content and documentation links; you do not need to find your way through the reference files.
 
-This package follows your July 2026 Cloud Security Engineer PDF and includes all **46 numbered objectives/sub-objectives**, grouped into **35 implementation walkthroughs**. Product procedures are linked to current official documentation retrieved on November 9, 2026. Your CWP experience is treated as a strength, while the plan retains the full exam scope.
+The complete course has **45 lesson files**, preserving all **46 blueprint objectives**, the **35 implementation walkthroughs**, the added Cortex CLI/Cytool and Kubernetes lessons, and both practice-question sets. Follow it over **six weeks**, using your **1–2 weekday hours and one weekend hour**. Your experience sets the pace; earlier larger time estimates are superseded. No learning content was removed to fit an estimate.
 
-| File | Use |
+AWS is the main lab environment in your Cortex XSIAM sandbox. Other blueprint platforms retain their documented procedures and become live labs as access is available. Kubernetes and organization onboarding start early; familiar container topics remain covered. June/July 2026 is the working exam-era focus from your meeting information; current sandbox procedures are distinguished from historically verified exam behavior.
+
+| Week | Main focus |
 | --- | --- |
-| [STUDY-PLAN.md](STUDY-PLAN.md) | Eight-week schedule, six/four-week alternatives, weak-area review and readiness checks |
-| [IMPLEMENTATION-GUIDE.md](IMPLEMENTATION-GUIDE.md) | Objective-by-objective reading, implementation, verification and recall |
-| [objective-tracker.csv](objective-tracker.csv) | Track all 46 numbered items separately |
-| [PRACTICE-SCENARIOS.md](PRACTICE-SCENARIOS.md) | 18 original scenarios with source-linked answer rubrics |
-| [COMMAND-LINE-LAB.md](COMMAND-LINE-LAB.md) | Cortex CLI arguments/exit codes and Cytool diagnostics from your notes |
-| [KUBERNETES-BRIDGE.md](KUBERNETES-BRIDGE.md) | Cluster concepts, connector, permissions, runtime coverage and admission labs |
-| [APPLICATION-ANALYSIS.md](APPLICATION-ANALYSIS.md) | 12 additional sourced scenarios with implementation and reasoning rubrics |
-| [practice-progress.csv](practice-progress.csv) | Separate attempts and evidence for the added labs and scenarios |
-| [notes/LEARNING-PROFILE.md](notes/LEARNING-PROFILE.md) | Meeting attribution, your experience, baseline and weekly prioritization |
-| [SOURCES.md](SOURCES.md) | Official technical reference register |
-| [LESSON-STANDARD.md](LESSON-STANDARD.md) | Required claim-level sourcing and lesson-to-lab alignment; current review limitations |
-| [notes/LESSON-TEMPLATE.md](notes/LESSON-TEMPLATE.md) | Teach concepts, justify choices, and map each lab step to its lesson and procedure |
-| [notes/EXAM-QUESTIONS.md](notes/EXAM-QUESTIONS.md) | Confirmed exam policies and remaining exam-specific questions |
-| [notes/ENVIRONMENT-WORKSHEET.md](notes/ENVIRONMENT-WORKSHEET.md) | Record access, entitlements, prerequisites and lab scope |
-| [evidence/TEMPLATE.md](evidence/TEMPLATE.md) | Capture configuration, observed result, failure/repair and cleanup |
-| [examples/cli-and-xql.md](examples/cli-and-xql.md) | Documented command patterns and synthetic lab fixtures |
-| [references/exam-blueprint.pdf](references/exam-blueprint.pdf) | Copy of the PDF you supplied |
+| 1 | Planning, access, initial Kubernetes and command-line concepts |
+| 2 | Integrations, organization onboarding and Kubernetes connector |
+| 3 | AppSec and Cortex CLI |
+| 4 | Posture and Kubernetes enforcement |
+| 5 | Runtime and Cytool |
+| 6 | Troubleshooting, application/analysis questions and readiness |
 
-Begin with the baseline in your learning profile and fill in the environment worksheet. Rate knowledge separately from live completion. The objective tracker now records primary week, first exposure, review weeks and priority rationale. Existing progress is preserved. Read an objective’s sources, perform its exercise, and save evidence before moving its tracker status from Not started to Read, Configured, Verified, or Walkthrough. Keep unavailable capabilities visible in the tracker.
+The [calendar](STUDY-PLAN.md) gives the daily rhythm. It does not replace the lesson sequence. Resume at the Next lesson link from your last completed lesson; use [the progress tracker](objective-tracker.csv) if you need to recover your place.
 
-**Open item:** Objective **5.2.2, AI-recommended guardrails**, is retained as a documentation gap because an exact public implementation procedure was not verified. Obtain the current official procedure/learning-path lesson for your tenant before marking it complete. All other objectives have implementation steps and references; access-dependent walkthroughs are clearly distinguished from live labs. No cloud changes or live tenant validation were performed while creating this package.
+**Source status:** Existing objective lessons retain their grouped official references; the full paragraph/step-level audit is still outstanding. New CLI/Kubernetes lessons provide concept and step references. Historical applicability remains subject to the version comparison, and objective 5.2.2 AI-recommended guardrails still needs its exact procedure. No sandbox execution is claimed by the course author.
 
-**Source-review status:** The existing guide links references by objective. It has not yet passed the paragraph/step-level support review and explicit lesson-to-lab mapping required by [our lesson standard](LESSON-STANDARD.md). Treat it as a sourced curriculum draft, not a fully audited set of lessons.
+Supporting references, only when needed: [full implementation reference](IMPLEMENTATION-GUIDE.md), [source register](SOURCES.md), [environment worksheet](notes/ENVIRONMENT-WORKSHEET.md), [platform comparisons](notes/PLATFORM-MAP.md), [exam timing](notes/EXAM-TIMELINE.md), [exam-era baseline](notes/EXAM-VERSION-BASELINE.md).
 
-Use the [official certification page](https://www.paloaltonetworks.com/services/education/palo-alto-networks-cloudsec-engineer) for its current learning-path and exam-registration links. See [exam details](notes/EXAM-QUESTIONS.md) for the documented scaled-score policy and remaining questions about duration, item count, and exam version.
+**Start course → [Lesson 1: Assess architecture and the existing environment](lessons/01-1-1-assess-architecture-and-the-existing-environment.md)**

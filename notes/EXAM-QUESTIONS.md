@@ -12,7 +12,7 @@ Checked November 9, 2026. The supplied blueprint remains our topic-coverage refe
 ## Questions for the official course, registration details, or training contact
 
 1. What exact exam name/code and blueprint revision apply to your planned sitting? Does the July 2026 PDF remain the applicable scope?
-2. Is there an official product release/content cutoff? How should differences between current Cortex documentation and the course's UI/workflows be handled?
+2. **Working era supplied:** You report June/July 2026 exam creation and features existing then. Follow [the version baseline](EXAM-VERSION-BASELINE.md); a dated official course/guide will resolve exact syntax and behavior where current documentation differs.
 3. What are this exam's question count, answering time, total appointment length, and item types? The public sources reviewed here do not establish these exam-specific details. The Pearson exam-list link returned an inactive-session page, so they remain unverified.
 4. Which current official lesson and technical procedure cover **5.2.2 AI-recommended guardrails**? We need the actual workflow and prerequisites before writing its implementation lab.
 5. Is an official practice assessment included in the assigned learning path, and what coverage does it claim? No availability or predictive value is assumed.
@@ -20,11 +20,12 @@ Checked November 9, 2026. The supplied blueprint remains our topic-coverage refe
 
 These are questions to clarify scope and preparation, not requests for confidential exam questions. Nothing has been sent to a training contact.
 
-## Information needed from you
+## Your supplied constraints
 
-- Work deadline or booked exam date, realistic weekly study hours, and any voucher-expiry constraint.
-- Standalone Cortex Cloud versus Cortex XSIAM with cloud capabilities; tenant-admin access and enabled modules.
-- AWS account-only versus sandbox Organization/OU access. The environment worksheet records other integrations and spending limits.
-- Assigned lesson/learning-path links or local files beyond the supplied PDF and notes; any release guidance from your training contact.
+- About six weeks of preparation; 1–2 hours each weekday and one hour total per weekend as our working interpretation. Keep the full course and adjust pacing from actual progress rather than earlier author estimates.
+- Certification by February 2027; exact deadline pending. One voucher; expiry and retake terms not supplied. See [attempt timing](EXAM-TIMELINE.md).
+- Cortex XSIAM with full XDR capabilities, tenant-admin access and enabled modules. Exact version/module inventory still to record.
+- AWS-focused implementation, with all blueprint platforms studied and other environments potentially added later. Actual AWS Organization/OU availability still to confirm in the worksheet.
+- Additional lessons and training-contact guidance will be supplied when available.
 
-The current eight-week recommendation remains a planning estimate until these details are known. Your answers tailor execution and pace; they do not remove blueprint objectives.
+Start the complete guided course at [README.md](../README.md).

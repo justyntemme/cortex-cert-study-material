@@ -15,7 +15,7 @@ Product facts and implementation steps still require official technical document
 | Area | Basis | Initial treatment |
 | --- | --- | --- |
 | Organization onboarding | Explicitly unfamiliar | Begin planning week 1; implement/rehearse week 2; repeat |
-| Kubernetes | Explicitly less familiar | Begin foundations week 1; dedicated week 4; repeat |
+| Kubernetes | Explicitly less familiar | Begin foundations week 1; Kubernetes practice weeks 2 and 4; repeat |
 | Cortex CLI and Cytool | Louise's advice; mastery not yet measured | Begin week 1; separate execution and diagnostic exercises |
 | AppSec, posture, IAM, data security, API security, CDR | Familiarity unknown | Provisional high priority; baseline determines extra time |
 | Docker and general container security | Reported professional strength | Short baseline; later validation; retain Cortex-specific work |
@@ -31,3 +31,11 @@ Score each attempt with our study rubric: 0 unable to explain; 1 recognizes term
 At the end of each week, choose next week's extra practice in this order: unresolved prerequisites, failed application questions, failed analysis questions, then slow but correct responses. Revisit a new weak topic in the next session, the next week, and again two weeks later. This cadence is our study design. Preserve the planned first exposure to every domain.
 
 For familiar container work, complete one sourced explanation, one available-environment verification, and one changed-condition diagnosis. If these succeed, use discretionary repetition time on weak topics. Keep every original exercise and objective available.
+
+## Confirmed constraints and active schedule
+
+Your November 9 answers set preparation at about 1.5 months, 1–2 hours per weekday and one hour per weekend, with one exam voucher. Certification is required by February 2027; the exact date remains pending. The active target is 51 hours across six weeks, with a 36–66-hour availability range. Follow [the six-week schedule](../STUDY-PLAN.md); the earlier eight-week sequence remains an extension library.
+
+You have Cortex XSIAM with full XDR capabilities, tenant-admin access and enabled modules. AWS is the primary lab platform; all other blueprint platforms remain study requirements and can become live labs as access arrives. Exact Organization/OU scope, versions, module inventory and spending cap still need recording.
+
+You report an exam creation period of June/July 2026. Keep exam-era behavior and current sandbox steps separate using [the version baseline](EXAM-VERSION-BASELINE.md). Additional official lessons and release guidance will be incorporated when you share them.

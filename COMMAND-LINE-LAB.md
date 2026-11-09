@@ -1,6 +1,8 @@
 # Cortex CLI and Cytool application labs
 
-Objectives: 5.5, 4.1, 6.2, with connections to 1.4, 2.3, 6.4 and 6.5. Louise's suggestion is recorded in [your learning profile](notes/LEARNING-PROFILE.md). Start CLI A and CY A in week 1, complete CLI B/C in week 3 and CY B in week 4, then repeat selected cases through week 8. Exercise order and fixtures are our study choices.
+Objectives: 5.5, 4.1, 6.2, with connections to 1.4, 2.3, 6.4 and 6.5. Louise's suggestion is recorded in [your learning profile](notes/LEARNING-PROFILE.md). Start CLI A and CY A in week 1, complete CLI B/C in week 3 and CY B in week 5, then repeat selected cases through week 6. Exercise order and fixtures are our study choices.
+
+**Exam-era note:** These are current documented procedures. Their June/July 2026 applicability must be established separately using [the version baseline](notes/EXAM-VERSION-BASELINE.md).
 
 ## Learn the Cortex CLI concepts
 

@@ -7,6 +7,7 @@ Status: Draft / source-reviewed / ready for this sandbox / executed
 - Product/module/version:
 - Required prior lessons:
 - Documentation checked on:
+- Exam-era source/version and current-sandbox differences:
 - Available access and capabilities:
 
 ## Learn

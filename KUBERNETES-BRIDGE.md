@@ -2,6 +2,8 @@
 
 Use your image/container knowledge to learn the cluster concepts needed for objectives 3.7, 4.1, 3.4 and 6.2. Begin K1 in week 1; rehearse K2 during week 2; complete K2–K4 in week 4 and revisit them during posture/runtime study. These are added lessons, not exemptions from the original guide.
 
+**Exam-era note:** These are current documented procedures. Their June/July 2026 applicability must be established separately using [the version baseline](notes/EXAM-VERSION-BASELINE.md).
+
 ## Learn the cluster model
 
 | Concept | Explanation | Official reference |
@@ -48,4 +50,4 @@ Use your image/container knowledge to learn the cluster concepts needed for obje
 3. **K4a/K4b:** Submit a new allowed workload and a new workload that violates the criterion using your reviewed lab manifest. Save the actual admission response and Cortex issue evidence. Compare an already-running workload separately. [Trusted image actions and prerequisites](https://cortex-docs.paloaltonetworks.com/cortex-cloud-posture-management/rules-and-policies/cloud-workload-policies-and-rules/cloud-workload-policies/types-of-cloud-workload-policies/types-of-cloud-workload-policies); [Admission controllers](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/); [kubectl quick reference](https://kubernetes.io/docs/reference/kubectl/quick-reference/).
 4. **K4b:** Restore the saved policy configuration and remove only your test workload using its recorded manifest/resource identity. Repeat a permitted deployment to verify the restored state. Procedure references: [Trusted image actions and prerequisites](https://cortex-docs.paloaltonetworks.com/cortex-cloud-posture-management/rules-and-policies/cloud-workload-policies-and-rules/cloud-workload-policies/types-of-cloud-workload-policies/types-of-cloud-workload-policies); [kubectl quick reference](https://kubernetes.io/docs/reference/kubectl/quick-reference/). The before/after record is our lab method.
 
-**Verify:** explain why registry scan findings, trust rules, admission decisions and runtime observations answer different questions. Use L5–L6 and A4 in [the application/analysis set](APPLICATION-ANALYSIS.md), then retest during weeks 5–8.
+**Verify:** explain why registry scan findings, trust rules, admission decisions and runtime observations answer different questions. Use L5–L6 and A4 in [the application/analysis set](APPLICATION-ANALYSIS.md), then retest during weeks 5–6.

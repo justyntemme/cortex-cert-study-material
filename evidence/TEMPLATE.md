@@ -6,6 +6,7 @@ Copy this template for each objective or related group of objectives. Keep crede
 - Date and tenant/product version:
 - Mode: live implementation / documented walkthrough / unavailable
 - Documentation URL and section:
+- Exam-era source/version versus installed sandbox version:
 - Lesson concept IDs practiced by each step:
 - Vendor recommendation and conditions, or our lab-design rationale:
 - Prerequisites and actual entitlements:

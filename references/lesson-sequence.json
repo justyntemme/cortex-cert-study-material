@@ -1,0 +1,317 @@
+[
+  {
+    "number": 1,
+    "week": 1,
+    "key": "1.1",
+    "title": "Assess architecture and the existing environment",
+    "file": "01-1-1-assess-architecture-and-the-existing-environment.md"
+  },
+  {
+    "number": 2,
+    "week": 1,
+    "key": "1.2",
+    "title": "Choose licenses, retention, scanning, and IAM",
+    "file": "02-1-2-choose-licenses-retention-scanning-and-iam.md"
+  },
+  {
+    "number": 3,
+    "week": 1,
+    "key": "1.3",
+    "title": "Verify network communication",
+    "file": "03-1-3-verify-network-communication.md"
+  },
+  {
+    "number": 4,
+    "week": 1,
+    "key": "K1",
+    "title": "K1 Inspect before installing",
+    "file": "04-k1-k1-inspect-before-installing.md"
+  },
+  {
+    "number": 5,
+    "week": 1,
+    "key": "1.4",
+    "title": "Manage user identities, RBAC, SBAC, and API keys",
+    "file": "05-1-4-manage-user-identities-rbac-sbac-and-api-keys.md"
+  },
+  {
+    "number": 6,
+    "week": 1,
+    "key": "CLI A",
+    "title": "CLI A Discover and explain arguments",
+    "file": "06-cli-a-cli-a-discover-and-explain-arguments.md"
+  },
+  {
+    "number": 7,
+    "week": 1,
+    "key": "1.5",
+    "title": "Optimize scanning and log costs",
+    "file": "07-1-5-optimize-scanning-and-log-costs.md"
+  },
+  {
+    "number": 8,
+    "week": 1,
+    "key": "CY A",
+    "title": "CY A Build a diagnostic baseline",
+    "file": "08-cy-a-cy-a-build-a-diagnostic-baseline.md"
+  },
+  {
+    "number": 9,
+    "week": 2,
+    "key": "2.1",
+    "title": "Onboard cloud providers and security capabilities",
+    "file": "09-2-1-onboard-cloud-providers-and-security-capabilities.md"
+  },
+  {
+    "number": 10,
+    "week": 2,
+    "key": "2.6",
+    "title": "Deploy and configure Broker VM",
+    "file": "10-2-6-deploy-and-configure-broker-vm.md"
+  },
+  {
+    "number": 11,
+    "week": 2,
+    "key": "3.7",
+    "title": "Deploy the Kubernetes connector",
+    "file": "11-3-7-deploy-the-kubernetes-connector.md"
+  },
+  {
+    "number": 12,
+    "week": 2,
+    "key": "K2",
+    "title": "K2 Review permissions and onboard the connector",
+    "file": "12-k2-k2-review-permissions-and-onboard-the-connector.md"
+  },
+  {
+    "number": 13,
+    "week": 2,
+    "key": "2.2",
+    "title": "Connect data and AI sources",
+    "file": "13-2-2-connect-data-and-ai-sources.md"
+  },
+  {
+    "number": 14,
+    "week": 2,
+    "key": "2.3",
+    "title": "Integrate GitHub and Jenkins",
+    "file": "14-2-3-integrate-github-and-jenkins.md"
+  },
+  {
+    "number": 15,
+    "week": 2,
+    "key": "2.4",
+    "title": "Integrate container registries",
+    "file": "15-2-4-integrate-container-registries.md"
+  },
+  {
+    "number": 16,
+    "week": 2,
+    "key": "2.5",
+    "title": "Ingest third-party SAST and SCA results",
+    "file": "16-2-5-ingest-third-party-sast-and-sca-results.md"
+  },
+  {
+    "number": 17,
+    "week": 3,
+    "key": "5.1",
+    "title": "Manage business applications and issue SLAs",
+    "file": "17-5-1-manage-business-applications-and-issue-slas.md"
+  },
+  {
+    "number": 18,
+    "week": 3,
+    "key": "5.3",
+    "title": "Configure repository scanning and IaC drift",
+    "file": "18-5-3-configure-repository-scanning-and-iac-drift.md"
+  },
+  {
+    "number": 19,
+    "week": 3,
+    "key": "5.5",
+    "title": "Install, authenticate, and execute Cortex CLI",
+    "file": "19-5-5-install-authenticate-and-execute-cortex-cli.md"
+  },
+  {
+    "number": 20,
+    "week": 3,
+    "key": "CLI B",
+    "title": "CLI B Track a scan through output and platform results",
+    "file": "20-cli-b-cli-b-track-a-scan-through-output-and-platform-results.md"
+  },
+  {
+    "number": 21,
+    "week": 3,
+    "key": "5.4",
+    "title": "Use VS Code and JetBrains security plugins",
+    "file": "21-5-4-use-vs-code-and-jetbrains-security-plugins.md"
+  },
+  {
+    "number": 22,
+    "week": 3,
+    "key": "5.2",
+    "title": "Deploy AppSec rules, policies, and guardrails",
+    "file": "22-5-2-deploy-appsec-rules-policies-and-guardrails.md"
+  },
+  {
+    "number": 23,
+    "week": 3,
+    "key": "CLI C",
+    "title": "CLI C Diagnose and repair",
+    "file": "23-cli-c-cli-c-diagnose-and-repair.md"
+  },
+  {
+    "number": 24,
+    "week": 4,
+    "key": "3.2",
+    "title": "Create static and dynamic asset groups",
+    "file": "24-3-2-create-static-and-dynamic-asset-groups.md"
+  },
+  {
+    "number": 25,
+    "week": 4,
+    "key": "3.1",
+    "title": "Create an XQL dashboard",
+    "file": "25-3-1-create-an-xql-dashboard.md"
+  },
+  {
+    "number": 26,
+    "week": 4,
+    "key": "3.3",
+    "title": "Create cloud security rules and policies",
+    "file": "26-3-3-create-cloud-security-rules-and-policies.md"
+  },
+  {
+    "number": 27,
+    "week": 4,
+    "key": "3.8",
+    "title": "Configure data classification and scanning",
+    "file": "27-3-8-configure-data-classification-and-scanning.md"
+  },
+  {
+    "number": 28,
+    "week": 4,
+    "key": "3.4",
+    "title": "Create workload rules and policies",
+    "file": "28-3-4-create-workload-rules-and-policies.md"
+  },
+  {
+    "number": 29,
+    "week": 4,
+    "key": "K3",
+    "title": "K3 Separate inventory and runtime coverage",
+    "file": "29-k3-k3-separate-inventory-and-runtime-coverage.md"
+  },
+  {
+    "number": 30,
+    "week": 4,
+    "key": "K4",
+    "title": "K4 Connect trusted images to admission",
+    "file": "30-k4-k4-connect-trusted-images-to-admission.md"
+  },
+  {
+    "number": 31,
+    "week": 4,
+    "key": "3.5",
+    "title": "Manage vulnerability issue and prevention policies",
+    "file": "31-3-5-manage-vulnerability-issue-and-prevention-policies.md"
+  },
+  {
+    "number": 32,
+    "week": 4,
+    "key": "3.6",
+    "title": "Build compliance standards, controls, assessments, and reports",
+    "file": "32-3-6-build-compliance-standards-controls-assessments-and-reports.md"
+  },
+  {
+    "number": 33,
+    "week": 5,
+    "key": "4.1",
+    "title": "Deploy agents to VMs, CaaS, Kubernetes, and functions",
+    "file": "33-4-1-deploy-agents-to-vms-caas-kubernetes-and-functions.md"
+  },
+  {
+    "number": 34,
+    "week": 5,
+    "key": "4.2",
+    "title": "Configure endpoint groups, prevention, extensions, and exceptions",
+    "file": "34-4-2-configure-endpoint-groups-prevention-extensions-and-exceptions.md"
+  },
+  {
+    "number": 35,
+    "week": 5,
+    "key": "CY B",
+    "title": "CY B Choose commands from the symptom",
+    "file": "35-cy-b-cy-b-choose-commands-from-the-symptom.md"
+  },
+  {
+    "number": 36,
+    "week": 5,
+    "key": "4.3",
+    "title": "Integrate API gateways",
+    "file": "36-4-3-integrate-api-gateways.md"
+  },
+  {
+    "number": 37,
+    "week": 5,
+    "key": "4.4",
+    "title": "Configure detection rules and automation playbooks",
+    "file": "37-4-4-configure-detection-rules-and-automation-playbooks.md"
+  },
+  {
+    "number": 38,
+    "week": 6,
+    "key": "6.1",
+    "title": "Diagnose IAM, template, organization, and ingestion failures",
+    "file": "38-6-1-diagnose-iam-template-organization-and-ingestion-failures.md"
+  },
+  {
+    "number": 39,
+    "week": 6,
+    "key": "6.3",
+    "title": "Diagnose outpost communication failures",
+    "file": "39-6-3-diagnose-outpost-communication-failures.md"
+  },
+  {
+    "number": 40,
+    "week": 6,
+    "key": "6.2",
+    "title": "Diagnose agent and Kubernetes connector failures",
+    "file": "40-6-2-diagnose-agent-and-kubernetes-connector-failures.md"
+  },
+  {
+    "number": 41,
+    "week": 6,
+    "key": "6.6",
+    "title": "Diagnose user and API access problems",
+    "file": "41-6-6-diagnose-user-and-api-access-problems.md"
+  },
+  {
+    "number": 42,
+    "week": 6,
+    "key": "6.4",
+    "title": "Resolve OAuth, PAT, webhook, and CI integration failures",
+    "file": "42-6-4-resolve-oauth-pat-webhook-and-ci-integration-failures.md"
+  },
+  {
+    "number": 43,
+    "week": 6,
+    "key": "6.5",
+    "title": "Diagnose AppSec scanner, mapping, and policy failures",
+    "file": "43-6-5-diagnose-appsec-scanner-mapping-and-policy-failures.md"
+  },
+  {
+    "number": 44,
+    "week": 6,
+    "key": "6.7",
+    "title": "Diagnose an unexpected AWS cost increase",
+    "file": "44-6-7-diagnose-an-unexpected-aws-cost-increase.md"
+  },
+  {
+    "number": 45,
+    "week": 6,
+    "key": "REVIEW",
+    "title": "Full scope practice and readiness review",
+    "file": "45-review-full-scope-practice-and-readiness-review.md"
+  }
+]

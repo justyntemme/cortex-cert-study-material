@@ -36,3 +36,7 @@ The implementation guide maps all supplied objective IDs to readings and exercis
 Objective 5.2.2 remains an explicit documentation gap. Related AppSec policy documentation must not be presented as proof of the exact AI-recommended guardrails workflow.
 
 Use [the lesson template](notes/LESSON-TEMPLATE.md) for expanded lessons and [the evidence template](evidence/TEMPLATE.md) to record execution.
+
+## Exam era and current execution
+
+Use the user-reported June/July 2026 exam era for study emphasis. Apply [the version baseline](notes/EXAM-VERSION-BASELINE.md) to distinguish dated exam behavior from current sandbox procedures; do not infer historical support from a current page.
