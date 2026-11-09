@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "cortex-study-fixture",
+          "rules": [
+            {
+              "id": "STUDY001",
+              "shortDescription": {
+                "text": "Synthetic ingestion verification"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "STUDY001",
+          "level": "note",
+          "message": {
+            "text": "Synthetic study finding used only to verify ingestion and repository mapping."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "study-fixture.txt"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

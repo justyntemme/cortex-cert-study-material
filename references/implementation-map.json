@@ -1,0 +1,819 @@
+[
+  {
+    "ids": [
+      "1.1"
+    ],
+    "title": "Assess architecture and the existing environment",
+    "mode": "Build and explain",
+    "docs": [
+      "D03",
+      "D09",
+      "D12"
+    ],
+    "steps": [
+      "Inventory your sandbox: account IDs, regions, EC2, containers, Kubernetes, functions, registries, data stores, repositories, existing security tooling, and audit-log destinations. Record owners and what each source contributes.",
+      "Draw the intended flow from source systems to Cortex, including identity trust, scanning infrastructure, log collection, and runtime agents. Put current coverage and missing coverage next to each workload.",
+      "Write a migration sequence: establish asset visibility, validate scans and logs, introduce scoped policies, then validate protection. Identify which existing tools or log paths would overlap during transition.",
+      "Produce a one-page deployment design with a coverage table; do not assume that connecting an account proves every capability is working."
+    ],
+    "verify": "A diagram and inventory that explain how every lab workload will be discovered, scanned, and protected.",
+    "recall": "Which components would you change for a customer with strict data-residency requirements?"
+  },
+  {
+    "ids": [
+      "1.2"
+    ],
+    "title": "Choose licenses, retention, scanning, and IAM",
+    "mode": "Configure and explain",
+    "docs": [
+      "D01",
+      "D02",
+      "D07",
+      "D09",
+      "D12",
+      "D62"
+    ],
+    "steps": [
+      "Inspect Settings \u2192 Cortex License and record the actual base license, add-ons, workload capacity, and retention entitlements. Mark unavailable labs before you start them.",
+      "Build a capability matrix for posture, runtime, AppSec, log ingestion, and data scanning. Match your intended lab workloads to the documented metering categories.",
+      "Record retention requirements by dataset and compare them with the documented defaults and your purchased entitlements; do not treat all data types as having one retention period.",
+      "For AWS, distinguish the permissions needed by the person deploying the template from the permissions used by Cortex afterward. Read the generated IAM resources and the provider-permission explanation for each enabled capability.",
+      "Choose Cloud Scan or Outpost for this deployment and defend the choice using data handling, operations, permissions, and cost. Implement the chosen mode in week 2."
+    ],
+    "verify": "A license and permissions matrix, a retention worksheet, and a justified scanning choice.",
+    "recall": "Why can a successful login coexist with an unavailable scanner or an API permission failure?"
+  },
+  {
+    "ids": [
+      "1.3"
+    ],
+    "title": "Verify network communication",
+    "mode": "Implement",
+    "docs": [
+      "D04",
+      "D12",
+      "D63"
+    ],
+    "steps": [
+      "Find your tenant region and the exact current endpoint requirements for the components you intend to deploy. Create a matrix with source, destination FQDN, port, direction, and purpose.",
+      "Check DNS and HTTPS reachability from the actual lab VM, build runner, and outpost or Broker network, rather than only from your laptop. Use the documented regional endpoints.",
+      "Apply the required egress rules to the lab network. If a proxy or TLS inspection is present, compare its configuration with the component-specific documentation.",
+      "Record successful connectivity and one failed connection caused by a deliberately incorrect destination in a local test. Do not disrupt the shared tenant."
+    ],
+    "verify": "A region-specific connectivity matrix and evidence from each execution location.",
+    "recall": "How would you distinguish a network failure from a successful network connection followed by a 403 response?"
+  },
+  {
+    "ids": [
+      "1.4"
+    ],
+    "title": "Manage user identities, RBAC, SBAC, and API keys",
+    "mode": "Implement",
+    "docs": [
+      "D05",
+      "D06",
+      "D25",
+      "D89"
+    ],
+    "steps": [
+      "In Settings \u2192 Configurations \u2192 Access Management, inspect a built-in role and create a restricted custom role for the lab. Record permitted actions separately from the assets the user may see.",
+      "Create a dynamic asset group using attributes supported for access management. Assign a lab test identity the custom role and an appropriate scope; keep an administrator session available.",
+      "With the test identity, compare an allowed asset with an out-of-scope asset and an allowed action with a disallowed action. Check both role and scope when results differ.",
+      "Create an API key with a suitable restricted role, scope, and expiration. Make a documented read operation, then revoke the key and verify authentication fails. Store only the key ID and results in your notes.",
+      "Explain the user lifecycle: identity source, group membership, role assignment, scope, key issuance, role changes, and revocation. Inspect your tenant authentication configuration without replacing its working identity provider."
+    ],
+    "verify": "An access matrix with positive and negative checks, plus an API-key lifecycle record.",
+    "recall": "Does granting a role automatically grant visibility to every asset? Why can a static asset group be unsuitable for SBAC?"
+  },
+  {
+    "ids": [
+      "1.5"
+    ],
+    "title": "Optimize scanning and log costs",
+    "mode": "Measure and explain",
+    "docs": [
+      "D08",
+      "D11",
+      "D12",
+      "D22",
+      "AWS1",
+      "AWS2"
+    ],
+    "steps": [
+      "Record a baseline of enabled scans, selected regions, image scan scope, audit trails, and log destinations.",
+      "Compare the existing CloudTrail delivery path with the proposed Cortex path. Draw where duplicate collection could occur before enabling an additional trail or ingestion path.",
+      "Review registry initial-scan selection and the cost tradeoff of Cloud Scan versus Outpost. Choose the smallest lab scope that still exercises the capability.",
+      "In AWS Cost Explorer, compare days and filter by account, service, region, and usage type. Record the change date alongside any scan or logging configuration change.",
+      "Write an optimization proposal and its coverage tradeoff. Check later billing data before claiming savings; current-period cost data can arrive late."
+    ],
+    "verify": "A baseline, a proposed change, and a method for measuring both cost and retained security coverage.",
+    "recall": "Which evidence would separate increased event volume from duplicated log collection?"
+  },
+  {
+    "ids": [
+      "2.1",
+      "2.1.1",
+      "2.1.2"
+    ],
+    "title": "Onboard cloud providers and security capabilities",
+    "mode": "AWS implementation plus multicloud walkthrough",
+    "docs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D12",
+      "D13",
+      "D16",
+      "D17",
+      "D18",
+      "D61",
+      "D62",
+      "D96",
+      "D102"
+    ],
+    "steps": [
+      "Start with AWS account scope: Settings \u2192 Data Sources & Integrations \u2192 Add New \u2192 AWS. Select environment, scope, scan mode, region restrictions, and required capabilities; inspect the generated template.",
+      "Deploy the account template using its supported CloudFormation or Terraform path. Preserve generated trust parameters. For Terraform, retain the original deployment directory and state for later updates.",
+      "Verify the new Connected cloud instance, discovered assets, and the status of each enabled capability. Validate audit logs, agentless disk scanning, registry scanning, serverless scanning, DSPM, and automation independently; a capability without a test resource remains unverified.",
+      "Repeat the configuration walkthrough for Organization or OU scope. Use CloudFormation for that scope, inspect the OU and account boundaries, deploy only into an authorized sandbox organization, and verify member-account results. If you only have one AWS account, record this as a walkthrough, not a completed organization lab.",
+      "For Outpost, create a standard AWS outpost, deploy its generated template, verify Connected status, then select it in cloud onboarding and run a scan. Compare its resource footprint with Cloud Scan. Use the appropriate template workflow rather than treating an outpost as an endpoint agent.",
+      "Build and explain three additional configuration sheets from the provider wizards: Azure tenant/management-group/subscription and service principal; GCP organization/folder/project; OCI tenancy and compartment selection. Include authentication, template deployment, enabled capabilities, and verification. Execute each only if that provider is available.",
+      "For the Cortex XSIAM analytics example in the blueprint, inspect the actual licensed analytics configuration and its required telemetry; do not mark analytics enabled simply because AWS ingestion is Connected. Complete the runtime analytics exercise in 4.4."
+    ],
+    "verify": "For AWS, save deployed-template references, discovered assets, capability statuses, and one scan/log result per exercised capability. For other providers, save complete deployment worksheets and explicitly mark whether deployed.",
+    "recall": "How would you prove an organization integration covers a newly included member account? When would you choose Outpost?"
+  },
+  {
+    "ids": [
+      "2.2"
+    ],
+    "title": "Connect data and AI sources",
+    "mode": "Conditional implementation and walkthrough",
+    "docs": [
+      "D19",
+      "D20",
+      "D21",
+      "D73"
+    ],
+    "steps": [
+      "For Microsoft 365, add the data source, supply the documented tenant ID and region, perform administrator authorization, and verify the instance. Use a sandbox tenant with synthetic data if available.",
+      "For Databricks, collect the account and application IDs and required administrator permissions. Add Databricks, configure cloud/network details, review and run the generated script in the documented CLI environment, and use Verify Connection.",
+      "For Azure AI Foundry, follow Azure onboarding and the AI Security service prerequisites. Current documentation requires Outpost and DSPM for full Azure AI asset discovery; record those prerequisites in the worksheet before deployment.",
+      "Use AWS AI services already available in your lab to inspect AI asset discovery and related findings. Compare supported services with the AI inventory; do not provision costly AI training simply to populate a screen.",
+      "For an unavailable service, complete an input/permissions/network/verification worksheet and rehearse the wizard from the documentation. Leave its live validation unchecked."
+    ],
+    "verify": "One connection and discovery record for each available source; complete implementation worksheets for Microsoft 365, Databricks, and Foundry even when access is unavailable.",
+    "recall": "Why might general cloud assets be visible while AI assets remain incomplete?"
+  },
+  {
+    "ids": [
+      "2.3"
+    ],
+    "title": "Integrate GitHub and Jenkins",
+    "mode": "Implement where available",
+    "docs": [
+      "D45",
+      "D46",
+      "D47",
+      "D48"
+    ],
+    "steps": [
+      "Create or use a disposable repository within a GitHub organization you can administer. Add GitHub SaaS in Cortex, choose the GitHub App ownership model, authorize selected repository access, and finish repository selection.",
+      "Verify the instance and repository are connected. Run an initial repository scan and record the commit/branch scanned.",
+      "For Jenkins pipeline scanning, add Jenkins with CI/CD System Scan, download the provided HPI plugin, install it under Manage Jenkins \u2192 Plugins, and configure its generated JWT under Manage Jenkins \u2192 System \u2192 Cortex Cloud. Verify Connected status.",
+      "For Jenkins code scanning, create a separate Code Scan integration, store CORTEX_API_KEY and CORTEX_API_KEY_ID in Jenkins Credentials, and use the wizard-generated pipeline configuration on a suitable Docker-capable runner.",
+      "Run a build and confirm the scan is associated with the intended repository and commit. Keep the two Jenkins integration types distinct in your notes."
+    ],
+    "verify": "A connected repository and one attributable scan; Jenkins plugin and code-pipeline evidence if Jenkins is available.",
+    "recall": "Why can a working Jenkins pipeline-risk integration still leave code scans absent?"
+  },
+  {
+    "ids": [
+      "2.4"
+    ],
+    "title": "Integrate container registries",
+    "mode": "Implement one and compare all named examples",
+    "docs": [
+      "D22",
+      "D23",
+      "D64",
+      "D65",
+      "D66"
+    ],
+    "steps": [
+      "Enable AWS ECR registry scanning in your AWS integration, choose an initial scan scope, and push a harmless lab image. Confirm the image identity and resulting scan details.",
+      "Add a separate third-party registry through Data Sources & Integrations \u2192 Add New \u2192 Container Registries. Select Docker Hub, GitLab, or JFrog according to your access.",
+      "Follow that connector\u2019s credential, URL, network, and repository-selection requirements. Save the configuration and verify the intended registry repositories are visible.",
+      "For the other two named registry examples, prepare the exact input and permission worksheet from their individual documentation rather than assuming credentials are interchangeable.",
+      "Compare an in-scope image with an excluded image; explain which connector and scope control each result."
+    ],
+    "verify": "One cloud-registry scan, one third-party scan when available, and Docker/GitLab/JFrog configuration comparison sheets.",
+    "recall": "How is third-party registry integration different from enabling a capability on an onboarded AWS account?"
+  },
+  {
+    "ids": [
+      "2.5"
+    ],
+    "title": "Ingest third-party SAST and SCA results",
+    "mode": "Implement Generic SARIF and walk through vendors",
+    "docs": [
+      "D49",
+      "D50",
+      "D51",
+      "D80",
+      "D81",
+      "D101"
+    ],
+    "steps": [
+      "For Semgrep, add the integration, authorize its Web API token, select SAST/SCA, map projects to onboarded repositories, and verify the connected mapped projects.",
+      "For Veracode, provide the documented credentials and region, authorize, select applications, confirm repository mappings, and verify ingestion. Record its documented scan and enforcement limitations.",
+      "For Generic SARIF, create a 3rd Party AppSec Collector. Match its name to the SARIF tool name, save its generated credentials securely, and copy its upload endpoint.",
+      "Validate a SARIF 2.1.0 file containing a rule ID, matching result, message, relative file URI, and start line. Use the provided fixture in examples as a format exercise.",
+      "Upload through the documented API workflow or the collector\u2019s generated example, then verify repository attribution and finding location. UI validation alone is not a completed ingestion test."
+    ],
+    "verify": "A validated and ingested synthetic finding tied to its repository and source location; vendor mapping worksheets.",
+    "recall": "Why can an authenticated connector ingest no results when project mapping is missing?"
+  },
+  {
+    "ids": [
+      "2.6"
+    ],
+    "title": "Deploy and configure Broker VM",
+    "mode": "Implement or supervised sandbox lab",
+    "docs": [
+      "D24",
+      "D63"
+    ],
+    "steps": [
+      "Read the Broker VM compatibility, sizing, network, and registration requirements. Choose an available supported deployment target and record why this lab needs a Broker.",
+      "For AWS, download the authorized Broker image, configure the documented VM import role, upload/import the image, and create the AMI using the AWS deployment procedure. Use the exact current import commands and AMI settings from that page.",
+      "Launch the Broker with the documented resources and network access; complete its initial configuration and registration with Cortex.",
+      "Activate only the collector applet needed for your selected test source, then send a small test record and verify collector health and received data.",
+      "Capture the image/instance identity, registration result, applet configuration, and cleanup plan. Explain the separate purposes of Broker VM and Outpost."
+    ],
+    "verify": "A registered Broker and a functioning test collector, or a fully specified deployment worksheet if sandbox access prevents deployment.",
+    "recall": "Which component would you inspect for a collector failure versus a workload scanning failure?"
+  },
+  {
+    "ids": [
+      "3.1"
+    ],
+    "title": "Create an XQL dashboard",
+    "mode": "Implement",
+    "docs": [
+      "D15",
+      "D26",
+      "D98"
+    ],
+    "steps": [
+      "Run a query against a dataset that actually exists in your sandbox. Start with cloud_health_auditing and inspect the returned fields and time window.",
+      "In Widget Library, choose Create widget \u2192 XQL widget. Name it, keep visibility restricted to the lab, enter the query, and Preview the results.",
+      "Use a table initially; then create an appropriate count or grouped chart after verifying the query output. Compare the widget with the direct query over the same time range.",
+      "Create a custom dashboard, add the saved widget, and add a title describing its scope. Configure a parameterized filter or drilldown using the documented widget options.",
+      "Save evidence of the query, preview, dashboard, and filter behavior. An empty result is a coverage or time-window question to investigate, not proof of zero risk."
+    ],
+    "verify": "A working dashboard whose counts match a direct query and whose scope you can explain.",
+    "recall": "Why might a dashboard show no events while its data source is Connected?"
+  },
+  {
+    "ids": [
+      "3.2"
+    ],
+    "title": "Create static and dynamic asset groups",
+    "mode": "Implement",
+    "docs": [
+      "D25"
+    ],
+    "steps": [
+      "Open Inventory \u2192 Assets \u2192 Groups \u2192 Add Group. Create one static group containing explicitly selected lab assets.",
+      "Create a dynamic group using attributes present on those assets, such as provider and region. Preview which assets match before saving.",
+      "Introduce or modify a lab asset so that it enters or leaves the dynamic criteria; observe membership after inventory refresh. Compare the static group.",
+      "Create an additional dynamic group using only access-management-supported fields and use it in the access-control lab.",
+      "Apply an asset group to a lab policy and verify that excluded assets are not targeted."
+    ],
+    "verify": "Static and dynamic membership evidence, plus a tested policy scope.",
+    "recall": "How does changing an asset attribute affect dynamic membership, and why are static groups not the SBAC choice?"
+  },
+  {
+    "ids": [
+      "3.3"
+    ],
+    "title": "Create cloud security rules and policies",
+    "mode": "Implement six rule types",
+    "docs": [
+      "D27",
+      "D28",
+      "D68",
+      "D69",
+      "D70",
+      "D71",
+      "D72",
+      "D91"
+    ],
+    "steps": [
+      "Under Posture Management \u2192 Rules & Policies \u2192 Rules \u2192 Cloud Security, create a Config rule. Name it, select severity, define a simple query against an observed lab configuration, and Search/Test before saving.",
+      "Create an Identity rule using an identity, its effective permissions, and a resource relationship. Test it against lab data and explain why the permission is excessive or unused.",
+      "Create a Network Exposure rule; choose inbound, outbound, or east-west and specify the relevant source, destination asset, and protocol/port conditions. Use existing sandbox examples; do not expose a vulnerable host merely to force a finding.",
+      "Create a Data rule using the available data criteria, and an AI rule using a discovered AI asset and its attributes. Use synthetic classified data. If there are no AI assets, save and test the rule configuration but mark positive-result validation as pending.",
+      "Create an Attack Path rule using the documented interface available in your tenant. The currently retrieved custom creation guide labels its workflow Attack Path (Legacy); combine observed finding/vulnerability conditions and test the result. Do not assume a newly named attack-path UI has identical behavior.",
+      "Create a Cloud Security policy, select the saved rules, explicitly scope it to lab accounts/groups, and save. Compare rule matches, policy scope, generated issues, and remediation after a controlled correction."
+    ],
+    "verify": "Six rule worksheets or saved configurations, a scoped policy, and before/after evidence for the rule types with available data.",
+    "recall": "What does the rule decide, what does the policy decide, and why might a matching rule generate no issue for an excluded asset?"
+  },
+  {
+    "ids": [
+      "3.4"
+    ],
+    "title": "Create workload rules and policies",
+    "mode": "Implement",
+    "docs": [
+      "D29",
+      "D31",
+      "D67",
+      "D90"
+    ],
+    "steps": [
+      "Create a custom Cloud Workload rule. Choose its scanner deliberately: Agentless Disk Scan, Kubernetes Connector, or XDR Agent. Use the documented example for that scanner, adapt it to a harmless lab condition, and validate the rule logic.",
+      "Associate the rule with a custom compliance control where required. Explain the input data and execution mechanism for each scanner, even if only one scanner is available.",
+      "Create separate lab-scoped misconfiguration, malware, secrets, and trusted-image policy configurations. Inspect the available stages/actions for each type; do not assume every rule supports prevention.",
+      "Start with issue creation. Use an available known finding or benign vendor-supported test fixture; do not introduce real malware or live credentials to manufacture a match.",
+      "For trusted images, specify a trust criterion, enable the admission controller on the lab cluster, and test a compliant image and a harmless image that violates the trust criterion. Compare new deployment behavior with already-running workload findings.",
+      "Record policy scope, scanner coverage, action, and conflicting-policy behavior. Trusted-image policy resolution must be learned from its own documentation, rather than borrowed from endpoint policy ordering."
+    ],
+    "verify": "One validated custom rule, four policy-type configurations, and an admission-control allow/block result when the connector supports it.",
+    "recall": "Can registry vulnerability scanning alone establish that an image is trusted by your organization?"
+  },
+  {
+    "ids": [
+      "3.5"
+    ],
+    "title": "Manage vulnerability issue and prevention policies",
+    "mode": "Implement",
+    "docs": [
+      "D30",
+      "D31"
+    ],
+    "steps": [
+      "Open Posture Management \u2192 Rules & Policies \u2192 Policies \u2192 Vulnerability Management \u2192 Add Policy.",
+      "Create an issue-creation policy using a finding that already exists in the lab. Set conditions, preview matching findings, select an explicit asset group, and set the issue action/severity.",
+      "Save and position the policy intentionally in the policy list. Check a broad and a specific policy against the same finding.",
+      "Create a separate prevention policy and inspect its supported enforcement prerequisites in the linked policy documentation before testing on a disposable workload.",
+      "Fix or replace the affected test artifact, rescan, and check the subsequent policy result. Document CVSS alongside the environmental context used to prioritize the finding."
+    ],
+    "verify": "A matching issue, a nonmatching control case, a configured prevention test, and a verified remediation result.",
+    "recall": "Why are a high CVSS score, an issue severity, and an actual prevention action different things?"
+  },
+  {
+    "ids": [
+      "3.6"
+    ],
+    "title": "Build compliance standards, controls, assessments, and reports",
+    "mode": "Implement",
+    "docs": [
+      "D33",
+      "D34",
+      "D92",
+      "D93"
+    ],
+    "steps": [
+      "Open Posture Management \u2192 Compliance \u2192 Catalogs and inspect an out-of-the-box standard, its controls, and associated rules.",
+      "Clone a built-in standard with Save as new, or create a small custom standard. Add a category and custom control and associate a custom detection rule with that control.",
+      "Ensure a cloud security policy includes the custom cloud rule and targets the same intended lab scope; the assessment configuration does not replace this policy.",
+      "Create an Assessment Profile, select the standard and lab asset group, review the summary, and save. Generate/review the resulting assessment and report; keep delivery within your sandbox.",
+      "Correct the tested configuration and rerun the assessment. Trace one failed control all the way to its rule and asset, then explain the new result."
+    ],
+    "verify": "Built-in and custom assessment results, a report, and a standard \u2192 control \u2192 rule \u2192 policy \u2192 asset trace.",
+    "recall": "Why can a custom assessment be misleading when its custom rule is not enabled through a policy?"
+  },
+  {
+    "ids": [
+      "3.7"
+    ],
+    "title": "Deploy the Kubernetes connector",
+    "mode": "Implement",
+    "docs": [
+      "D32",
+      "D31"
+    ],
+    "steps": [
+      "Use a disposable supported Kubernetes cluster. Open Data Sources & Integrations and add Kubernetes.",
+      "Choose Posture Management and, when licensed, Realtime Protection. Inspect advanced settings including scan cadence, admission-controller enforcement, and agent-related options.",
+      "Download the generated installer and review its requested cluster permissions and settings. Execute the generated instructions against the intended kubectl context.",
+      "Verify connector status, discovered cluster/namespaces/workloads, and scanner results. Keep posture collection and runtime protection validation as separate checks.",
+      "Test admission enforcement with the harmless trusted-image policy from 3.4. Confirm a permitted deployment still works, then restore the lab policy state."
+    ],
+    "verify": "Installer configuration, healthy connector evidence, discovered workload, and one scoped enforcement test.",
+    "recall": "Why is a connected posture connector not sufficient proof that runtime prevention is active?"
+  },
+  {
+    "ids": [
+      "3.8"
+    ],
+    "title": "Configure data classification and scanning",
+    "mode": "Implement",
+    "docs": [
+      "D08",
+      "D35",
+      "D73"
+    ],
+    "steps": [
+      "Enable DSPM for the relevant AWS integration and inspect the supported-service scanning controls for your lab data store.",
+      "Use a private lab bucket containing synthetic records only. In Settings \u2192 Configurations \u2192 Data Classification \u2192 Data Patterns, add a pattern for an invented identifier such as LABID-[0-9]{6}.",
+      "Set a context word, proximity, and masking level. Use the built-in validator with a matching sample and nonmatching samples; include one sample where the context is too far away.",
+      "Associate the pattern with a custom data profile as described in the classification documentation. Run or await the configured supported scan and inspect the classification results.",
+      "Check scope, scanner permissions, profile association, and masking when the expected result is missing. Record that custom patterns have platform-wide applicability, so use a narrowly distinctive test format."
+    ],
+    "verify": "Validator results plus a discovered, classified synthetic record and the corresponding scan configuration.",
+    "recall": "How can a valid regex still fail to classify a record because of context or proximity settings?"
+  },
+  {
+    "ids": [
+      "4.1"
+    ],
+    "title": "Deploy agents to VMs, CaaS, Kubernetes, and functions",
+    "mode": "Implement supported AWS variants",
+    "docs": [
+      "D36",
+      "D40",
+      "D74",
+      "D75"
+    ],
+    "steps": [
+      "Create an installation matrix for EC2 VM, Kubernetes, ECS Fargate/CaaS, and Lambda/serverless: supported runtime/OS, package type, resource requirements, permissions, and required connectivity. Check the linked compatibility matrix before deployment.",
+      "For the VM, open Inventory \u2192 Endpoints \u2192 Agent Installations, create a suitable Standalone package, and run that package\u2019s installation procedure on the lab instance. Verify registration and operational status.",
+      "For Kubernetes, create the documented Kubernetes or Helm package, or use the runtime option in the Kubernetes onboarding workflow appropriate to your deployment. Check the intended nodes and namespaces and avoid installing the agent twice.",
+      "For CaaS, generate the CaaS Dockerfile/package, embed the agent according to the documented build instructions, and deploy the harmless image to supported ECS Fargate. Check architecture, resources, SYS_PTRACE, and entrypoint constraints against the CaaS guide.",
+      "For serverless, select the Serverless function package, use its generated instructions for the supported function runtime, and configure the applicable restriction profile and policy. Invoke the benign lab function and check runtime visibility.",
+      "For each variant, record successful deployment separately from demonstrated protection. Mark a variant as a walkthrough if your license or runtime cannot support it."
+    ],
+    "verify": "A four-row deployment matrix and live registration/protection evidence for each supported environment.",
+    "recall": "How do VM installation, Kubernetes deployment, container-embedded agents, and function packages differ?"
+  },
+  {
+    "ids": [
+      "4.2",
+      "4.2.1",
+      "4.2.2"
+    ],
+    "title": "Configure endpoint groups, prevention, extensions, and exceptions",
+    "mode": "Implement",
+    "docs": [
+      "D37",
+      "D38",
+      "D39",
+      "D76",
+      "D100"
+    ],
+    "steps": [
+      "Create a static and a dynamic endpoint group under Inventory \u2192 Endpoints \u2192 Groups. Verify membership using actual registered lab endpoints.",
+      "Create or clone the appropriate malware, exploit, restrictions, and agent-settings profiles for your lab platform. Review their settings before assignment.",
+      "Create a Prevention policy rule, attach the profiles, target the lab group, and deliberately position it in the ordered policy list. Verify the effective policy on the endpoint.",
+      "For an extension example, configure a FIM rule group for a harmless lab directory, create a FIM extension profile, and assign it through an Extensions policy. Check the FIM license/agent prerequisites first; modify a test file and find its event.",
+      "Create a narrowly scoped exception using the documented exception type applicable to your benign test. Compare behavior with and without it, then remove the exception.",
+      "Export or record the final policy configuration, membership, effective profile, and rollback steps."
+    ],
+    "verify": "Effective endpoint policy, a FIM event where licensed, and an exception test with restoration.",
+    "recall": "Why can creating a profile have no effect until a policy assigns it? How does the first matching endpoint policy affect the result?"
+  },
+  {
+    "ids": [
+      "4.3"
+    ],
+    "title": "Integrate API gateways",
+    "mode": "AWS implementation plus Azure and Apigee walkthrough",
+    "docs": [
+      "D41",
+      "D103",
+      "D104"
+    ],
+    "steps": [
+      "Add AWS API Gateway in Cortex Data Sources & Integrations, create the collector, and securely retain its generated key and endpoint.",
+      "On a disposable AWS API Gateway REST API stage, configure the documented CloudWatch role, logs/tracing, and access-log format. Use synthetic request data.",
+      "Create the Data Firehose stream with the documented HTTP endpoint destination, authentication, compression, and failed-record backup. Add the CloudWatch subscription and IAM role described in the guide.",
+      "Send a benign request to the API and trace it through CloudWatch, delivery, and Cortex. Diagnose each hop separately if the event is absent.",
+      "For Azure APIM, create the Cortex collector, configure APIM named values (including the secret key), and apply the documented inbound/outbound policy to a test API; send a request and verify ingestion. For Apigee, create the collector, download its configuration package, set project/organization/environment/URL/key, deploy the documented shared flows and hooks, and validate a request. Rehearse these exact configurations from the docs when the services are unavailable."
+    ],
+    "verify": "An end-to-end AWS API request trace and complete APIM/Apigee configuration walkthroughs.",
+    "recall": "Which evidence separates a gateway logging problem from an HTTP collector authentication problem?"
+  },
+  {
+    "ids": [
+      "4.4",
+      "4.4.1",
+      "4.4.2"
+    ],
+    "title": "Configure detection rules and automation playbooks",
+    "mode": "Implement",
+    "docs": [
+      "D42",
+      "D43",
+      "D44",
+      "D77",
+      "D78",
+      "D79",
+      "D102"
+    ],
+    "steps": [
+      "Choose a harmless test event already observable in your sandbox. Identify its dataset, timestamp, asset, and relevant fields before creating any rule.",
+      "Create a lab IOC for a benign test artifact and a BIOC for a harmless observable behavior using the documented rule builders. Save, produce matching and nonmatching activity, and verify results; label all test artifacts clearly.",
+      "Create an XQL correlation rule, test the query, choose its schedule or supported real-time mode, map issue fields, and configure suppression and the action. Use a dataset output while tuning, then test issue generation in the lab.",
+      "Inspect Analytics configuration, available sensors, and an analytics-generated example. Explain what data the engine uses and why one manually generated event does not prove a baseline-driven analytics detector is working.",
+      "Build a small playbook with input validation, a condition, a manual review step, and a harmless enrichment or lab-only remediation task. Attach it to the appropriate test workflow.",
+      "Debug using mock issue data, breakpoints, and explicit input/output checks. Inspect actual external actions before running tasks; the debugger is not a guarantee that external commands are side-effect-free.",
+      "Validate the remediation against the source resource and a subsequent scan/event. Save the detection \u2192 issue \u2192 playbook \u2192 corrected-state trace."
+    ],
+    "verify": "IOC, BIOC, correlation and analytics worksheets; a tested playbook and one complete response trace.",
+    "recall": "When should you use an IOC, BIOC, correlation rule, or analytics detection? How do you prove an automation succeeded beyond its task status?"
+  },
+  {
+    "ids": [
+      "5.1",
+      "5.1.1",
+      "5.1.2"
+    ],
+    "title": "Manage business applications and issue SLAs",
+    "mode": "Implement",
+    "docs": [
+      "D53",
+      "D54",
+      "D82",
+      "D87"
+    ],
+    "steps": [
+      "Create a manual business application under Application Security \u2192 Business Applications. Set a lab name, criticality, ownership context, and starting code or cloud assets.",
+      "Inspect the connected assets across Code, Build, Deploy, and Run. Record missing relationships and their evidence; a business application label alone does not prove code-to-cloud lineage.",
+      "Create a criteria-based application using supported code hierarchy or cloud tags. Preview the matched assets, create it, and verify membership after changing a harmless matching attribute.",
+      "Open Settings \u2192 Configurations \u2192 Object Setup \u2192 Issues \u2192 SLA Rules. Create a lab SLA with explicit matching conditions, a resolution goal, and intentional rule ordering.",
+      "Inspect a matching issue and a nonmatching issue. Verify the assigned SLA and test how a higher-priority matching rule affects selection.",
+      "Use the resulting application context and issue state to write a short prioritization explanation for the lab application."
+    ],
+    "verify": "Manual and criteria-based application records, a lineage check, and a matching issue with its assigned SLA.",
+    "recall": "How do application grouping, code-to-cloud mapping, policy scope, and SLA timing serve different purposes?"
+  },
+  {
+    "ids": [
+      "5.2",
+      "5.2.1",
+      "5.2.2",
+      "5.2.3"
+    ],
+    "title": "Deploy AppSec rules, policies, and guardrails",
+    "mode": "Implement policies; resolve one documented coverage gap",
+    "docs": [
+      "D55",
+      "D56",
+      "D83",
+      "EXAM"
+    ],
+    "steps": [
+      "For 5.2.1, create a custom IaC or secrets rule under Application Security \u2192 AppSec Rules. Set framework/scanner, severity, category, and remediation; validate the YAML and test it against one matching and one nonmatching lab fixture.",
+      "Create an AppSec policy using the current wizard: General, Conditions, Scope, Triggers & Actions, Exceptions, Summary. Select the relevant finding types, the lab repository/application, and supported periodic/PR/CI triggers.",
+      "Trigger a violating pull request or CI scan, inspect its policy result, fix the fixture, and rerun. Confirm that the intended policy caused the outcome rather than relying on a generic pipeline failure.",
+      "For 5.2.3, create a CI/CD Configuration Scanners policy, define a CI/CD risk condition, choose a lab scope, and use the triggers/actions supported by that policy type. Inspect an actual pipeline or VCS configuration finding.",
+      "For 5.2.2, preserve the exact blueprint topic, AI-recommended guardrails. The public documentation reviewed did not establish a step-by-step workflow under that name. Keep this child objective marked Documentation gap. Locate the applicable lesson in the official learning path or obtain a current vendor documentation link for the feature in your tenant, then add its verified steps here.",
+      "Once that documentation is available, record the recommendation, inspect the proposed scope/action, apply it only to the lab, and run matching/nonmatching checks. This last line is a proposed validation exercise, not a claim that a particular recommendation UI exists."
+    ],
+    "verify": "A custom rule, an exercised code policy, and a CI/CD policy. Objective 5.2.2 remains open until its exact documented workflow is identified and rehearsed.",
+    "recall": "How do code scan policies differ from CI/CD configuration policies? What must you verify before accepting an AI-proposed control?"
+  },
+  {
+    "ids": [
+      "5.3"
+    ],
+    "title": "Configure repository scanning and IaC drift",
+    "mode": "Implement",
+    "docs": [
+      "D57",
+      "D86",
+      "D87",
+      "D94",
+      "D95"
+    ],
+    "steps": [
+      "Open the lab repository\u2019s Scan Configuration through its VCS integration. Inspect whether it follows Global settings or uses Custom settings.",
+      "Use repository-specific settings to enable IaC, SCA, secrets, and PR scanning for the lab. Record history scanning, validation, path exclusions, and behavior on scan errors. Avoid overwriting other repositories\u2019 custom settings.",
+      "Prepare separate fixtures: an IaC violation selected from a documented enabled rule, a dependency finding you can reproduce, and an obviously synthetic secret-pattern sample. Scan, fix, and rescan each; a synthetic string is not guaranteed to match every built-in secrets detector.",
+      "For drift, deploy a harmless IaC-defined resource only after cloud/repository integration and code-to-cloud mapping are working. Use the required mapping/tagging workflow and confirm lineage first.",
+      "Select a documented security rule, make a reversible lab configuration change that violates it while code remains compliant, and inspect the drift finding. Restore the configuration from code and recheck.",
+      "Distinguish raw findings from policy-created issues and security-relevant drift from arbitrary configuration differences. Record the missing prerequisites if a positive drift test cannot be reproduced."
+    ],
+    "verify": "Before/after results for IaC, SCA, and secrets; scanner configuration evidence; and a mapped resource with a drift/remediation trace.",
+    "recall": "Why might changing a cloud resource fail to generate a drift issue even though its configuration differs from Git?"
+  },
+  {
+    "ids": [
+      "5.4"
+    ],
+    "title": "Use VS Code and JetBrains security plugins",
+    "mode": "Implement at least one and rehearse both",
+    "docs": [
+      "D59",
+      "D60"
+    ],
+    "steps": [
+      "Check each plugin\u2019s documented host architecture, runtime dependencies, AppSec entitlement, and CLI permissions before installing.",
+      "Generate a suitably scoped Standard API key and retrieve its ID and tenant API URL. Use the documented authentication fields rather than assuming an Advanced key works.",
+      "Install the official Cortex plugin in VS Code, configure authentication, open the lab project, and scan a known fixture. Read the finding\u2019s explanation and apply a correction; rescan.",
+      "Repeat in JetBrains if installed. Otherwise, walk through its actual configuration screens from the documentation and record the required fields and dependencies.",
+      "Compare IDE results with the repository/CLI scan of the same commit and configuration. Investigate path exclusions or scanner differences before assuming results must be identical."
+    ],
+    "verify": "A successful IDE scan and remediation, plus configuration evidence or a complete walkthrough for the second IDE.",
+    "recall": "What would you check when authentication works elsewhere but IDE scanning fails?"
+  },
+  {
+    "ids": [
+      "5.5"
+    ],
+    "title": "Install, authenticate, and execute Cortex CLI",
+    "mode": "Implement",
+    "docs": [
+      "D58",
+      "D84",
+      "D85",
+      "D99",
+      "CLI1",
+      "CLI2"
+    ],
+    "steps": [
+      "Use the current Connect Cortex CLI instructions for your host and tenant to obtain the executable. Validate local requirements and record the installed version/help output.",
+      "Configure CORTEX_API_BASE_URL, CORTEX_API_KEY, and CORTEX_API_KEY_ID through a protected credential file or environment variables. Select a Standard key and permissions appropriate to local-only versus uploaded scans.",
+      "From the disposable lab repository, run a local code scan using the documented directory flag and no-upload mode. Use examples/cli-and-xql.md as a starting command reference.",
+      "Run an uploaded scan with the correct owner/repo identifier and branch. Confirm its results are attributed to the intended repository rather than an unrelated asset ID.",
+      "Add the same scan to your CI job with credentials in its secret store. Test a finding-triggered failure, an authentication failure, and a clean run; record what each exit status actually means in your installed version.",
+      "Compare no-upload, no-code, and upload behavior from the documentation and choose the correct mode for your lab\u2019s data handling requirements."
+    ],
+    "verify": "A reproducible local command, an attributed uploaded scan, and a CI run that distinguishes scan findings from scanner failure.",
+    "recall": "Why might a scan run locally but fail when uploading, or upload into the wrong repository context?",
+    "supplement": "COMMAND-LINE-LAB.md"
+  },
+  {
+    "ids": [
+      "6.1"
+    ],
+    "title": "Diagnose IAM, template, organization, and ingestion failures",
+    "mode": "Break and repair in the lab",
+    "docs": [
+      "D10",
+      "D15",
+      "D61",
+      "D62",
+      "D88"
+    ],
+    "steps": [
+      "Start with a known working AWS integration and save its configuration. Use a dedicated disposable test instance for fault injection.",
+      "Practice a missing-permission case on that test role: record the exact denied action and capability error, compare with the provider permission table, restore the missing permission, and verify recovery.",
+      "For a stack failure, inspect CloudFormation Events and the first causal resource failure; for Terraform inspect the failing resource and retained state. Correct the stated prerequisite and rerun the supported template workflow.",
+      "For organization coverage, compare configured OU/account selection with discovered member accounts and per-account capability status. Inspect the generated organization deployment and its failed member deployment rather than treating the management-account status as sufficient.",
+      "For ingestion, follow the configured log path through delivery, permissions, notifications, and collector status. Query collection_auditing for collector transitions and cloud_health_auditing for cloud capability errors.",
+      "If CloudFormation succeeds but Cortex never shows a new connected instance, check the registration Lambda/CloudWatch evidence described in the post-deployment guide. Capture error, fix, recovery, and fresh ingested data."
+    ],
+    "verify": "A fault report with the causal error, minimal correction, and fresh post-recovery evidence.",
+    "recall": "Why can CREATE_COMPLETE coexist with missing registration, missing member accounts, or missing logs?"
+  },
+  {
+    "ids": [
+      "6.2"
+    ],
+    "title": "Diagnose agent and Kubernetes connector failures",
+    "mode": "Break and repair in the lab",
+    "docs": [
+      "D04",
+      "D32",
+      "D36",
+      "D40",
+      "CY1",
+      "CY2"
+    ],
+    "steps": [
+      "Choose a single disposable VM or cluster connector with known working telemetry. Record last-seen time, operational state, version, and assigned policy.",
+      "Use a controlled lab connectivity interruption or a deliberately incorrect test installation setting. Keep the restoration command/configuration ready.",
+      "Check local process/pod status, installation output, generated configuration, DNS/TLS/egress, platform compatibility, and registration credentials in that order where applicable.",
+      "Compare endpoint/connector health with actual data arrival and scanner coverage. A running process is not sufficient evidence that Cortex can receive its telemetry.",
+      "Restore the original setting, produce a harmless new event, and verify current timestamps and expected policy enforcement."
+    ],
+    "verify": "A diagnosis and recovery record with a new event after restoration.",
+    "recall": "How do you tell an unsupported host from a connectivity failure or an incorrect target policy?",
+    "supplement": "COMMAND-LINE-LAB.md"
+  },
+  {
+    "ids": [
+      "6.3"
+    ],
+    "title": "Diagnose outpost communication failures",
+    "mode": "Break and repair or evidence walkthrough",
+    "docs": [
+      "D12",
+      "D14",
+      "D15",
+      "D96"
+    ],
+    "steps": [
+      "Begin with the outpost identity, selected region/account, current template version, and associated cloud instance.",
+      "Inspect the outpost\u2019s open errors and the cloud instance\u2019s individual capability statuses. Query cloud_health_auditing for Outpost events over the failure window.",
+      "Compare deployment/registration evidence with connectivity and IAM evidence. For a completed template with no registered outpost, inspect the outbound path used for registration.",
+      "Reproduce one documented fault on a disposable deployment, such as an acknowledged template prerequisite or a lab network error; do not randomly remove production permissions.",
+      "Apply the correction from the matching troubleshooting entry, verify Connected status, and execute a fresh scan to prove end-to-end recovery. If Outpost is unavailable, write a diagnosis against a supplied sandbox example and leave the live test pending."
+    ],
+    "verify": "An error timeline, identified root cause, and scan after recovery.",
+    "recall": "Why is a healthy outpost VM different from a registered outpost with successful scans?"
+  },
+  {
+    "ids": [
+      "6.4"
+    ],
+    "title": "Resolve OAuth, PAT, webhook, and CI integration failures",
+    "mode": "Break and repair",
+    "docs": [
+      "D45",
+      "D46",
+      "D47",
+      "D48",
+      "D65",
+      "D97"
+    ],
+    "steps": [
+      "Identify the actual authentication mechanism before troubleshooting: GitHub SaaS currently uses GitHub Apps; GitLab SaaS uses its documented authorization workflow; GitLab registry uses a PAT; Jenkins integrations have their own credentials/configuration.",
+      "In a disposable token-based integration, use an expired/revoked test credential or missing scope, observe the failure, replace it with the documented scoped credential, and verify recovery.",
+      "For GitHub App integrations, check installation authorization and selected repository access. Do not try to repair installation-token authentication by supplying a PAT intended for a different connector.",
+      "For missing PR results, confirm the repository is selected, PR scanning is enabled, and webhook delivery reaches the expected integration. Inspect provider delivery details when available; compare timestamps with Cortex scan history.",
+      "For Jenkins, verify the selected integration type, installed plugin or pipeline configuration, runner network access, and secret names. Rerun a fresh build after repair.",
+      "Record a fresh commit/PR/build that succeeds after the fix. A Connected label without a new scan is incomplete verification."
+    ],
+    "verify": "A credential or repository-access repair plus a fresh PR/build result; webhook investigation worksheet.",
+    "recall": "Which checks differ among a GitHub App installation, an OAuth integration, and a registry PAT?"
+  },
+  {
+    "ids": [
+      "6.5"
+    ],
+    "title": "Diagnose AppSec scanner, mapping, and policy failures",
+    "mode": "Break and repair",
+    "docs": [
+      "D55",
+      "D57",
+      "D86",
+      "D87",
+      "D94",
+      "D95",
+      "D99"
+    ],
+    "steps": [
+      "Use a fixture that produced a finding earlier. Deliberately exclude its path or disable its scanner in only the lab repository\u2019s custom configuration.",
+      "Run another scan and compare scanner selection, branch, commit, exclusions, and scan health with the working baseline. Restore the setting and verify the finding returns.",
+      "Next, keep the finding but exclude the repository from the lab policy\u2019s scope. Compare raw finding visibility with issue creation or blocking behavior.",
+      "Inspect finding type, conditions, supported trigger, action, exception, and policy scope when the expected enforcement is missing.",
+      "For missing lineage or drift, inspect cloud/repository integrations, YOR mapping signals, and pipeline execution. Restore the missing link and confirm the expected Code \u2192 Build \u2192 Deploy \u2192 Run relationship.",
+      "Save a diagnosis that separates no scan, no finding, no issue, and no blocking action."
+    ],
+    "verify": "Two deliberate misconfigurations repaired with before/after scan and policy evidence.",
+    "recall": "Why can a scanner report a finding while a PR still passes?"
+  },
+  {
+    "ids": [
+      "6.6"
+    ],
+    "title": "Diagnose user and API access problems",
+    "mode": "Break and repair",
+    "docs": [
+      "D05",
+      "D06",
+      "D25",
+      "D89"
+    ],
+    "steps": [
+      "Use the restricted lab identity from 1.4 and choose an asset/action it should access.",
+      "Check authentication and tenant selection first, then component RBAC, asset/endpoint/case scope, and any dataset-specific access relevant to the operation.",
+      "Compare with the administrator\u2019s view to distinguish absent data from hidden data. Verify the dynamic group uses fields eligible for access management.",
+      "For an API failure, check key validity, security level, role, scope, and the permission required by the exact endpoint. Apply only the missing access, then repeat the read operation.",
+      "Retest an out-of-scope asset to prove that the correction did not broaden access beyond the intended lab boundary."
+    ],
+    "verify": "A least-privilege repair with a positive test and a still-denied negative test.",
+    "recall": "How can a user have permission to open a module but see no relevant assets?"
+  },
+  {
+    "ids": [
+      "6.7"
+    ],
+    "title": "Diagnose an unexpected AWS cost increase",
+    "mode": "Investigate actual or supplied billing evidence",
+    "docs": [
+      "D08",
+      "D11",
+      "D12",
+      "D22",
+      "AWS1",
+      "AWS2"
+    ],
+    "steps": [
+      "Compare a baseline interval with the cost-rise interval in Cost Explorer. Group by service and filter the affected account/region, then examine usage types.",
+      "Correlate the first increase with onboarding, scan scope/cadence changes, new registry images, CloudTrail data events, or an Outpost deployment. Treat these as hypotheses until usage supports them.",
+      "Inventory the actual scanning/logging resources and compare them with the generated templates and selected capabilities. Check for redundant log paths and retained lab resources.",
+      "Make one scoped correction, record the intended coverage impact, and inspect subsequent usage and security coverage. Allow for billing-data delay.",
+      "Write a short explanation naming the service, resource or usage driver, configuration trigger, correction, and remaining uncertainty. Use existing data or a provided sample; do not intentionally generate a large bill."
+    ],
+    "verify": "A cost investigation backed by usage evidence and a measured correction.",
+    "recall": "How would you prove that a scanning change caused the increase rather than ordinary workload growth?"
+  }
+]

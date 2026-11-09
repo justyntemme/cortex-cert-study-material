@@ -1,0 +1,91 @@
+1.1 Evaluate the existing cloud and IT infrastructure to align with Cortex Cloud architecture (i.e., multicloud footprint, workload inventory, Cloud-Native Application Protection Platform [CNAPP] tooling, migration)
+
+1.2 Determine Cortex Cloud deployment and license requirements, data source ingestion and retention targets, scanning models (e.g., cloud scan versus Outpost), and cloud provider identity and access management (IAM) requirements (e.g., least-privilege)
+
+1.3 Determine network communication and connectivity requirements for Cortex Cloud components (e.g., egress rules, URLs, ports, regional endpoints)
+
+1.4 Explain the conﬁguration and management lifecycle of user identity, roles, permissions, and access controls within a Cortex tenant (e.g., Scope-Based Access Control [SBAC], custom Role-Based Access Control [RBAC] roles, API keys)
+
+1.5 Identify and describe cost optimization methods (e.g., scan cadence, duplicate audit logs)
+
+2.1 Explain the onboarding and conﬁguration process for cloud provider resources (e.g., AWS, Azure, GCP, OCI)
+
+2.1.1 Security capabilities (e.g., Data Security Posture Management [DSPM], audit logs, Cortex XSIAM analytics, agentless scanning, container registry options, serverless function scanning)
+
+2.1.2 Cloud scan versus Outpost
+
+2.2 Explain the process of onboarding and conﬁguring data and AI sources (e.g., Oﬃce 365, Databricks, Azure Foundry)
+
+2.3 Explain the process of onboarding application development and deployment systems (e.g., GitHub, Jenkins)
+
+2.4 Explain the process of container registry integration (e.g., JFrog, Docker, GitLab)
+
+2.5 Explain the integration process for third-party static application security testing (SAST) / Software Composition Analysis (SCA) tools (e.g., Semgrep, Veracode, Generic SARIF)
+
+2.6 Explain the deployment and conﬁguration process for Broker VM
+
+3.1 Explain the process of dashboard creation and conﬁguration using XQL
+
+3.2 Explain the creation and conﬁguration process for static and dynamic asset groups
+
+3.3 Explain the creation and conﬁguration of cloud security rules and policies (e.g., attack path, conﬁguration, data, identity, network exposure, AI)
+
+3.4 Explain the creation and conﬁguration of cloud workload rules and policies (e.g., custom rules, scanner type, misconﬁguration, malware, secrets, trusted images)
+
+3.5 Explain the creation and management of vulnerability policies (i.e., issue creation and prevention)
+
+3.6 Identify and describe methods for managing custom and out-of-the-box compliance standards / controls, assessments, and reporting
+
+3.7 Explain the deployment of Kubernetes connectors
+
+3.8 Identify and describe data security classiﬁcation settings and scanning options
+
+4.1 Explain the deployment and conﬁguration of XDR agents (e.g., virtual machines VMs, Containers as a Service [CaaS], serverless functions, Kubernetes)
+
+4.2 Explain the process of endpoint protection conﬁguration
+
+4.2.1 Endpoint proﬁles and policies (e.g., prevention, extension, exceptions)
+
+4.2.2 Endpoint groups
+
+4.3 Explain the process of third-party API gateway integration (e.g., AWS, API Gateway, APIM, Apigee)
+
+4.4 Explain the creation and conﬁguration process for Cloud Detection and Response (CDR) and Threat Management
+
+4.4.1 Detection rules (e.g., correlation, behavioral indicator of compromise [BIOC], indicator of compromise [IOC], analytic)
+
+4.4.2 Automation playbooks
+
+5.1 Identify and evaluate Application Security Posture Management (ASPM) features and functionality
+
+5.1.1 Business applications (i.e., manual, dynamic)
+
+5.1.2 Service-level agreement (SLA) for issues
+
+5.2 Explain rule and policy deployment and management
+
+5.2.1 Code security
+
+5.2.2 AI-recommended guardrails
+
+5.2.3 CI/CD policies
+
+5.3 Explain the conﬁguration and management of repository scanning (e.g., Infrastructure as Code [IaC], secrets, SCA, IaC drift detection)
+
+5.4 Explain the deployment and conﬁguration of Cortex Cloud application security IDE plugins (i.e., VS Code, JetBrains)
+
+5.5 Identify and describe the steps to install, conﬁgure, and execute Cortex CLI in workﬂows
+
+6.1 Identify and describe troubleshooting issues related to insuﬃcient cloud service provider (CSP) IAM permissions, CloudFormation / Terraform stack failures, and organization-level onboarding related errors, including ingestion
+
+6.2 Demonstrate knowledge of troubleshooting Cortex Cloud Workload components (e.g., agents / connectors, connectivity issues)
+
+6.3 Demonstrate knowledge of troubleshooting communication gaps between customer-managed outposts and the Cortex tenant
+
+6.4 Demonstrate knowledge of authentication failure resolution (OAuth / PAT) and webhook delivery issues when connecting version control systems (VCS) (e.g., GitHub, GitLab) and CI/CD systems (e.g., Jenkins) to Cortex Cloud
+
+6.5 Identify and describe troubleshooting issues related to Application Security components (e.g., proper policy conﬁguration)
+
+6.6 Identify and describe access and permissions troubleshooting issues
+
+6.7 Explain the process of diagnosing / determining the source of an unexpected Cloud cost increase
