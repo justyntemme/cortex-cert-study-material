@@ -1,0 +1,17 @@
+digraph G { graph [rankdir=LR,bgcolor="transparent",pad="0.3",nodesep="0.45",ranksep="0.6",fontname="Helvetica",fontsize=14]; node [shape=box,style="rounded,filled",fillcolor="#f6f6f0",color="#81968d",fontcolor="#15352e",fontname="Helvetica",fontsize=13,margin="0.18,0.14"]; edge [color="#6d827b",fontcolor="#3c544c",fontname="Helvetica",fontsize=10,arrowsize=0.7];"eval" -> "verification" [label="5"];
+"api" -> "infra" [label="8"];
+"api" -> "verification" [label="7"];
+"api" -> "learning" [label="5"];
+"cognitive" -> "infra" [label="8"];
+"cognitive" -> "verification" [label="4"];
+"cognitive" -> "engine" [label="5"];
+"engine" -> "rqlxql" [label="8"];
+"pipeline" -> "domain" [label="5"];
+"pipeline" -> "verification" [label="12"];
+"pipeline" -> "infra" [label="7"];
+"pipeline" -> "learning" [label="5"];
+"pipeline" -> "cognitive" [label="4"];
+"verification" -> "infra" [label="8"];
+"verification" -> "domain" [label="10"];
+"verification" -> "learning" [label="6"];
+"training" -> "cognitive" [label="4"];}

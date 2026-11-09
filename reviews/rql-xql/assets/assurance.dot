@@ -1,0 +1,15 @@
+digraph G { graph [rankdir=LR,bgcolor="transparent",pad="0.3",nodesep="0.45",ranksep="0.6",fontname="Helvetica",fontsize=14]; node [shape=box,style="rounded,filled",fillcolor="#f6f6f0",color="#81968d",fontcolor="#15352e",fontname="Helvetica",fontsize=13,margin="0.18,0.14"]; edge [color="#6d827b",fontcolor="#3c544c",fontname="Helvetica",fontsize=10,arrowsize=0.7];
+  input [label="1 · Input accepted
+size / nesting / request shape"];
+  syntax [label="2 · Local syntax valid
+parser accepts target query"];
+  schema [label="3 · Field meaning supported
+known mapping or heuristic?"];
+  execute [label="4 · Executes in a tenant
+credentials + environment + time"];
+  parity [label="5 · Results agree in scope
+nonempty evidence + identity matching"];
+  general [label="6 · Generalizes to unseen queries
+independent held-out evaluation"];
+  input -> syntax -> schema -> execute -> parity -> general;
+}

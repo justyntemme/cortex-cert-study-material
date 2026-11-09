@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "desktop": "1440x1000",
+  "mobile": "390x844",
+  "diagrams": 7,
+  "journey_routes": 4,
+  "examples": 3,
+  "checks": [
+    "diagram load",
+    "journey progression",
+    "example switch",
+    "symbol search",
+    "empty search",
+    "subsystem filter",
+    "finding severity filters",
+    "mobile overflow",
+    "offline file mode",
+    "no external network requests",
+    "no JavaScript errors",
+    "architecture PDF generated"
+  ]
+}

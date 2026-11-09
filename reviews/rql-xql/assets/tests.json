@@ -1,0 +1,4982 @@
+[
+  {
+    "name": "test_ip_address_leak",
+    "suite": "tests.unit.test_adversarial.TestAdversarialLeakDetection",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_email_leak",
+    "suite": "tests.unit.test_adversarial.TestAdversarialLeakDetection",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_aws_arn_leak",
+    "suite": "tests.unit.test_adversarial.TestAdversarialLeakDetection",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_clean_query_no_leaks",
+    "suite": "tests.unit.test_adversarial.TestAdversarialLeakDetection",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_adversarial_input_handled[adv_prompt_injection]",
+    "suite": "tests.unit.test_adversarial.TestAdversarialInputValidation",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_adversarial_input_handled[adv_sql_injection]",
+    "suite": "tests.unit.test_adversarial.TestAdversarialInputValidation",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_adversarial_input_handled[adv_template_injection]",
+    "suite": "tests.unit.test_adversarial.TestAdversarialInputValidation",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_adversarial_input_handled[adv_schema_leak]",
+    "suite": "tests.unit.test_adversarial.TestAdversarialInputValidation",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_adversarial_input_handled[adv_xql_injection]",
+    "suite": "tests.unit.test_adversarial.TestAdversarialInputValidation",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_adversarial_input_handled[adv_unicode_trick]",
+    "suite": "tests.unit.test_adversarial.TestAdversarialInputValidation",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_adversarial_input_handled[adv_empty]",
+    "suite": "tests.unit.test_adversarial.TestAdversarialInputValidation",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_adversarial_input_handled[adv_long_input]",
+    "suite": "tests.unit.test_adversarial.TestAdversarialInputValidation",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_injection_coverage",
+    "suite": "tests.unit.test_adversarial.TestAdversarialBackTranslation",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_empty_rql",
+    "suite": "tests.unit.test_adversarial.TestAdversarialBackTranslation",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_empty_xql",
+    "suite": "tests.unit.test_adversarial.TestAdversarialBackTranslation",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_health_returns_200",
+    "suite": "tests.unit.test_api.TestHealth",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_health_includes_gold_standard_count",
+    "suite": "tests.unit.test_api.TestHealth",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_health_includes_uptime",
+    "suite": "tests.unit.test_api.TestHealth",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_basic_translation",
+    "suite": "tests.unit.test_api.TestTranslate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_translate_returns_trace_id",
+    "suite": "tests.unit.test_api.TestTranslate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_translate_returns_confidence",
+    "suite": "tests.unit.test_api.TestTranslate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_translate_with_target_lang",
+    "suite": "tests.unit.test_api.TestTranslate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_translate_with_cloud_rule_guidelines",
+    "suite": "tests.unit.test_api.TestTranslate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_translate_parity_mode_requires_full_validation",
+    "suite": "tests.unit.test_api.TestTranslate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_translate_parity_mode_enabled_with_full",
+    "suite": "tests.unit.test_api.TestTranslate",
+    "status": "failed",
+    "message": "assert False is True"
+  },
+  {
+    "name": "test_translate_empty_query_returns_422",
+    "suite": "tests.unit.test_api.TestTranslate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_translate_includes_method",
+    "suite": "tests.unit.test_api.TestTranslate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_translate_includes_fixes_applied",
+    "suite": "tests.unit.test_api.TestTranslate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_translate_parser_autofix_applied",
+    "suite": "tests.unit.test_api.TestTranslate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_validate_valid_xql",
+    "suite": "tests.unit.test_api.TestValidate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_validate_invalid_xql",
+    "suite": "tests.unit.test_api.TestValidate",
+    "status": "failed",
+    "message": "AssertionError: assert 2 == 1\n +  where 2 = len([{'severity': 'warning', 'message': 'Live Cortex validation skipped: CC_API_URL / CC_API_KEY / CC_API_KEY_ID not confi...iables.', ...}, {'severity': 'error', 'message': 'missing dataset', 'rule_id': 'dataset', 'fix_suggestion': None, ...}])"
+  },
+  {
+    "name": "test_validate_returns_auto_fixed",
+    "suite": "tests.unit.test_api.TestValidate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_feedback_accepted",
+    "suite": "tests.unit.test_api.TestFeedback",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_feedback_missing_fields_422",
+    "suite": "tests.unit.test_api.TestFeedback",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_stats_returns_summary",
+    "suite": "tests.unit.test_api.TestStats",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_classify_returns_category",
+    "suite": "tests.unit.test_api.TestClassify",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_bulk_single_item",
+    "suite": "tests.unit.test_api.TestBulkTranslate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_bulk_multiple_items",
+    "suite": "tests.unit.test_api.TestBulkTranslate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_bulk_exceeds_max_returns_422",
+    "suite": "tests.unit.test_api.TestBulkTranslate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_bulk_handles_translation_error",
+    "suite": "tests.unit.test_api.TestBulkTranslate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_bulk_item_ids_auto_assigned",
+    "suite": "tests.unit.test_api.TestBulkTranslate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_bulk_item_ids_preserved",
+    "suite": "tests.unit.test_api.TestBulkTranslate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_save_correction",
+    "suite": "tests.unit.test_api.TestCorrections",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_retranslate",
+    "suite": "tests.unit.test_api.TestCorrections",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_connectivity_unconfigured",
+    "suite": "tests.unit.test_api.TestConnectivity",
+    "status": "failed",
+    "message": "assert 405 == 200\n +  where 405 = <Response [405 Method Not Allowed]>.status_code"
+  },
+  {
+    "name": "test_basic_clean",
+    "suite": "tests.unit.test_auto_fix.TestSanitizeAlias",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_dots_replaced",
+    "suite": "tests.unit.test_auto_fix.TestSanitizeAlias",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_special_chars_removed",
+    "suite": "tests.unit.test_auto_fix.TestSanitizeAlias",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_leading_digit_prefixed",
+    "suite": "tests.unit.test_auto_fix.TestSanitizeAlias",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_empty_fallback",
+    "suite": "tests.unit.test_auto_fix.TestSanitizeAlias",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_long_truncation",
+    "suite": "tests.unit.test_auto_fix.TestSanitizeAlias",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_consecutive_underscores_collapsed",
+    "suite": "tests.unit.test_auto_fix.TestSanitizeAlias",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_result_is_lowercase",
+    "suite": "tests.unit.test_auto_fix.TestSanitizeAlias",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_camel_case",
+    "suite": "tests.unit.test_auto_fix.TestToSnakeCase",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_pascal_case",
+    "suite": "tests.unit.test_auto_fix.TestToSnakeCase",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_acronym_handling",
+    "suite": "tests.unit.test_auto_fix.TestToSnakeCase",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_already_snake",
+    "suite": "tests.unit.test_auto_fix.TestToSnakeCase",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_empty",
+    "suite": "tests.unit.test_auto_fix.TestToSnakeCase",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_special_chars",
+    "suite": "tests.unit.test_auto_fix.TestToSnakeCase",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_empty_input",
+    "suite": "tests.unit.test_auto_fix.TestAutoFixBasic",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_none_passthrough",
+    "suite": "tests.unit.test_auto_fix.TestAutoFixBasic",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_uppercase_and_or_lowered",
+    "suite": "tests.unit.test_auto_fix.TestAutoFixBasic",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_double_spaces_collapsed",
+    "suite": "tests.unit.test_auto_fix.TestAutoFixBasic",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_single_quotes_to_double",
+    "suite": "tests.unit.test_auto_fix.TestAutoFixBasic",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_valid_xql_preserved",
+    "suite": "tests.unit.test_auto_fix.TestAutoFixBasic",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_rql_equals_replaced",
+    "suite": "tests.unit.test_auto_fix.TestAutoFixOperatorLeaks",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_is_true_to_string_true",
+    "suite": "tests.unit.test_auto_fix.TestAutoFixOperatorLeaks",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_is_false_to_string_false",
+    "suite": "tests.unit.test_auto_fix.TestAutoFixOperatorLeaks",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_does_not_exist_to_null",
+    "suite": "tests.unit.test_auto_fix.TestAutoFixOperatorLeaks",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_exists_to_not_null",
+    "suite": "tests.unit.test_auto_fix.TestAutoFixOperatorLeaks",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_residual_array_bracket_removed",
+    "suite": "tests.unit.test_auto_fix.TestAutoFixArrayPatterns",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_any_quantifier_leak_fixed",
+    "suite": "tests.unit.test_auto_fix.TestAutoFixArrayPatterns",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_asset_inventory_dataset",
+    "suite": "tests.unit.test_auto_fix.TestAutoFixDatasetAware",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_original_rql_passthrough",
+    "suite": "tests.unit.test_auto_fix.TestAutoFixDatasetAware",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_bracket_notation_conversion",
+    "suite": "tests.unit.test_auto_fix.TestAutoFixDocumentedEdgeCases",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_bare_at_element_quoted",
+    "suite": "tests.unit.test_auto_fix.TestAutoFixDocumentedEdgeCases",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_simple_arrayexpand_filter_rewrite",
+    "suite": "tests.unit.test_auto_fix.TestArrayExpandOptimization",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_arrayexpand_with_projection_kept",
+    "suite": "tests.unit.test_auto_fix.TestArrayExpandOptimization",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_is_empty_to_null",
+    "suite": "tests.unit.test_auto_fix.TestAutoFixFilterOperators",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_is_not_empty_to_not_null",
+    "suite": "tests.unit.test_auto_fix.TestAutoFixFilterOperators",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_does_not_contain_syntax",
+    "suite": "tests.unit.test_auto_fix.TestAutoFixFilterOperators",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_not_field_contains_normalized",
+    "suite": "tests.unit.test_auto_fix.TestAutoFixFilterOperators",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_does_not_exist_to_null",
+    "suite": "tests.unit.test_auto_fix.TestAutoFixFilterOperators",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_exists_to_not_null",
+    "suite": "tests.unit.test_auto_fix.TestAutoFixFilterOperators",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_is_empty_leak_detected",
+    "suite": "tests.unit.test_auto_fix.TestValidatorFilterLeaks",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_is_not_empty_leak_detected",
+    "suite": "tests.unit.test_auto_fix.TestValidatorFilterLeaks",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_size_operator_leak_detected",
+    "suite": "tests.unit.test_auto_fix.TestValidatorFilterLeaks",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_does_not_start_with_leak_detected",
+    "suite": "tests.unit.test_auto_fix.TestValidatorFilterLeaks",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_member_of_leak_detected",
+    "suite": "tests.unit.test_auto_fix.TestValidatorFilterLeaks",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_clean_xql_no_leaks",
+    "suite": "tests.unit.test_auto_fix.TestValidatorFilterLeaks",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_normalize_unknown_field",
+    "suite": "tests.unit.test_autofix_generator.TestErrorPatternClusterer",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_normalize_column_and_line",
+    "suite": "tests.unit.test_autofix_generator.TestErrorPatternClusterer",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_add_and_cluster_errors",
+    "suite": "tests.unit.test_autofix_generator.TestErrorPatternClusterer",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_samples_limited_to_five",
+    "suite": "tests.unit.test_autofix_generator.TestErrorPatternClusterer",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_validate_syntax_valid",
+    "suite": "tests.unit.test_autofix_generator.TestFixValidator",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_validate_syntax_invalid",
+    "suite": "tests.unit.test_autofix_generator.TestFixValidator",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_validate_execution_success",
+    "suite": "tests.unit.test_autofix_generator.TestFixValidator",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_validate_execution_no_function",
+    "suite": "tests.unit.test_autofix_generator.TestFixValidator",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_get_next_fix_number",
+    "suite": "tests.unit.test_autofix_generator.TestAutoFixInserter",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_to_dict",
+    "suite": "tests.unit.test_autofix_generator.TestGeneratedFix",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_cluster_mock_errors",
+    "suite": "tests.unit.test_autofix_generator.TestIntegration",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_simple_pipeline",
+    "suite": "tests.unit.test_autofix_per_fix.TestParseXqlStages",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_nested_subquery_not_split",
+    "suite": "tests.unit.test_autofix_per_fix.TestParseXqlStages",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_quoted_pipe_not_split",
+    "suite": "tests.unit.test_autofix_per_fix.TestParseXqlStages",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_roundtrip",
+    "suite": "tests.unit.test_autofix_per_fix.TestParseXqlStages",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_empty_string",
+    "suite": "tests.unit.test_autofix_per_fix.TestParseXqlStages",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_config_preamble",
+    "suite": "tests.unit.test_autofix_per_fix.TestParseXqlStages",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_normalizes_keywords[dataset = x | filter a = 1 AND b = 2- and ]",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix1UppercaseAndOr",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_normalizes_keywords[dataset = x | filter a = 1 OR b = 2- or ]",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix1UppercaseAndOr",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_normalizes_keywords[dataset = x | filter name = \"AND\"-\"AND\"]",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix1UppercaseAndOr",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_eq_zero",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix5ArrayLengthScalar",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_gt_zero",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix5ArrayLengthScalar",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_after_fix60_patterns",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix5bCatchAll",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_bare_at_element_quoted",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix14AtElement",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_single_to_double",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix17SingleQuotes",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_field_with_equivalent",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix24PrismaFieldTransform",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_field_without_equivalent_gets_marker",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix24PrismaFieldTransform",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_strips_inactive_alias",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix26JoinAware",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_preserves_active_join_alias",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix26JoinAware",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_unquoted_bool_gets_quoted",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix33BooleanTypeSafety",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_xdm_field_bool_unchanged",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix33BooleanTypeSafety",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_optimizes_simple_case",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix52ArrayexpandCompGuard",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_preserves_when_comp_follows",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix52ArrayexpandCompGuard",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_hyphen_replaced",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix57HyphenAliases",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_noop_for_asset_inventory",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix80DatasetConditional",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_skips_cloud_audit_logs",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix80DatasetConditional",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_preserves_provider_for_provider_unique",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix87ProviderTypeIdGuard",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_keeps_for_ambiguous",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix87ProviderTypeIdGuard",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_provider_preserved_for_all_prefixes[AWS_]",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix87ProviderTypeIdGuard",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_provider_preserved_for_all_prefixes[AMAZON_]",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix87ProviderTypeIdGuard",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_provider_preserved_for_all_prefixes[AZURE_]",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix87ProviderTypeIdGuard",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_provider_preserved_for_all_prefixes[GOOGLE_]",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix87ProviderTypeIdGuard",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_provider_preserved_for_all_prefixes[OCI_]",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix87ProviderTypeIdGuard",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_service_level_prefix_keeps_provider[EC2_]",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix87ProviderTypeIdGuard",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_service_level_prefix_keeps_provider[RDS_]",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix87ProviderTypeIdGuard",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_service_level_prefix_keeps_provider[S3_]",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix87ProviderTypeIdGuard",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_service_level_prefix_keeps_provider[LAMBDA_]",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix87ProviderTypeIdGuard",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_service_level_prefix_keeps_provider[CLOUDTRAIL_]",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix87ProviderTypeIdGuard",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_lowercase_triggers_config",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix87ProviderTypeIdGuard",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_rql_ignore_case_triggers_config",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix87ProviderTypeIdGuard",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_uppercase_fixed_after_late_rewrite",
+    "suite": "tests.unit.test_autofix_per_fix.TestReconciliationPass",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_trace_returns_tuple",
+    "suite": "tests.unit.test_autofix_per_fix.TestFixTrace",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_no_trace_returns_string",
+    "suite": "tests.unit.test_autofix_per_fix.TestFixTrace",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_trace_only_records_changes",
+    "suite": "tests.unit.test_autofix_per_fix.TestFixTrace",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_all_fixes_applied_in_order",
+    "suite": "tests.unit.test_autofix_per_fix.TestPhaseHeaders",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_pushes_type_filter_before_alter",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix30PushdownFilters",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_does_not_push_user_var_filter",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix30PushdownFilters",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_unquotes_false",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix97ConfigBooleanQuotes",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_unquotes_true",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix97ConfigBooleanQuotes",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_leaves_bare_boolean_untouched",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix97ConfigBooleanQuotes",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_chained_string_value",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix98ChainedAlterAssignment",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_chained_null_value",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix98ChainedAlterAssignment",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_normal_alter_not_affected",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix98ChainedAlterAssignment",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_unquotes_true_for_to_boolean_var",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix99ToBooleanBare",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_unquotes_false_for_to_boolean_var",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix99ToBooleanBare",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_non_to_boolean_var_keeps_quotes",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix99ToBooleanBare",
+    "status": "failed",
+    "message": "assert 'status = \"true\"' in 'dataset = asset_inventory\\n| alter status_val = json_extract_scalar(xdm.asset.raw_fields,\"$.status\")\\n| filter status_val = \"true\"\\n| fields xdm.asset.id as asset_id, xdm.asset.type.id as asset_type_id'"
+  },
+  {
+    "name": "test_rewrites_not_in_bare_var",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix100NotInBareArray",
+    "status": "failed",
+    "message": "assert ('_negated_arr_' in 'dataset = asset_inventory\\n| filter xdm.asset.type.id = \"X\"\\n| alter negated_arr_1 = array_any(x_applicationLoadBalan...oadBalancerArn)\\n| filter negated_arr_1 = false\\n| fields xdm.asset.id as asset_id, xdm.asset.type.id as asset_type_id' or 'not array_any' in 'dataset = asset_inventory\\n| filter xdm.asset.type.id = \"X\"\\n| alter negated_arr_1 = array_any(x_applicationLoadBalan...oadBalancerArn)\\n| filter negated_arr_1 = false\\n| fields xdm.asset.id as asset_id, xdm.a...\n[truncated; full report in element text]"
+  },
+  {
+    "name": "test_not_in_with_parens_untouched",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix100NotInBareArray",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_strips_alias_in_filter_and_fields",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix26RevisedAliasStripping",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_no_join_strips_xy_normally",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix26RevisedAliasStripping",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_preserves_scalar_array_function",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix101ScalarArray",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_leaves_valid_functions",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix101ScalarArray",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_moves_filter_after_defining_alter",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix102FilterBeforeAlter",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_preserves_already_correct_order",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix102FilterBeforeAlter",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_dotted_field_not_confused_with_alter_var",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix102FilterBeforeAlter",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_reorders_filter_with_subquery_referencing_undefined_var",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix102FilterBeforeAlter",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_unquotes_to_string",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix103UnquoteFunctions",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_unquotes_json_extract_scalar",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix103UnquoteFunctions",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_leaves_already_unquoted_functions",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix103UnquoteFunctions",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_preserves_explicit_form",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix104ElementSugar",
+    "status": "failed",
+    "message": "assert 'json_extract_scalar(\"@element\", \"$.DomainName\")' in 'dataset = asset_inventory\\n| filter array_any(arr, json_extract_scalar(\"@element\",\"$.DomainName\") != null)\\n| fields xdm.asset.id as asset_id, xdm.asset.type.id as asset_type_id'"
+  },
+  {
+    "name": "test_removes_to_json_string_antipattern",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix104ElementSugar",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_rewrites_arrow_inside_array_any",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix104dElementArrowInArray",
+    "status": "failed",
+    "message": "assert 'json_extract_scalar(\"@element\", \"$.Protocol\")' in 'dataset = asset_inventory\\n| filter array_any(listeners, json_extract_scalar(\"@element\",\"$.Protocol\") = \"HTTPS\")\\n| fields xdm.asset.id as asset_id, xdm.asset.type.id as asset_type_id'"
+  },
+  {
+    "name": "test_rewrites_arrow_inside_arrayfilter",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix104dElementArrowInArray",
+    "status": "failed",
+    "message": "assert 'json_extract_scalar(\"@element\", \"$.status\")' in 'dataset = asset_inventory\\n| filter array_length(arrayfilter(items, json_extract_scalar(\"@element\",\"$.status\") = \"active\")) > 0\\n| fields xdm.asset.id as asset_id, xdm.asset.type.id as asset_type_id'"
+  },
+  {
+    "name": "test_preserves_arrow_outside_array_func",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix104dElementArrowInArray",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_converts_outside_array_func",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix109ArrowSugarGuard",
+    "status": "failed",
+    "message": "assert 'xdm.asset.raw_fields -> encryption.enabled' in 'dataset = asset_inventory\\n| alter enc = json_extract_scalar(xdm.asset.raw_fields,\"$.encryption.enabled\")\\n| fields xdm.asset.id as asset_id, xdm.asset.type.id as asset_type_id'"
+  },
+  {
+    "name": "test_skips_inside_array_any",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix109ArrowSugarGuard",
+    "status": "failed",
+    "message": "assert 'json_extract_scalar(\"@element\", \"$.DomainName\")' in 'dataset = asset_inventory\\n| filter array_any(arr, json_extract_scalar(\"@element\",\"$.DomainName\") contains \"*\")\\n| fields xdm.asset.id as asset_id, xdm.asset.type.id as asset_type_id'"
+  },
+  {
+    "name": "test_skips_inside_arrayfilter",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix109ArrowSugarGuard",
+    "status": "failed",
+    "message": "assert 'json_extract_scalar(\"@element\", \"$.status\")' in 'dataset = asset_inventory\\n| alter filtered = arrayfilter(items, json_extract_scalar(\"@element\",\"$.status\") = \"active\")\\n| fields xdm.asset.id as asset_id, xdm.asset.type.id as asset_type_id'"
+  },
+  {
+    "name": "test_skips_inside_arraymap",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix109ArrowSugarGuard",
+    "status": "failed",
+    "message": "assert 'json_extract_scalar(\"@element\", \"$.name\")' in 'dataset = asset_inventory\\n| alter names = arraymap(items, json_extract_scalar(\"@element\",\"$.name\"))\\n| fields xdm.asset.id as asset_id, xdm.asset.type.id as asset_type_id'"
+  },
+  {
+    "name": "test_contains_star_inside_array_any_preserved",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix105WildcardContains",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_contains_star_top_level_becomes_not_null",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix105WildcardContains",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_not_contains_star_becomes_null",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix105WildcardContains",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_contains_real_value_unchanged",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix105WildcardContains",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_dot_notation_converted",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix106BracketNotation",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_bracket_notation_unchanged",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix106BracketNotation",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_nested_path_converted",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix106BracketNotation",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_multiple_extracts_all_converted",
+    "suite": "tests.unit.test_autofix_per_fix.TestFix106BracketNotation",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_default_temperature",
+    "suite": "tests.unit.test_config",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_env_override_temperature",
+    "suite": "tests.unit.test_config",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_examples_file_constant",
+    "suite": "tests.unit.test_config",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_env_override_vertex_model",
+    "suite": "tests.unit.test_config",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_settings_singleton",
+    "suite": "tests.unit.test_config",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_settings_vertex_defaults",
+    "suite": "tests.unit.test_config",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_records_a_translation_with_an_unresolved_field",
+    "suite": "tests.unit.test_field_gaps",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_ignores_a_translation_with_no_gaps",
+    "suite": "tests.unit.test_field_gaps",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_captures_below_the_review_threshold",
+    "suite": "tests.unit.test_field_gaps",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_deduplicates_by_normalized_rql",
+    "suite": "tests.unit.test_field_gaps",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_load_survives_a_truncated_line",
+    "suite": "tests.unit.test_field_gaps",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_summary_and_report",
+    "suite": "tests.unit.test_field_gaps",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_report_explains_each_provenance",
+    "suite": "tests.unit.test_field_gaps",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_ambient_capture_is_suppressed_under_pytest",
+    "suite": "tests.unit.test_field_gaps",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_capture_never_raises",
+    "suite": "tests.unit.test_field_gaps",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_truncated_mid_identifier_with_open_parens",
+    "suite": "tests.unit.test_guardrails.TestTruncationDetection",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_truncated_ends_with_pipe",
+    "suite": "tests.unit.test_guardrails.TestTruncationDetection",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_truncated_ends_with_comma",
+    "suite": "tests.unit.test_guardrails.TestTruncationDetection",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_truncated_ends_with_operator",
+    "suite": "tests.unit.test_guardrails.TestTruncationDetection",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_valid_query_not_truncated",
+    "suite": "tests.unit.test_guardrails.TestTruncationDetection",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_empty_is_truncated",
+    "suite": "tests.unit.test_guardrails.TestTruncationDetection",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_missing_closing",
+    "suite": "tests.unit.test_guardrails.TestParenBalance",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_extra_closing",
+    "suite": "tests.unit.test_guardrails.TestParenBalance",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_already_balanced",
+    "suite": "tests.unit.test_guardrails.TestParenBalance",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_event_query_wrong_dataset",
+    "suite": "tests.unit.test_guardrails.TestDatasetCorrection",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_inventory_query_correct_dataset",
+    "suite": "tests.unit.test_guardrails.TestDatasetCorrection",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_no_query_type_no_change",
+    "suite": "tests.unit.test_guardrails.TestDatasetCorrection",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_appends_fields_stage",
+    "suite": "tests.unit.test_guardrails.TestCloudRuleEnforcement",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_adds_missing_aliases",
+    "suite": "tests.unit.test_guardrails.TestCloudRuleEnforcement",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_already_compliant",
+    "suite": "tests.unit.test_guardrails.TestCloudRuleEnforcement",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_alter_vars_projected",
+    "suite": "tests.unit.test_guardrails.TestCloudRuleEnforcement",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_wrong_dataset_rejected_not_rewritten",
+    "suite": "tests.unit.test_guardrails.TestCloudRuleEnforcement",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_multi_dataset_declaration_rejected",
+    "suite": "tests.unit.test_guardrails.TestCloudRuleEnforcement",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_cross_dataset_join_rejected",
+    "suite": "tests.unit.test_guardrails.TestCloudRuleEnforcement",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_same_dataset_join_amends_only_outer_fields",
+    "suite": "tests.unit.test_guardrails.TestCloudRuleEnforcement",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_fixes_single_quotes",
+    "suite": "tests.unit.test_guardrails.TestSingleQuotedJsonPaths",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_already_double_quoted",
+    "suite": "tests.unit.test_guardrails.TestSingleQuotedJsonPaths",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_rejects_truncated",
+    "suite": "tests.unit.test_guardrails.TestFullGuardrails",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_rejects_empty",
+    "suite": "tests.unit.test_guardrails.TestFullGuardrails",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_fixes_and_accepts_good_output",
+    "suite": "tests.unit.test_guardrails.TestFullGuardrails",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_cloud_rule_enforcement",
+    "suite": "tests.unit.test_guardrails.TestFullGuardrails",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_double_equals_fixed",
+    "suite": "tests.unit.test_guardrails.TestFullGuardrails",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_removes_sql_on_keyword",
+    "suite": "tests.unit.test_guardrails.TestJoinSyntax",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_contains_in_join_becomes_post_filter",
+    "suite": "tests.unit.test_guardrails.TestJoinSyntax",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_bare_contains_unchanged",
+    "suite": "tests.unit.test_guardrails.TestJoinSyntax",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_not_contains_preserved",
+    "suite": "tests.unit.test_guardrails.TestJoinSyntax",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_tilde_contains_rewritten_to_contains",
+    "suite": "tests.unit.test_guardrails.TestJoinSyntax",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_no_join_no_change",
+    "suite": "tests.unit.test_guardrails.TestJoinSyntax",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_contains_inside_string_literal_untouched",
+    "suite": "tests.unit.test_guardrails.TestJoinSyntax",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_contains_outside_string_unchanged",
+    "suite": "tests.unit.test_guardrails.TestJoinSyntax",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_core_fields",
+    "suite": "tests.unit.test_ir_bridge.TestFromLegacy",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_complexity_mapping",
+    "suite": "tests.unit.test_ir_bridge.TestFromLegacy",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_cloud_provider_mapping",
+    "suite": "tests.unit.test_ir_bridge.TestFromLegacy",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_query_type_mapping",
+    "suite": "tests.unit.test_ir_bridge.TestFromLegacy",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_json_conditions_structured",
+    "suite": "tests.unit.test_ir_bridge.TestFromLegacy",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_join_clause_created_when_has_join",
+    "suite": "tests.unit.test_ir_bridge.TestFromLegacy",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_no_join_clause_when_no_join",
+    "suite": "tests.unit.test_ir_bridge.TestFromLegacy",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_extended_fields_fidelity",
+    "suite": "tests.unit.test_ir_bridge.TestFromLegacy",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_out_of_scope_fields",
+    "suite": "tests.unit.test_ir_bridge.TestFromLegacy",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_minimal_parsed_query",
+    "suite": "tests.unit.test_ir_bridge.TestFromLegacy",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_computed_fields",
+    "suite": "tests.unit.test_ir_bridge.TestFromLegacy",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_count_less_than_1",
+    "suite": "tests.unit.test_ir_bridge.TestFromLegacy",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_fast_path_uses_parsed_query",
+    "suite": "tests.unit.test_ir_bridge.TestPipelineBuildIR",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_fallback_when_no_parsed_query",
+    "suite": "tests.unit.test_ir_bridge.TestPipelineBuildIR",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_fast_path_preserves_extended_fields",
+    "suite": "tests.unit.test_ir_bridge.TestPipelineBuildIR",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_parsed_rql_reexported_from_translator",
+    "suite": "tests.unit.test_ir_bridge",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_simple_config_query",
+    "suite": "tests.unit.test_ir_bridge.TestNormalizeIR",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_array_quantifier_query",
+    "suite": "tests.unit.test_ir_bridge.TestNormalizeIR",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_array_wildcard_query",
+    "suite": "tests.unit.test_ir_bridge.TestNormalizeIR",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_join_query",
+    "suite": "tests.unit.test_ir_bridge.TestNormalizeIR",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_aggregate_count",
+    "suite": "tests.unit.test_ir_bridge.TestNormalizeIR",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_empty_query_minimal_ir",
+    "suite": "tests.unit.test_ir_bridge.TestNormalizeIR",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_render_output_is_string",
+    "suite": "tests.unit.test_ir_bridge.TestNormalizeIR",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_emit_creates_jsonl_entry",
+    "suite": "tests.unit.test_learning_bus.TestLearningBus",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_subscriber_receives_event",
+    "suite": "tests.unit.test_learning_bus.TestLearningBus",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_load_events_with_filter",
+    "suite": "tests.unit.test_learning_bus.TestLearningBus",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_count_corrections",
+    "suite": "tests.unit.test_learning_bus.TestLearningBus",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_multiple_emits_append",
+    "suite": "tests.unit.test_learning_bus.TestLearningBus",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_router_escalates_low_accuracy_api",
+    "suite": "tests.unit.test_learning_bus.TestAdaptiveRouter",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_router_keeps_high_accuracy_api",
+    "suite": "tests.unit.test_learning_bus.TestAdaptiveRouter",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_router_ignores_low_sample_count",
+    "suite": "tests.unit.test_learning_bus.TestAdaptiveRouter",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_router_gold_standard_bypass",
+    "suite": "tests.unit.test_learning_bus.TestAdaptiveRouter",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_router_no_feedback_store",
+    "suite": "tests.unit.test_learning_bus.TestAdaptiveRouter",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_router_no_api_name",
+    "suite": "tests.unit.test_learning_bus.TestAdaptiveRouter",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_dual_path_disabled_by_config",
+    "suite": "tests.unit.test_learning_bus.TestBestOfN",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_dual_path_enabled_for_llm_route",
+    "suite": "tests.unit.test_learning_bus.TestBestOfN",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_dual_path_not_for_gold_standard",
+    "suite": "tests.unit.test_learning_bus.TestBestOfN",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_dual_path_requires_cognitive",
+    "suite": "tests.unit.test_learning_bus.TestBestOfN",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_select_best_prefers_valid_grammar",
+    "suite": "tests.unit.test_learning_bus.TestBestOfN",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_select_best_prefers_live_validated",
+    "suite": "tests.unit.test_learning_bus.TestBestOfN",
+    "status": "failed",
+    "message": "AssertionError: assert 'tier1 xql' == 'cognitive xql'\n  \n  - cognitive xql\n  + tier1 xql"
+  },
+  {
+    "name": "test_shadow_mode_unchanged",
+    "suite": "tests.unit.test_learning_bus.TestBestOfN",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_get_accuracy_no_data",
+    "suite": "tests.unit.test_learning_bus.TestFeedbackStoreAccuracy",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_get_accuracy_with_stats",
+    "suite": "tests.unit.test_learning_bus.TestFeedbackStoreAccuracy",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_hindsight_includes_automated_events",
+    "suite": "tests.unit.test_learning_bus.TestHindsightWithBusEvents",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_defaults",
+    "suite": "tests.unit.test_parity_gate.TestSynchronousParityResult",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_verified_result",
+    "suite": "tests.unit.test_parity_gate.TestSynchronousParityResult",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_corrected_result",
+    "suite": "tests.unit.test_parity_gate.TestSynchronousParityResult",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_verified_path",
+    "suite": "tests.unit.test_parity_gate.TestRunSynchronous",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_verified_100_saves_gold_standard",
+    "suite": "tests.unit.test_parity_gate.TestRunSynchronous",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_api_error_returns_failed",
+    "suite": "tests.unit.test_parity_gate.TestRunSynchronous",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_mismatch_triggers_correction_loop",
+    "suite": "tests.unit.test_parity_gate.TestRunSynchronous",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_correction_failure_returns_failed",
+    "suite": "tests.unit.test_parity_gate.TestRunSynchronous",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_exception_returns_failed",
+    "suite": "tests.unit.test_parity_gate.TestRunSynchronous",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_strict_98_tolerance",
+    "suite": "tests.unit.test_parity_gate.TestRunSynchronous",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_parity_mode_synchronous_verified",
+    "suite": "tests.unit.test_parity_gate.TestTranslateParityMode",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_parity_mode_synchronous_corrected",
+    "suite": "tests.unit.test_parity_gate.TestTranslateParityMode",
+    "status": "failed",
+    "message": "assert 'dataset = cl...EC2 Instance\"' == 'dataset = cl...ec2-instance\"'\n  \n  Skipping 56 identical leading characters in diff, use -v to show\n  - asset_type_id = \"ec2-instance\"\n  ?           ---    ^^ ^^\n  + asset_type = \"EC2 Instance\"\n  ?               ^^ ^^"
+  },
+  {
+    "name": "test_parity_mode_false_no_parity_fields",
+    "suite": "tests.unit.test_parity_gate.TestTranslateParityMode",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_parity_disabled_in_config_skips_gate",
+    "suite": "tests.unit.test_parity_gate.TestTranslateParityMode",
+    "status": "failed",
+    "message": "AssertionError: assert 'verified' == ''\n  \n  + verified"
+  },
+  {
+    "name": "test_default_settings",
+    "suite": "tests.unit.test_parity_gate.TestParityConfig",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_settings_from_env",
+    "suite": "tests.unit.test_parity_gate.TestParityConfig",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_rule_engine_strategy",
+    "suite": "tests.unit.test_pipeline.TestTranslationServiceRouting",
+    "status": "failed",
+    "message": "assert 'EC2_INSTANCE' in 'dataset = cloud_inventory | filter provider = \"AWS\" and asset_type = \"EC2 Instance\"'\n +  where 'dataset = cloud_inventory | filter provider = \"AWS\" and asset_type = \"EC2 Instance\"' = TranslationResult(source_query=\"config from cloud.resource where api.name = 'aws-ec2-describe-instances'\", translated_...alidation_ms': 0.1, 'total_ms': 0.1}}, parity_status='', parity_match_rate=0.0, parity_trace_id='', needs_review=False).translated_query"
+  },
+  {
+    "name": "test_gold_standard_strategy",
+    "suite": "tests.unit.test_pipeline.TestTranslationServiceRouting",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_llm_escalation_when_router_recommends",
+    "suite": "tests.unit.test_pipeline.TestTranslationServiceRouting",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_fallback_triggers_llm",
+    "suite": "tests.unit.test_pipeline.TestTranslationServiceRouting",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_trace_id_present",
+    "suite": "tests.unit.test_pipeline.TestTranslationServiceResult",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_processing_time_positive",
+    "suite": "tests.unit.test_pipeline.TestTranslationServiceResult",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_confidence_in_range",
+    "suite": "tests.unit.test_pipeline.TestTranslationServiceResult",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_ir_populated",
+    "suite": "tests.unit.test_pipeline.TestTranslationServiceResult",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_valid_xql_passes",
+    "suite": "tests.unit.test_pipeline.TestTranslationServiceValidation",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_no_llm_means_no_repair",
+    "suite": "tests.unit.test_pipeline.TestTranslationServiceValidation",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_gold_standard_high_confidence",
+    "suite": "tests.unit.test_pipeline.TestTranslationServiceConfidence",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_fallback_low_confidence",
+    "suite": "tests.unit.test_pipeline.TestTranslationServiceConfidence",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_join_schema_fallbacks_reduce_confidence",
+    "suite": "tests.unit.test_pipeline.TestTranslationServiceConfidence",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_unresolved_join_penalty_is_stronger_than_fallback_only",
+    "suite": "tests.unit.test_pipeline.TestTranslationServiceConfidence",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_low_certainty_join_uses_cognitive_path",
+    "suite": "tests.unit.test_pipeline.TestLowCertaintyJoinEscalation",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_every_corpus_rql_is_relayable",
+    "suite": "tests.unit.test_query_guard.TestNoFalsePositives",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_every_corpus_xql_is_relayable",
+    "suite": "tests.unit.test_query_guard.TestNoFalsePositives",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_escaped_quote_inside_a_string_is_balanced",
+    "suite": "tests.unit.test_query_guard.TestNoFalsePositives",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_oversized_query",
+    "suite": "tests.unit.test_query_guard.TestRejections",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_empty_query",
+    "suite": "tests.unit.test_query_guard.TestRejections",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_control_and_format_characters[a\\x00b]",
+    "suite": "tests.unit.test_query_guard.TestRejections",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_control_and_format_characters[a\\u202eb]",
+    "suite": "tests.unit.test_query_guard.TestRejections",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_control_and_format_characters[a\\ufeffb]",
+    "suite": "tests.unit.test_query_guard.TestRejections",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_control_and_format_characters[a\\x1bb]",
+    "suite": "tests.unit.test_query_guard.TestRejections",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_unbalanced_delimiters[config from cloud.resource where api.name IN ('a','b']",
+    "suite": "tests.unit.test_query_guard.TestRejections",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_unbalanced_delimiters[config from cloud.resource where json.rule = 'x' and (a = 1]",
+    "suite": "tests.unit.test_query_guard.TestRejections",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_unbalanced_delimiters[config from cloud.resource where api.name = 'unterminated]",
+    "suite": "tests.unit.test_query_guard.TestRejections",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_excessive_nesting",
+    "suite": "tests.unit.test_query_guard.TestRejections",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_non_rql_is_not_relayed_to_prisma['; DROP TABLE users; --]",
+    "suite": "tests.unit.test_query_guard.TestRejections",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_non_rql_is_not_relayed_to_prisma[<script>alert(1)</script>]",
+    "suite": "tests.unit.test_query_guard.TestRejections",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_non_rql_is_not_relayed_to_prisma[dataset = asset_inventory | filter xdm.asset.provider = \"AWS\"]",
+    "suite": "tests.unit.test_query_guard.TestRejections",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_valid_query_passes",
+    "suite": "tests.unit.test_query_guard.TestRejections",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_control_character_validator_rejects",
+    "suite": "tests.unit.test_query_guard.TestRejections",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_prisma_does_not_send_rejected_rql",
+    "suite": "tests.unit.test_query_guard.TestOutboundChokePoints",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_cortex_does_not_send_rejected_xql",
+    "suite": "tests.unit.test_query_guard.TestOutboundChokePoints",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_oversized_query_is_422",
+    "suite": "tests.unit.test_query_guard.TestApiBoundary",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_control_character_is_422_not_500",
+    "suite": "tests.unit.test_query_guard.TestApiBoundary",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_oversized_batch_is_422",
+    "suite": "tests.unit.test_query_guard.TestApiBoundary",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_malformed_rql_query_is_400_without_detail['; DROP TABLE users; --]",
+    "suite": "tests.unit.test_query_guard.TestApiBoundary",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_malformed_rql_query_is_400_without_detail[config from cloud.resource where api.name IN ('a','b']",
+    "suite": "tests.unit.test_query_guard.TestApiBoundary",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_gold_match_returns_gold_strategy",
+    "suite": "tests.unit.test_router.TestGoldStandardRouting",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_override_match_returns_gold_strategy",
+    "suite": "tests.unit.test_router.TestGoldStandardRouting",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_gold_match_has_low_latency",
+    "suite": "tests.unit.test_router.TestGoldStandardRouting",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_count_less_than_pattern",
+    "suite": "tests.unit.test_router.TestLLMRequiredPatterns",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_jsonpath_predicate_filter",
+    "suite": "tests.unit.test_router.TestLLMRequiredPatterns",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_windowcomp_pattern",
+    "suite": "tests.unit.test_router.TestLLMRequiredPatterns",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_triple_nested_wildcards",
+    "suite": "tests.unit.test_router.TestLLMRequiredPatterns",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_out_of_scope_routes_to_llm",
+    "suite": "tests.unit.test_router.TestOutOfScopeRouting",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_out_of_scope_reason_in_reason",
+    "suite": "tests.unit.test_router.TestOutOfScopeRouting",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_cascading_join_routes_to_llm",
+    "suite": "tests.unit.test_router.TestJoinRouting",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_simple_join_stays_rule_engine",
+    "suite": "tests.unit.test_router.TestJoinRouting",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_count_less_than_1_routes_to_rule_engine",
+    "suite": "tests.unit.test_router.TestCountRouting",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_simple_config_query",
+    "suite": "tests.unit.test_router.TestDefaultRouting",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_default_has_low_latency",
+    "suite": "tests.unit.test_router.TestDefaultRouting",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_decision_is_frozen",
+    "suite": "tests.unit.test_router.TestDefaultRouting",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_hard_with_array_routes_to_llm",
+    "suite": "tests.unit.test_router.TestComplexityRouting",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_hard_without_array_stays_rule_engine",
+    "suite": "tests.unit.test_router.TestComplexityRouting",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_bulk_endpoint_does_not_print_credentials",
+    "suite": "tests.unit.test_security_fixes.TestNoCredentialLogging",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_source_has_no_credential_print",
+    "suite": "tests.unit.test_security_fixes.TestNoCredentialLogging",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_cortex_session_verifies_by_default",
+    "suite": "tests.unit.test_security_fixes.TestOutboundTLS",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_cortex_ca_bundle_builds_context",
+    "suite": "tests.unit.test_security_fixes.TestOutboundTLS",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_cortex_verification_can_be_disabled_explicitly",
+    "suite": "tests.unit.test_security_fixes.TestOutboundTLS",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_no_warning_suppression_in_cortex_client",
+    "suite": "tests.unit.test_security_fixes.TestOutboundTLS",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_cortex_session_uses_the_tls_builder",
+    "suite": "tests.unit.test_security_fixes.TestOutboundTLS",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_frontend_client_has_no_hardcoded_verify_false",
+    "suite": "tests.unit.test_security_fixes.TestOutboundTLS",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_server_connectivity_probe_has_no_verify_false",
+    "suite": "tests.unit.test_security_fixes.TestOutboundTLS",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_injected_email_is_critical",
+    "suite": "tests.unit.test_security_fixes.TestLeakGate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_email_from_source_query_is_downgraded",
+    "suite": "tests.unit.test_security_fixes.TestLeakGate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_gate_blocks_and_flags_critical_leak",
+    "suite": "tests.unit.test_security_fixes.TestLeakGate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_gate_reports_without_blocking_when_configured",
+    "suite": "tests.unit.test_security_fixes.TestLeakGate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_clean_query_is_untouched",
+    "suite": "tests.unit.test_security_fixes.TestLeakGate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_gate_is_a_noop_when_detection_disabled",
+    "suite": "tests.unit.test_security_fixes.TestLeakGate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_detector_failure_never_breaks_translation",
+    "suite": "tests.unit.test_security_fixes.TestLeakGate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_unauthenticated_request_is_rejected_when_enforced",
+    "suite": "tests.unit.test_security_fixes.TestAuthentication",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_health_stays_public_for_probes",
+    "suite": "tests.unit.test_security_fixes.TestAuthentication",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_shared_token_authenticates",
+    "suite": "tests.unit.test_security_fixes.TestAuthentication",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_wrong_shared_token_is_rejected",
+    "suite": "tests.unit.test_security_fixes.TestAuthentication",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_local_development_stays_open",
+    "suite": "tests.unit.test_security_fixes.TestAuthentication",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_gold_standard_write_requires_admin",
+    "suite": "tests.unit.test_security_fixes.TestAdminAuthorization",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_admin_token_grants_access",
+    "suite": "tests.unit.test_security_fixes.TestAdminAuthorization",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_admin_token_comparison_rejects_wrong_value",
+    "suite": "tests.unit.test_security_fixes.TestAdminAuthorization",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_admin_routes_absent_when_disabled",
+    "suite": "tests.unit.test_security_fixes.TestAdminAuthorization",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_docs_routes_absent_when_enforcing",
+    "suite": "tests.unit.test_security_fixes.TestAdminAuthorization",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_bucket_allows_burst_then_throttles",
+    "suite": "tests.unit.test_security_fixes.TestRateLimiting",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_buckets_are_per_key",
+    "suite": "tests.unit.test_security_fixes.TestRateLimiting",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_tokens_refill_over_time",
+    "suite": "tests.unit.test_security_fixes.TestRateLimiting",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_endpoint_returns_429_when_exhausted",
+    "suite": "tests.unit.test_security_fixes.TestRateLimiting",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_fails_closed_without_configured_key_on_cloud_run",
+    "suite": "tests.unit.test_security_fixes.TestEncryptionKey",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_ephemeral_key_allowed_locally",
+    "suite": "tests.unit.test_security_fixes.TestEncryptionKey",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_configured_key_is_stable_and_not_ephemeral",
+    "suite": "tests.unit.test_security_fixes.TestEncryptionKey",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_escaped_newline_pem_is_accepted",
+    "suite": "tests.unit.test_security_fixes.TestEncryptionKey",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_roundtrip_encrypt_decrypt",
+    "suite": "tests.unit.test_security_fixes.TestEncryptionKey",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_key_mismatch_gives_actionable_error",
+    "suite": "tests.unit.test_security_fixes.TestEncryptionKey",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_scans_actually_trigger",
+    "suite": "tests.unit.test_security_fixes.TestCIWorkflow",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_no_token_echo",
+    "suite": "tests.unit.test_security_fixes.TestCIWorkflow",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_runtime_token_is_masked",
+    "suite": "tests.unit.test_security_fixes.TestCIWorkflow",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_no_xtrace_around_api_keys",
+    "suite": "tests.unit.test_security_fixes.TestCIWorkflow",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_nonexistent_column_is_rejected",
+    "suite": "tests.unit.test_security_fixes.TestCorpusAdmissionGate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_correct_replacement_is_accepted",
+    "suite": "tests.unit.test_security_fixes.TestCorpusAdmissionGate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_gate_does_not_need_credentials_or_network",
+    "suite": "tests.unit.test_security_fixes.TestCorpusAdmissionGate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_denylist_is_exported_for_the_gate",
+    "suite": "tests.unit.test_security_fixes.TestCorpusAdmissionGate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_computed_column_of_the_same_name_still_allowed",
+    "suite": "tests.unit.test_security_fixes.TestCorpusAdmissionGate",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_no_nonexistent_status_column[backend/gold_standard.yaml]",
+    "suite": "tests.unit.test_security_fixes.TestCorpusIsClean",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_no_nonexistent_status_column[backend/knowledge/feedback/learning_events.jsonl]",
+    "suite": "tests.unit.test_security_fixes.TestCorpusIsClean",
+    "status": "failed",
+    "message": "assert 'xdm.asset.status' not in '{\"source\": ...741.76095}\\n'\n  \n  'xdm.asset.status' is contained here:\n[+3 more lines; full report in element text]"
+  },
+  {
+    "name": "test_provider_literals_are_upper_case[backend/gold_standard.yaml]",
+    "suite": "tests.unit.test_security_fixes.TestCorpusIsClean",
+    "status": "failed",
+    "message": "assert not <re.Match object; span=(35791, 35815), match='xdm.asset.provider = \\\\\"a'>\n +  where <re.Match object; span=(35791, 35815), match='xdm.asset.provider = \\\\\"a'> = <function search at 0x107aa3600>('xdm\\\\.asset\\\\.provider\\\\s*=\\\\s*\\\\\\\\?\"[a-z]', \"metadata:\\n  version: '3.2'\\n  description: Curated matched RQL\u2194XQL translation pairs from PANW policy cross-referenc...: 'User corrected on 2026-08-27 12:24. Original bad translation: dataset = x. Corrected to the XQL/RQL shown above.'\\n\")\n[+3 more lines; full report in element text]"
+  },
+  {
+    "name": "test_provider_literals_are_upper_case[backend/knowledge/feedback/learning_events.jsonl]",
+    "suite": "tests.unit.test_security_fixes.TestCorpusIsClean",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_raw_html_sites_do_not_grow",
+    "suite": "tests.unit.test_security_fixes.TestFrontendHtmlRendering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_every_interpolated_value_is_escaped",
+    "suite": "tests.unit.test_security_fixes.TestFrontendHtmlRendering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_escape_helper_uses_html_escape",
+    "suite": "tests.unit.test_security_fixes.TestFrontendHtmlRendering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_shadow_returns_tier1_not_tier2",
+    "suite": "tests.unit.test_shadow_traffic.TestShadowTraffic",
+    "status": "failed",
+    "message": "assert 'dataset = cl...EC2 Instance\"' == 'dataset = as...EC2_INSTANCE\"'\n  \n  - dataset = asset_inventory | filter xdm.asset.type.id = \"EC2_INSTANCE\"\n  + dataset = cloud_inventory | filter provider = \"AWS\" and asset_type = \"EC2 Instance\""
+  },
+  {
+    "name": "test_shadow_does_not_block_on_tier2_failure",
+    "suite": "tests.unit.test_shadow_traffic.TestShadowTraffic",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_shadow_logs_comparison",
+    "suite": "tests.unit.test_shadow_traffic.TestShadowTraffic",
+    "status": "failed",
+    "message": "AssertionError: Expected shadow log entry, got: []\nassert 0 >= 1\n +  where 0 = len([])"
+  },
+  {
+    "name": "test_shadow_disabled_by_default",
+    "suite": "tests.unit.test_shadow_traffic.TestShadowTraffic",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_shadow_executor_shutdown",
+    "suite": "tests.unit.test_shadow_traffic.TestShadowTraffic",
+    "status": "failed",
+    "message": "assert None is not None\n +  where None = <rql_xql.pipeline.translator.TranslationService object at 0x10be92c90>._shadow_executor"
+  },
+  {
+    "name": "test_exact_match",
+    "suite": "tests.unit.test_trajectory.TestInOrderMatch",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_subsequence",
+    "suite": "tests.unit.test_trajectory.TestInOrderMatch",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_missing_node",
+    "suite": "tests.unit.test_trajectory.TestInOrderMatch",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_wrong_order",
+    "suite": "tests.unit.test_trajectory.TestInOrderMatch",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_empty_required",
+    "suite": "tests.unit.test_trajectory.TestInOrderMatch",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_empty_actual",
+    "suite": "tests.unit.test_trajectory.TestInOrderMatch",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_repeated_nodes",
+    "suite": "tests.unit.test_trajectory.TestInOrderMatch",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_perfect_precision",
+    "suite": "tests.unit.test_trajectory.TestPrecisionRecall",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_half_precision",
+    "suite": "tests.unit.test_trajectory.TestPrecisionRecall",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_zero_precision",
+    "suite": "tests.unit.test_trajectory.TestPrecisionRecall",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_empty_actual",
+    "suite": "tests.unit.test_trajectory.TestPrecisionRecall",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_perfect_recall",
+    "suite": "tests.unit.test_trajectory.TestPrecisionRecall",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_partial_recall",
+    "suite": "tests.unit.test_trajectory.TestPrecisionRecall",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_empty_expected",
+    "suite": "tests.unit.test_trajectory.TestPrecisionRecall",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_happy_path_pass",
+    "suite": "tests.unit.test_trajectory.TestEvaluateTrajectory",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_happy_path_with_extras",
+    "suite": "tests.unit.test_trajectory.TestEvaluateTrajectory",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_self_correction_pass",
+    "suite": "tests.unit.test_trajectory.TestEvaluateTrajectory",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_forbidden_node_violation",
+    "suite": "tests.unit.test_trajectory.TestEvaluateTrajectory",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_over_budget",
+    "suite": "tests.unit.test_trajectory.TestEvaluateTrajectory",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_missing_required_fails",
+    "suite": "tests.unit.test_trajectory.TestEvaluateTrajectory",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_schema_enriched_path",
+    "suite": "tests.unit.test_trajectory.TestEvaluateTrajectory",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[activity_iam_actions]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[addcolumn_projection]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[aggregate_count_lt]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[array_index]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[array_predicate_any]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[array_size_eq]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[array_size_gt]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[asset_tagsets_membership]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[aws_provider_uppercase]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[azure_mfa_admin_groups]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[azure_mfa_all_users]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[azure_mysql_ssl_enforce]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[azure_port_in_range_contains]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[azure_postgresql_firewall]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[azure_postgresql_flexible_log_checkpoints]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[azure_resource_status_active]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[datetime_age_unsupported]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[dot_bracket_wildcard]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[e10_null_guard_empty]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[e11_object_dotted_key]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[e11_object_tags_contains]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[e12_aws_casing]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[e1_dot_path]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[e2_findings_native_and_normalized]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[e2_normalized_field_bracket]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[e2_stringify_membership]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[e2_wildcard_array_any]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[e4_contains_literal]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[e6_port_inrange_single]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[e6_port_range_intersect_nacl]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[e6_port_window_cast]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[e7_date_age_future_window]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[e7_date_age_in_array_lambda]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[e7_date_age_macro]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[e7_date_age_two_fields]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[e8_hyphen_dot_notation]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[event_audit_log_useragent]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[filter_selector_multi_term]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[findings_simple]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[fix1_roles_array_any]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[fix2_dotspace_path]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[fix3_istype_integer]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[fix4_filter_selector_size]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[fix5_join_fallback]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[iam_activity_service_scoped]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[iam_granted_by_role]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[iam_passrole_escalation]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[intersects_operator]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[intersects_scalar_array]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[ip_insubnet]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[ip_isloopback]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[ip_isprivate]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[ip_ispublic]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[join_array_key_expand]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[join_pipe_index_array_key]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[list_contains]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[list_intersects]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[meta_accountgroup_case_insensitive]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[meta_accountgroup_join]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[meta_cloud_account_name]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[meta_status_native_state_override]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[multi_join_three_way]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[multi_source_join]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[not_intersects_operator]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[null_check]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[object_array_subfield]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[object_field_access]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[port_in_range]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[s3_public_bucket_acl_policy]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[simple_single_source]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_pair_through_adapter[single_source_presence]",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_metadata_contract",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_low_confidence_requires_review",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_never_raises_on_garbage",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_cache_hit_flag",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_gold_standard_exact_match_wins",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_detect_query_semantics",
+    "suite": "tests.unit.test_translator_engine",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_or_inside_json_rule_not_split",
+    "suite": "tests.unit.test_where_parser.TestFindTopLevelSplitJsonRule",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_and_inside_json_rule_not_split",
+    "suite": "tests.unit.test_where_parser.TestFindTopLevelSplitJsonRule",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_regular_or_still_splits",
+    "suite": "tests.unit.test_where_parser.TestFindTopLevelSplitJsonRule",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_two_json_rules_split_correctly",
+    "suite": "tests.unit.test_where_parser.TestFindTopLevelSplitJsonRule",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_json_rule_with_parens_preserved",
+    "suite": "tests.unit.test_where_parser.TestFindTopLevelSplitJsonRule",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_azure_app_service_or_preserved",
+    "suite": "tests.unit.test_where_parser.TestParseWhereClauseJsonRule",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_json_rule_internal_and_preserved",
+    "suite": "tests.unit.test_where_parser.TestParseWhereClauseJsonRule",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_two_separate_json_rules",
+    "suite": "tests.unit.test_where_parser.TestParseWhereClauseJsonRule",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_json_rule_followed_by_regular_condition",
+    "suite": "tests.unit.test_where_parser.TestParseWhereClauseJsonRule",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_compound_json_rule_then_api_name",
+    "suite": "tests.unit.test_where_parser.TestParseWhereClauseJsonRule",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_no_json_rule_or_still_works",
+    "suite": "tests.unit.test_where_parser.TestParseWhereClauseJsonRule",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_json_rule_with_contains_operator",
+    "suite": "tests.unit.test_where_parser.TestParseWhereClauseJsonRule",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_simple_filter",
+    "suite": "tests.unit.test_xql_ast.TestParseBasic",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_multi_stage",
+    "suite": "tests.unit.test_xql_ast.TestParseBasic",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_empty_string",
+    "suite": "tests.unit.test_xql_ast.TestParseBasic",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_alter_stage",
+    "suite": "tests.unit.test_xql_ast.TestParseBasic",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_and_condition",
+    "suite": "tests.unit.test_xql_ast.TestParseFilter",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_or_condition",
+    "suite": "tests.unit.test_xql_ast.TestParseFilter",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_in_expression",
+    "suite": "tests.unit.test_xql_ast.TestParseFilter",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_function_call",
+    "suite": "tests.unit.test_xql_ast.TestParseFilter",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_not_expression",
+    "suite": "tests.unit.test_xql_ast.TestParseFilter",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_nested_parens",
+    "suite": "tests.unit.test_xql_ast.TestParseFilter",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_or_to_in",
+    "suite": "tests.unit.test_xql_ast.TestNormalization",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_sort_and_children",
+    "suite": "tests.unit.test_xql_ast.TestNormalization",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_alter_reorder",
+    "suite": "tests.unit.test_xql_ast.TestNormalization",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_identical_queries",
+    "suite": "tests.unit.test_xql_ast.TestEquivalence",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_filter_reorder_equivalent",
+    "suite": "tests.unit.test_xql_ast.TestEquivalence",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_or_vs_in_equivalent",
+    "suite": "tests.unit.test_xql_ast.TestEquivalence",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_alter_reorder_equivalent",
+    "suite": "tests.unit.test_xql_ast.TestEquivalence",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_completely_different",
+    "suite": "tests.unit.test_xql_ast.TestEquivalence",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_ast_structural_match_true",
+    "suite": "tests.unit.test_xql_ast.TestEquivalence",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_ast_structural_match_false",
+    "suite": "tests.unit.test_xql_ast.TestEquivalence",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_empty_vs_empty",
+    "suite": "tests.unit.test_xql_ast.TestEdgeCases",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_single_stage",
+    "suite": "tests.unit.test_xql_ast.TestEdgeCases",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_unparseable_filter_falls_back_to_body",
+    "suite": "tests.unit.test_xql_ast.TestEdgeCases",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_word_operator_parses_instead_of_becoming_unsupported",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_longest_operator_token_wins",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_starts_with_lowers_to_an_anchored_regex",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_unknown_word_operator_is_still_preserved_as_unsupported",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_contains_all_lowers_to_membership",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_contains_any_lowers_to_the_same_membership_filter",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_compound_operator_lowering_is_declared_in_data_not_code",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_dest_wildcardscope_resolves_on_ciem",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_policy_type_maps_confirmed_labels_to_the_cortex_enum",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_policy_type_unconfirmed_label_is_flagged_not_guessed",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_policy_condition_predicate_resolves_to_an_array_none_check",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_not_modelled_field_is_never_given_a_plausible_column",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_full_passrole_policy_translates_all_it_can_and_flags_the_rest",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_principal_arn_maps_to_the_identity_arn_column",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_json_column_field_is_hoisted_into_an_alter",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_alter_precedes_every_filter_that_uses_it",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_mapped_field_no_longer_produces_a_review_marker",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_target_resolves_against_a_sampled_column",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_merge_into_a_column_the_query_does_not_filter_is_flagged",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_merge_is_silent_when_the_target_filter_exists",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_unmapped_activity_field_still_costs_confidence",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_unrecognized_meta_key_is_not_discarded",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_unrecognized_meta_key_is_kept_on_the_asset_path_too",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_resource_status_active_maps_to_the_inactive_insight",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_resource_status_inactive_inverts",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_resource_status_unknown_value_stays_unmapped",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_provider_literal_is_upper_case",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_resource_status_round_trips_back_to_rql",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_cloud_region_maps_prisma_ui_names_to_provider_region_codes",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_cloud_region_unlisted_name_is_flagged_not_guessed",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_unmapped_json_rule_field_extracts_from_raw_log_not_a_fabricated_column",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_unmapped_json_rule_field_with_explicit_dollar_prefix_is_not_doubled",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_a_genuinely_flat_json_rule_field_stays_bare",
+    "suite": "tests.rqlxql.test_activity_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_cloud_account_maps_to_native_column",
+    "suite": "tests.rqlxql.test_asset_meta_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_cloud_account_value_case_is_preserved",
+    "suite": "tests.rqlxql.test_asset_meta_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_accountgroup_lowers_to_asset_groups_join",
+    "suite": "tests.rqlxql.test_asset_meta_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_accountgroup_join_precedes_payload_alters",
+    "suite": "tests.rqlxql.test_asset_meta_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_dedup_precedes_aggregate",
+    "suite": "tests.rqlxql.test_asset_meta_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_roundtrip_reconstructs_the_meta_condition[rql0]",
+    "suite": "tests.rqlxql.test_asset_meta_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_roundtrip_reconstructs_the_meta_condition[rql1]",
+    "suite": "tests.rqlxql.test_asset_meta_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_roundtrip_carries_free_text_values_quoted",
+    "suite": "tests.rqlxql.test_asset_meta_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_unmapped_meta_key_still_becomes_a_review_marker",
+    "suite": "tests.rqlxql.test_asset_meta_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_join_field_names_come_from_the_data_file",
+    "suite": "tests.rqlxql.test_asset_meta_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_overridden_type_uses_provider_native_state",
+    "suite": "tests.rqlxql.test_asset_meta_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_unlisted_type_keeps_the_platform_flag",
+    "suite": "tests.rqlxql.test_asset_meta_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_override_roundtrips_back_to_resource_status",
+    "suite": "tests.rqlxql.test_asset_meta_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_override_values_come_from_the_data_file",
+    "suite": "tests.rqlxql.test_asset_meta_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_compiled_file_present[asset_fields.json]",
+    "suite": "tests.rqlxql.test_compiled_schema",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_compiled_file_present[dataset_fields.json]",
+    "suite": "tests.rqlxql.test_compiled_schema",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_compiled_file_present[xdm_model.json]",
+    "suite": "tests.rqlxql.test_compiled_schema",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_asset_fields_loaded_and_indexed",
+    "suite": "tests.rqlxql.test_compiled_schema",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_dataset_fields_expose_native_columns",
+    "suite": "tests.rqlxql.test_compiled_schema",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_xdm_model_carries_dataclass_and_enum_literals",
+    "suite": "tests.rqlxql.test_compiled_schema",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_casing_is_per_asset_type",
+    "suite": "tests.rqlxql.test_compiled_schema",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_casing_map_drops_segments_that_conflict_within_a_type",
+    "suite": "tests.rqlxql.test_compiled_schema",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_scope_does_not_leak_between_sources",
+    "suite": "tests.rqlxql.test_compiled_schema",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_path_alias_rewrites_the_emitted_jsonpath",
+    "suite": "tests.rqlxql.test_compiled_schema",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_path_alias_is_scoped_to_its_asset_type",
+    "suite": "tests.rqlxql.test_compiled_schema",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_path_alias_applies_to_an_array_quantifier_base",
+    "suite": "tests.rqlxql.test_compiled_schema",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_confirmed_field_is_not_reported_as_a_gap",
+    "suite": "tests.rqlxql.test_compiled_schema",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_absent_field_is_reported_with_its_asset_type",
+    "suite": "tests.rqlxql.test_compiled_schema",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_declared_policy_status_resolves_with_payload_casing",
+    "suite": "tests.rqlxql.test_compiled_schema",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_prefix_alias_resolves_a_path_reaching_into_a_renamed_node",
+    "suite": "tests.rqlxql.test_compiled_schema",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_unsampled_asset_type_is_distinct_from_absent",
+    "suite": "tests.rqlxql.test_compiled_schema",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_array_element_field_resolves_through_its_array",
+    "suite": "tests.rqlxql.test_compiled_schema",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_bare_array_reference_classifies_without_its_trailing_wildcard",
+    "suite": "tests.rqlxql.test_compiled_schema",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_casing_survives_a_wildcard_segment",
+    "suite": "tests.rqlxql.test_compiled_schema",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_suggestions_reject_an_unrelated_sibling",
+    "suite": "tests.rqlxql.test_compiled_schema",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_nearest_paths_ranks_a_case_mismatch_first",
+    "suite": "tests.rqlxql.test_compiled_schema",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_compiled_data_matches_the_reference",
+    "suite": "tests.rqlxql.test_compiled_schema",
+    "status": "skipped",
+    "message": ""
+  },
+  {
+    "name": "test_compilation_is_deterministic",
+    "suite": "tests.rqlxql.test_compiled_schema",
+    "status": "skipped",
+    "message": ""
+  },
+  {
+    "name": "test_irregular_array_shapes_compile_to_unknown",
+    "suite": "tests.rqlxql.test_compiled_schema",
+    "status": "skipped",
+    "message": ""
+  },
+  {
+    "name": "test_raw_string_is_regex_cleaned_before_parsing",
+    "suite": "tests.rqlxql.test_date_age_timestamps",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_trailing_z_format_is_gone",
+    "suite": "tests.rqlxql.test_date_age_timestamps",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_parse_timestamp_never_reads_the_raw_string_directly",
+    "suite": "tests.rqlxql.test_date_age_timestamps",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_clean_pattern_tolerates_every_sampled_spelling",
+    "suite": "tests.rqlxql.test_date_age_timestamps",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_format_matches_what_the_pattern_produces",
+    "suite": "tests.rqlxql.test_date_age_timestamps",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_date_age_in_lambda_is_not_dropped",
+    "suite": "tests.rqlxql.test_date_age_timestamps",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_lambda_date_field_resolves_against_element",
+    "suite": "tests.rqlxql.test_date_age_timestamps",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_lambda_age_comparison_keeps_operator_and_threshold",
+    "suite": "tests.rqlxql.test_date_age_timestamps",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_top_level_still_hoists_to_an_alias",
+    "suite": "tests.rqlxql.test_date_age_timestamps",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_roundtrip_is_stable",
+    "suite": "tests.rqlxql.test_date_age_timestamps",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_scalar_key_anchors_the_substring_test",
+    "suite": "tests.rqlxql.test_flat_stringify_anchoring",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_container_key_stays_unanchored",
+    "suite": "tests.rqlxql.test_flat_stringify_anchoring",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_negated_key_test_anchors_and_wraps",
+    "suite": "tests.rqlxql.test_flat_stringify_anchoring",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_comma_list_keeps_rule_7_alternation_under_the_anchor",
+    "suite": "tests.rqlxql.test_flat_stringify_anchoring",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_anchoring_is_deterministic",
+    "suite": "tests.rqlxql.test_flat_stringify_anchoring",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[join_array_key_expand-rql_path0-xql_path0]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[azure_resource_status_active-rql_path1-xql_path1]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[azure_mfa_all_users-rql_path2-xql_path2]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[azure_postgresql_firewall-rql_path3-xql_path3]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[fix3_istype_integer-rql_path4-xql_path4]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[join_pipe_index_array_key-rql_path5-xql_path5]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[intersects_scalar_array-rql_path6-xql_path6]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[e1_dot_path-rql_path7-xql_path7]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[iam_granted_by_role-rql_path8-xql_path8]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[activity_iam_actions-rql_path9-xql_path9]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[fix4_filter_selector_size-rql_path10-xql_path10]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[event_audit_log_useragent-rql_path11-xql_path11]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[ip_ispublic-rql_path12-xql_path12]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[e12_aws_casing-rql_path13-xql_path13]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[dot_bracket_wildcard-rql_path14-xql_path14]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[intersects_operator-rql_path15-xql_path15]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[array_size_eq-rql_path16-xql_path16]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[asset_tagsets_membership-rql_path17-xql_path17]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[datetime_age_unsupported-rql_path18-xql_path18]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[aggregate_count_lt-rql_path19-xql_path19]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[single_source_presence-rql_path20-xql_path20]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[e7_date_age_future_window-rql_path21-xql_path21]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[not_intersects_operator-rql_path22-xql_path22]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[e2_normalized_field_bracket-rql_path23-xql_path23]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[meta_accountgroup_join-rql_path24-xql_path24]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[e11_object_dotted_key-rql_path25-xql_path25]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[e2_wildcard_array_any-rql_path26-xql_path26]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[multi_source_join-rql_path27-xql_path27]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[azure_mysql_ssl_enforce-rql_path28-xql_path28]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[ip_insubnet-rql_path29-xql_path29]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[findings_simple-rql_path30-xql_path30]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[object_array_subfield-rql_path31-xql_path31]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[azure_port_in_range_contains-rql_path32-xql_path32]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[simple_single_source-rql_path33-xql_path33]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[filter_selector_multi_term-rql_path34-xql_path34]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[list_contains-rql_path35-xql_path35]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[ip_isprivate-rql_path36-xql_path36]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[azure_postgresql_flexible_log_checkpoints-rql_path37-xql_path37]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[list_intersects-rql_path38-xql_path38]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[array_index-rql_path39-xql_path39]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[meta_accountgroup_case_insensitive-rql_path40-xql_path40]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[iam_passrole_escalation-rql_path41-xql_path41]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[fix1_roles_array_any-rql_path42-xql_path42]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[e4_contains_literal-rql_path43-xql_path43]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[array_predicate_any-rql_path44-xql_path44]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[e7_date_age_in_array_lambda-rql_path45-xql_path45]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[array_size_gt-rql_path46-xql_path46]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[e11_object_tags_contains-rql_path47-xql_path47]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[e6_port_inrange_single-rql_path48-xql_path48]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[azure_mfa_admin_groups-rql_path49-xql_path49]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[object_field_access-rql_path50-xql_path50]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[e10_null_guard_empty-rql_path51-xql_path51]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[e7_date_age_macro-rql_path52-xql_path52]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[aws_provider_uppercase-rql_path53-xql_path53]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[e7_date_age_two_fields-rql_path54-xql_path54]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[iam_activity_service_scoped-rql_path55-xql_path55]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[s3_public_bucket_acl_policy-rql_path56-xql_path56]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[multi_join_three_way-rql_path57-xql_path57]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[null_check-rql_path58-xql_path58]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[e8_hyphen_dot_notation-rql_path59-xql_path59]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[ip_isloopback-rql_path60-xql_path60]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[port_in_range-rql_path61-xql_path61]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[fix5_join_fallback-rql_path62-xql_path62]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[meta_cloud_account_name-rql_path63-xql_path63]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[e6_port_window_cast-rql_path64-xql_path64]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[fix2_dotspace_path-rql_path65-xql_path65]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[e6_port_range_intersect_nacl-rql_path66-xql_path66]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[e2_findings_native_and_normalized-rql_path67-xql_path67]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[e2_stringify_membership-rql_path68-xql_path68]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[addcolumn_projection-rql_path69-xql_path69]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_rql_to_xql[meta_status_native_state_override-rql_path70-xql_path70]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[join_array_key_expand-rql_path0-xql_path0]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[azure_resource_status_active-rql_path1-xql_path1]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[azure_mfa_all_users-rql_path2-xql_path2]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[azure_postgresql_firewall-rql_path3-xql_path3]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[fix3_istype_integer-rql_path4-xql_path4]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[join_pipe_index_array_key-rql_path5-xql_path5]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[intersects_scalar_array-rql_path6-xql_path6]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[e1_dot_path-rql_path7-xql_path7]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[iam_granted_by_role-rql_path8-xql_path8]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[activity_iam_actions-rql_path9-xql_path9]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[fix4_filter_selector_size-rql_path10-xql_path10]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[event_audit_log_useragent-rql_path11-xql_path11]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[ip_ispublic-rql_path12-xql_path12]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[e12_aws_casing-rql_path13-xql_path13]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[dot_bracket_wildcard-rql_path14-xql_path14]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[intersects_operator-rql_path15-xql_path15]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[array_size_eq-rql_path16-xql_path16]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[asset_tagsets_membership-rql_path17-xql_path17]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[datetime_age_unsupported-rql_path18-xql_path18]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[aggregate_count_lt-rql_path19-xql_path19]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[single_source_presence-rql_path20-xql_path20]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[e7_date_age_future_window-rql_path21-xql_path21]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[not_intersects_operator-rql_path22-xql_path22]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[e2_normalized_field_bracket-rql_path23-xql_path23]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[meta_accountgroup_join-rql_path24-xql_path24]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[e11_object_dotted_key-rql_path25-xql_path25]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[e2_wildcard_array_any-rql_path26-xql_path26]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[multi_source_join-rql_path27-xql_path27]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[azure_mysql_ssl_enforce-rql_path28-xql_path28]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[ip_insubnet-rql_path29-xql_path29]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[findings_simple-rql_path30-xql_path30]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[object_array_subfield-rql_path31-xql_path31]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[azure_port_in_range_contains-rql_path32-xql_path32]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[simple_single_source-rql_path33-xql_path33]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[filter_selector_multi_term-rql_path34-xql_path34]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[list_contains-rql_path35-xql_path35]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[ip_isprivate-rql_path36-xql_path36]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[azure_postgresql_flexible_log_checkpoints-rql_path37-xql_path37]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[list_intersects-rql_path38-xql_path38]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[array_index-rql_path39-xql_path39]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[meta_accountgroup_case_insensitive-rql_path40-xql_path40]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[iam_passrole_escalation-rql_path41-xql_path41]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[fix1_roles_array_any-rql_path42-xql_path42]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[e4_contains_literal-rql_path43-xql_path43]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[array_predicate_any-rql_path44-xql_path44]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[e7_date_age_in_array_lambda-rql_path45-xql_path45]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[array_size_gt-rql_path46-xql_path46]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[e11_object_tags_contains-rql_path47-xql_path47]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[e6_port_inrange_single-rql_path48-xql_path48]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[azure_mfa_admin_groups-rql_path49-xql_path49]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[object_field_access-rql_path50-xql_path50]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[e10_null_guard_empty-rql_path51-xql_path51]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[e7_date_age_macro-rql_path52-xql_path52]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[aws_provider_uppercase-rql_path53-xql_path53]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[e7_date_age_two_fields-rql_path54-xql_path54]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[iam_activity_service_scoped-rql_path55-xql_path55]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[s3_public_bucket_acl_policy-rql_path56-xql_path56]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[multi_join_three_way-rql_path57-xql_path57]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[null_check-rql_path58-xql_path58]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[e8_hyphen_dot_notation-rql_path59-xql_path59]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[ip_isloopback-rql_path60-xql_path60]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[port_in_range-rql_path61-xql_path61]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[fix5_join_fallback-rql_path62-xql_path62]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[meta_cloud_account_name-rql_path63-xql_path63]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[e6_port_window_cast-rql_path64-xql_path64]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[fix2_dotspace_path-rql_path65-xql_path65]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[e6_port_range_intersect_nacl-rql_path66-xql_path66]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[e2_findings_native_and_normalized-rql_path67-xql_path67]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[e2_stringify_membership-rql_path68-xql_path68]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[addcolumn_projection-rql_path69-xql_path69]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_golden_xql_to_rql[meta_status_native_state_override-rql_path70-xql_path70]",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_no_golden_pairs_found",
+    "suite": "tests.rqlxql.test_golden",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_config_from_iam_routes_to_ciem_not_audit_logs",
+    "suite": "tests.rqlxql.test_iam_permission_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_event_from_audit_logs_still_routes_to_cloud_audit_logs",
+    "suite": "tests.rqlxql.test_iam_permission_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_policy_condition_parses_to_an_array_predicate",
+    "suite": "tests.rqlxql.test_iam_permission_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_policy_condition_exists_form_lowers_to_array_any",
+    "suite": "tests.rqlxql.test_iam_permission_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_policy_condition_on_an_unmapped_field_is_flagged_not_guessed",
+    "suite": "tests.rqlxql.test_iam_permission_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_action_access_level_lowers_to_array_any",
+    "suite": "tests.rqlxql.test_iam_permission_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_action_access_level_not_equal_negates_the_array_any",
+    "suite": "tests.rqlxql.test_iam_permission_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_wildcardscope_true_checks_resource_name_equals_star",
+    "suite": "tests.rqlxql.test_iam_permission_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_wildcardscope_false_checks_resource_name_not_star",
+    "suite": "tests.rqlxql.test_iam_permission_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_field_to_field_comparison_is_unsupported_not_a_literal",
+    "suite": "tests.rqlxql.test_iam_permission_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_field_to_field_guard_does_not_misfire_on_a_quoted_literal",
+    "suite": "tests.rqlxql.test_iam_permission_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_entity_lastlogin_days_uses_last_access_time_as_a_documented_proxy",
+    "suite": "tests.rqlxql.test_iam_permission_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_mfaenabled_is_not_modelled",
+    "suite": "tests.rqlxql.test_iam_permission_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_entity_type_maps_to_the_native_column",
+    "suite": "tests.rqlxql.test_iam_permission_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_level_type_maps_a_confirmed_label",
+    "suite": "tests.rqlxql.test_iam_permission_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_level_type_unconfirmed_label_is_flagged_not_guessed",
+    "suite": "tests.rqlxql.test_iam_permission_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_action_access_isadministrative_is_a_plain_bool_column",
+    "suite": "tests.rqlxql.test_iam_permission_fields",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_array_predicate_is_filtered_before_the_join_key_expands_it",
+    "suite": "tests.rqlxql.test_join_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_one_alter_per_distinct_extraction",
+    "suite": "tests.rqlxql.test_join_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_array_key_expands_exactly_once_per_key",
+    "suite": "tests.rqlxql.test_join_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_negated_cross_filter_is_recorded_on_the_spec",
+    "suite": "tests.rqlxql.test_join_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_unnegated_cross_filter_stays_unnegated",
+    "suite": "tests.rqlxql.test_join_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_negated_scalar_key_join_lowers_to_not_in",
+    "suite": "tests.rqlxql.test_join_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_negated_array_key_join_is_flagged_not_guessed",
+    "suite": "tests.rqlxql.test_join_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_secondary_array_predicate_is_filtered_before_its_own_join_key_expands_it",
+    "suite": "tests.rqlxql.test_join_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_secondary_side_one_alter_per_distinct_extraction",
+    "suite": "tests.rqlxql.test_join_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_secondary_side_array_key_expands_exactly_once",
+    "suite": "tests.rqlxql.test_join_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_secondary_side_post_stages_keep_the_subquery_indent",
+    "suite": "tests.rqlxql.test_join_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_addcolumn_as_its_own_statement_is_kept",
+    "suite": "tests.rqlxql.test_join_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_addcolumn_accepts_space_separated_fields",
+    "suite": "tests.rqlxql.test_join_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_addcolumn_targets_sharing_a_leaf_get_distinct_columns",
+    "suite": "tests.rqlxql.test_join_lowering",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_two_way_join_reverse_fields",
+    "suite": "tests.rqlxql.test_join_roundtrip",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_two_way_join_xql_to_rql",
+    "suite": "tests.rqlxql.test_join_roundtrip",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_two_way_join_sources",
+    "suite": "tests.rqlxql.test_join_roundtrip",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_three_way_join_reverse_fields",
+    "suite": "tests.rqlxql.test_join_roundtrip",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_three_way_join_xql_to_rql",
+    "suite": "tests.rqlxql.test_join_roundtrip",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_three_way_join_sources",
+    "suite": "tests.rqlxql.test_join_roundtrip",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_join_stage_parses_to_joinspec",
+    "suite": "tests.rqlxql.test_join_roundtrip",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_marker_extraction_handles_both_comment_forms",
+    "suite": "tests.rqlxql.test_review_markers",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_marker_forces_review_and_costs_confidence",
+    "suite": "tests.rqlxql.test_review_markers",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_dropped_conditions_are_penalized_and_capped",
+    "suite": "tests.rqlxql.test_review_markers",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_unmapped_api_name_is_not_penalized_twice",
+    "suite": "tests.rqlxql.test_review_markers",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_unsupported_node_marker_is_not_penalized_twice",
+    "suite": "tests.rqlxql.test_review_markers",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_score_and_diagnose_cannot_disagree",
+    "suite": "tests.rqlxql.test_review_markers",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_diagnostics_are_never_truncated",
+    "suite": "tests.rqlxql.test_review_markers",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_clean_translation_still_scores_one",
+    "suite": "tests.rqlxql.test_review_markers",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_roundtrip_stability_baseline",
+    "suite": "tests.rqlxql.test_roundtrip",
+    "status": "skipped",
+    "message": ""
+  },
+  {
+    "name": "test_roundtrip_ir_stability_placeholder",
+    "suite": "tests.rqlxql.test_roundtrip",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_roundtrip_determinism_placeholder",
+    "suite": "tests.rqlxql.test_roundtrip",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_ir_frozen_immutability",
+    "suite": "tests.rqlxql.test_roundtrip",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_ir_json_serialization",
+    "suite": "tests.rqlxql.test_roundtrip",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_is_member_of_lowers_to_a_key_and_value_quantified_predicate",
+    "suite": "tests.rqlxql.test_tagsets",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_is_not_member_of_negates_only_the_value_side",
+    "suite": "tests.rqlxql.test_tagsets",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_does_not_exist_checks_the_key_only_with_none_quantifier",
+    "suite": "tests.rqlxql.test_tagsets",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_exists_checks_the_key_only_with_any_quantifier",
+    "suite": "tests.rqlxql.test_tagsets",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_does_not_exist_or_is_not_member_of_covers_both_absent_and_mismatched",
+    "suite": "tests.rqlxql.test_tagsets",
+    "status": "passed",
+    "message": ""
+  },
+  {
+    "name": "test_tagsets_resolves_with_no_unknown_fields",
+    "suite": "tests.rqlxql.test_tagsets",
+    "status": "passed",
+    "message": ""
+  }
+]

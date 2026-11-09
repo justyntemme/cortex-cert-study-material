@@ -1,0 +1,20 @@
+digraph G { graph [rankdir=LR,bgcolor="transparent",pad="0.3",nodesep="0.45",ranksep="0.6",fontname="Helvetica",fontsize=14]; node [shape=box,style="rounded,filled",fillcolor="#f6f6f0",color="#81968d",fontcolor="#15352e",fontname="Helvetica",fontsize=13,margin="0.18,0.14"]; edge [color="#6d827b",fontcolor="#3c544c",fontname="Helvetica",fontsize=10,arrowsize=0.7];
+  user [label="Browser / analyst",fillcolor="#dcebe7"];
+  ui [label="Streamlit frontend
+app.py + api_client.py"];
+  api [label="FastAPI API
+auth • credentials • request guards"];
+  service [label="TranslationService
+cache • routing • validation • repair",fillcolor="#dcebe7"];
+  engine [label="SemanticTranslator adapter
+gold lookup + deterministic compiler"];
+  ai [label="Gemini on Vertex AI
+cognitive translation / repair"];
+  cortex [label="Cortex API
+optional execution evidence"];
+  parity [label="Prisma + Cortex parity
+disabled by HTTP translate handlers",fillcolor="#fae5da"];
+  user -> ui [label="query / results"]; ui -> api [label="HTTP"]; api -> service;
+  service -> engine [label="first attempt"]; service -> ai [label="fallback / repair",style=dashed];
+  service -> cortex [label="when credentials exist"]; service -> parity [style=dashed];
+}

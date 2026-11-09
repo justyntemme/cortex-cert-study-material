@@ -1,0 +1,21 @@
+digraph G { graph [rankdir=LR,bgcolor="transparent",pad="0.3",nodesep="0.45",ranksep="0.6",fontname="Helvetica",fontsize=14]; node [shape=box,style="rounded,filled",fillcolor="#f6f6f0",color="#81968d",fontcolor="#15352e",fontname="Helvetica",fontsize=13,margin="0.18,0.14"]; edge [color="#6d827b",fontcolor="#3c544c",fontname="Helvetica",fontsize=10,arrowsize=0.7];
+  rankdir=TB;
+  feedback [label="Human feedback / repair / parity events"];
+  local [label="Local JSONL event log
+process-local subscribers"];
+  gold [label="gold_standard.yaml
+673 examples",shape=folder];
+  context [label="Corpus-in-context assembly
+Vertex context cache"];
+  prepare [label="Dataset preparation
+examples + hindsight + repair records"];
+  train [label="Vertex supervised fine-tuning"];
+  eval [label="Independent evaluation + promotion
+currently simulated in finetune.py",fillcolor="#fae5da"];
+  worker [label="KFP batch components
+application image / shared artifacts missing",fillcolor="#fae5da"];
+  feedback -> local; feedback -> gold [label="selected write paths"]; gold -> context;
+  gold -> prepare [label="automatic runner: tuple/list error",style=dashed,color="#bb4c32"];
+  local -> worker [label="local path is not a distributed artifact",style=dashed,color="#bb4c32"];
+  prepare -> train [label="manual preparation path exists"]; train -> eval [style=dashed,color="#bb4c32"];
+}

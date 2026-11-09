@@ -1,0 +1,20 @@
+digraph G { graph [rankdir=LR,bgcolor="transparent",pad="0.3",nodesep="0.45",ranksep="0.6",fontname="Helvetica",fontsize=14]; node [shape=box,style="rounded,filled",fillcolor="#f6f6f0",color="#81968d",fontcolor="#15352e",fontname="Helvetica",fontsize=13,margin="0.18,0.14"]; edge [color="#6d827b",fontcolor="#3c544c",fontname="Helvetica",fontsize=10,arrowsize=0.7];
+  browser [label="User browser"];
+  lb [label="HTTPS load balancer
+frontend / API host routing"];
+  subgraph cluster_mig {label="Regional managed instance group • autoscaled VMs"; color="#89a99d"; style=rounded;
+    ui [label="Streamlit container :8501"];
+    api [label="FastAPI container :8000
+AUTH_MODE=required"];
+    state [label="Memory + temporary feedback files
+per instance",fillcolor="#fae5da"];
+    ui -> api [label="localhost HTTP
+no configured auth header",color="#bb4c32"];
+    api -> state;
+  }
+  secret [label="Secret Manager
+attached workload identity"];
+  vertex [label="Vertex AI / Google APIs"];
+  tenant [label="Cortex / Prisma tenant APIs"];
+  browser -> lb; lb -> ui; lb -> api; secret -> api; api -> vertex; api -> tenant;
+}

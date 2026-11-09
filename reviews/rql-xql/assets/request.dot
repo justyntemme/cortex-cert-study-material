@@ -1,0 +1,18 @@
+digraph G { graph [rankdir=LR,bgcolor="transparent",pad="0.3",nodesep="0.45",ranksep="0.6",fontname="Helvetica",fontsize=14]; node [shape=box,style="rounded,filled",fillcolor="#f6f6f0",color="#81968d",fontcolor="#15352e",fontname="Helvetica",fontsize=13,margin="0.18,0.14"]; edge [color="#6d827b",fontcolor="#3c544c",fontname="Helvetica",fontsize=10,arrowsize=0.7];
+  rankdir=TB;
+  request [label="Authenticated API request
+normalize query + credentials"];
+  cache [label="Full-result cache?",shape=diamond,fillcolor="#f5ecd8"];
+  engine [label="Gold match or deterministic compiler"];
+  ai [label="Cognitive fallback
+only when escalation conditions apply"];
+  check [label="Local grammar + cloud-rule checks
+guardrails / optional LLM repair"];
+  live [label="Cortex execution check
+missing credentials currently look successful",fillcolor="#fae5da"];
+  result [label="Confidence + warnings + result
+cache store → API serialization"];
+  request -> cache; cache -> engine [label="miss"]; cache -> result [label="hit: early return"];
+  engine -> check [label="usable candidate"]; engine -> ai [label="fallback"]; ai -> check;
+  check -> live; live -> result;
+}

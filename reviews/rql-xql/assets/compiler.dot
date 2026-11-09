@@ -1,0 +1,18 @@
+digraph G { graph [rankdir=LR,bgcolor="transparent",pad="0.3",nodesep="0.45",ranksep="0.6",fontname="Helvetica",fontsize=14]; node [shape=box,style="rounded,filled",fillcolor="#f6f6f0",color="#81968d",fontcolor="#15352e",fontname="Helvetica",fontsize=13,margin="0.18,0.14"]; edge [color="#6d827b",fontcolor="#3c544c",fontname="Helvetica",fontsize=10,arrowsize=0.7];
+  text [label="RQL text
+config / event / network / IAM"];
+  parse [label="Preparse + parser
+tokens → typed query structure"];
+  ir [label="Intermediate representation
+Query • Source • Compare
+And / Or / Not • arrays • joins",fillcolor="#dcebe7"];
+  emit [label="XQL emitter + resolver
+datasets • asset types • field access"];
+  mapping [label="YAML / JSON mapping data
+operators • schemas • functions",shape=folder,fillcolor="#f5ecd8"];
+  validate [label="Local validator + scorer
+diagnostics • review markers"];
+  result [label="TranslationResult
+XQL + confidence + requires_review"];
+  text -> parse -> ir -> emit -> validate -> result; mapping -> emit;
+}

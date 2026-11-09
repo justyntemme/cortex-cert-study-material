@@ -1,0 +1,174 @@
+[
+  {
+    "input": "config from cloud.resource where cloud.type = 'aws'",
+    "result": {
+      "query": "dataset = asset_inventory | filter xdm.asset.provider = \"AWS\"\n| fields xdm.asset.id as asset_id, xdm.asset.type.id as asset_type_id",
+      "detection_method": "rule_based",
+      "is_valid": true,
+      "confidence": 1.0,
+      "requires_review": false,
+      "parity_rate": 1.0,
+      "fixes_applied": 0,
+      "explanation": "clean translation",
+      "diagnostics": {
+        "unmapped_api_names": [],
+        "unknown_fields": [],
+        "field_gaps": [],
+        "unsupported_fragments": [],
+        "dropped_conditions": [],
+        "array_unknown_count": 0
+      }
+    },
+    "ir": {
+      "domain": "config",
+      "sources": [
+        {
+          "dataset": "config from cloud.resource",
+          "predicate": null,
+          "alias": null,
+          "cloud_type": "aws",
+          "cloud_service": null,
+          "api_name": null,
+          "asset_type_id": null,
+          "activity_filters": [],
+          "meta_filters": []
+        }
+      ],
+      "join_spec": null,
+      "extra_joins": null,
+      "projection": null,
+      "aggregate": null
+    }
+  },
+  {
+    "input": "config from cloud.resource where api.name = 'aws-ec2-describe-instances' AND json.rule = state.name equals running",
+    "result": {
+      "query": "dataset = asset_inventory | filter xdm.asset.provider = \"AWS\" and xdm.asset.type.id = \"EC2_INSTANCE\"\n| alter name = json_extract_scalar(xdm.asset.raw_fields, \"$.Platform Discovery.state.name\")\n| filter name = \"running\"\n| fields xdm.asset.id as asset_id, xdm.asset.type.id as asset_type_id",
+      "detection_method": "rule_based",
+      "is_valid": true,
+      "confidence": 1.0,
+      "requires_review": false,
+      "parity_rate": 1.0,
+      "fixes_applied": 0,
+      "explanation": "clean translation",
+      "diagnostics": {
+        "unmapped_api_names": [],
+        "unknown_fields": [],
+        "field_gaps": [],
+        "unsupported_fragments": [],
+        "dropped_conditions": [],
+        "array_unknown_count": 0
+      }
+    },
+    "ir": {
+      "domain": "config",
+      "sources": [
+        {
+          "dataset": "config from cloud.resource",
+          "predicate": {
+            "field": {
+              "raw_path": "state.name",
+              "segments": [
+                {
+                  "name": "state",
+                  "is_wildcard": false,
+                  "index": null,
+                  "is_quoted": false
+                },
+                {
+                  "name": "name",
+                  "is_wildcard": false,
+                  "index": null,
+                  "is_quoted": false
+                }
+              ],
+              "resolved_type": "FieldType.UNKNOWN",
+              "accessor": null
+            },
+            "op": "Op.EQ",
+            "value": "running"
+          },
+          "alias": null,
+          "cloud_type": null,
+          "cloud_service": null,
+          "api_name": "aws-ec2-describe-instances",
+          "asset_type_id": null,
+          "activity_filters": [],
+          "meta_filters": []
+        }
+      ],
+      "join_spec": null,
+      "extra_joins": null,
+      "projection": null,
+      "aggregate": null
+    }
+  },
+  {
+    "input": "config from cloud.resource where json.rule = madeUpField equals true",
+    "result": {
+      "query": "dataset = asset_inventory\n| alter madeUpField = json_extract_scalar(xdm.asset.raw_fields, \"$.Platform Discovery.madeUpField\")\n| filter madeUpField = \"true\"\n| fields xdm.asset.id as asset_id, xdm.asset.type.id as asset_type_id",
+      "detection_method": "rule_based",
+      "is_valid": true,
+      "confidence": 0.9,
+      "requires_review": false,
+      "parity_rate": 1.0,
+      "fixes_applied": 0,
+      "explanation": "1 UNKNOWN field(s): madeUpField",
+      "diagnostics": {
+        "unmapped_api_names": [],
+        "unknown_fields": [
+          "madeUpField"
+        ],
+        "field_gaps": [
+          {
+            "path": "madeUpField",
+            "dataset": "asset_inventory",
+            "asset_type_id": "",
+            "provenance": "heuristic",
+            "in_array_predicate": false,
+            "suggestions": []
+          }
+        ],
+        "unsupported_fragments": [],
+        "dropped_conditions": [],
+        "array_unknown_count": 0
+      }
+    },
+    "ir": {
+      "domain": "config",
+      "sources": [
+        {
+          "dataset": "config from cloud.resource",
+          "predicate": {
+            "field": {
+              "raw_path": "madeUpField",
+              "segments": [
+                {
+                  "name": "madeUpField",
+                  "is_wildcard": false,
+                  "index": null,
+                  "is_quoted": false
+                }
+              ],
+              "resolved_type": "FieldType.UNKNOWN",
+              "accessor": null
+            },
+            "op": "Op.EQ",
+            "value": true
+          },
+          "alias": null,
+          "cloud_type": null,
+          "cloud_service": null,
+          "api_name": null,
+          "asset_type_id": null,
+          "activity_filters": [],
+          "meta_filters": []
+        }
+      ],
+      "join_spec": null,
+      "extra_joins": null,
+      "projection": null,
+      "aggregate": null
+    }
+  }
+]

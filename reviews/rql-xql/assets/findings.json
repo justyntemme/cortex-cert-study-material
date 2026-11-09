@@ -1,0 +1,379 @@
+[
+  {
+    "id": "01",
+    "level": "High",
+    "title": "A live check can report success without running",
+    "evidence": "Reproduced",
+    "observed": "With no Cortex credentials, _check_cortex_execution returns an empty error list. The orchestrator interprets that as live_validation_passed=true. Exceptions also become empty error lists. The HTTP translation routes explicitly disable parity even when requested.",
+    "impact": "A user can receive syntactically valid output carrying stronger verification signals than the evidence supports. Local parsing, live execution and source/target equivalence are different claims.",
+    "principle": "Make validation evidence explicit: not requested, unavailable, failed, or passed, with the environment and query revision attached. Preserve compiler uncertainty through every adapter.",
+    "refs": [
+      {
+        "path": "backend/rql_xql/pipeline/translator.py",
+        "line": 709
+      },
+      {
+        "path": "backend/rql_xql/pipeline/translator.py",
+        "line": 1483
+      },
+      {
+        "path": "backend/rql_xql/api/server.py",
+        "line": 298
+      }
+    ]
+  },
+  {
+    "id": "02",
+    "level": "High",
+    "title": "Shared caches cross tenant and execution-policy boundaries",
+    "evidence": "Reproduced",
+    "observed": "The full-result cache key excludes tenant credentials, disable_llm, shadow mode and model/corpus revisions. A second request with different tenant credentials returned the first tenant\u2019s cached validation result, and the same mutable result object. The separate live-validation cache is keyed only by XQL.",
+    "impact": "Verification for one tenant can be presented to another. Changing policy or knowledge may leave old results active. This probe demonstrates cross-context reuse, not a confirmed disclosure of secrets or tenant data.",
+    "principle": "Separate reusable translation artifacts from tenant-specific execution evidence. Give each cache a complete identity, bounded lifetime and immutable values.",
+    "refs": [
+      {
+        "path": "backend/rql_xql/pipeline/translator.py",
+        "line": 136
+      },
+      {
+        "path": "backend/rql_xql/pipeline/translator.py",
+        "line": 354
+      },
+      {
+        "path": "backend/rql_xql/pipeline/translator.py",
+        "line": 1505
+      }
+    ]
+  },
+  {
+    "id": "03",
+    "level": "High",
+    "title": "Compiler review requirements disappear at the service boundary",
+    "evidence": "Reproduced",
+    "observed": "A controlled engine result with requires_review=true and confidence=0.1 emerged from the service with confidence=0.75 and needs_review=false. Confidence is recalculated by strategy, while needs_review does not consult compiler diagnostics. Separately, the real compiler accepted a made-up field heuristically with confidence=0.9 and parity_rate=1.0.",
+    "impact": "A translation can look safe even when fields are guessed or conditions require review. The compiler\u2019s parity_rate is a local heuristic, not measured agreement between Prisma and Cortex.",
+    "principle": "Use one typed result contract that retains provenance, unsupported constructs, dropped predicates and review requirements. Confidence should summarize evidence, not override it.",
+    "refs": [
+      {
+        "path": "backend/rql_xql/pipeline/translator.py",
+        "line": 1748
+      },
+      {
+        "path": "backend/rql_xql/domain/models.py",
+        "line": 964
+      },
+      {
+        "path": "backend/rql_xql/rqlxql/__init__.py",
+        "line": 112
+      }
+    ]
+  },
+  {
+    "id": "04",
+    "level": "High",
+    "title": "Bulk translation drops encrypted credentials",
+    "evidence": "Reproduced",
+    "observed": "The bulk handler decrypts the submitted credential payload but does not use the decrypted values. A request using the frontend\u2019s credential contract reached the translation service with all three credential arguments null. The same route accepted and forwarded plaintext credential fields.",
+    "impact": "Single, stream, v2 and bulk paths have different credential and validation behavior. Bulk users can believe live checks are enabled while requests run without their credentials.",
+    "principle": "Treat endpoint variants as transports around one request normalization and execution policy, including credential handling and validation status.",
+    "refs": [
+      {
+        "path": "backend/rql_xql/api/server.py",
+        "line": 830
+      },
+      {
+        "path": "backend/rql_xql/api/server.py",
+        "line": 870
+      },
+      {
+        "path": "frontend/api_client.py",
+        "line": 120
+      }
+    ]
+  },
+  {
+    "id": "05",
+    "level": "High",
+    "title": "The shipped build and deployment contracts do not line up",
+    "evidence": "Source + install failure",
+    "observed": "Installing the backend\u2019s pinned requirements failed on macOS at the unconditional pywin32==312 dependency; the backend Dockerfile installs that same file on Linux. Terraform requires backend authentication, but starts the frontend against localhost with no machine token. The client auto-mints identity tokens only for run.app URLs. CI also invokes docker compose build from the root although the compose file is under deploy/.",
+    "impact": "The supplied image build has a platform dependency blocker, and the GCE frontend-to-backend path has an authentication mismatch as configured. These are repository findings; no live deployment was inspected or changed.",
+    "principle": "Keep one executable deployment contract per supported target, with platform-aware dependencies and an explicitly authenticated service-to-service connection.",
+    "refs": [
+      {
+        "path": "backend/requirements.txt",
+        "line": 114
+      },
+      {
+        "path": "backend/Dockerfile",
+        "line": 1
+      },
+      {
+        "path": "deploy/terraform/compute_engine.tf",
+        "line": 67
+      },
+      {
+        "path": "deploy/terraform/cloud-init.yaml.tftpl",
+        "line": 170
+      },
+      {
+        "path": "frontend/api_client.py",
+        "line": 64
+      },
+      {
+        "path": ".github/workflows/security_scans.yml",
+        "line": 43
+      }
+    ]
+  },
+  {
+    "id": "06",
+    "level": "High",
+    "title": "Automatic fine-tuning fails before submitting a job",
+    "evidence": "Reproduced",
+    "observed": "load_gold_standard returns (examples, seen_rqls), but EphemeralSFTRunner treats the tuple as a list and adds hindsight examples. A dry run raises TypeError before any cloud operation. All 673 gold examples lack timestamp/added fields, so all are counted as new even after a future last-run marker.",
+    "impact": "The advertised automatic training cycle cannot currently complete through this entry point. Its readiness accounting would also repeatedly count old examples after the loader bug is repaired.",
+    "principle": "Model training as a durable, idempotent job over a versioned dataset, with a committed watermark and an explicit job state.",
+    "refs": [
+      {
+        "path": "backend/training/prepare.py",
+        "line": 168
+      },
+      {
+        "path": "backend/training/ephemeral_sft.py",
+        "line": 158
+      },
+      {
+        "path": "backend/training/ephemeral_sft.py",
+        "line": 70
+      },
+      {
+        "path": "backend/rql_xql/verification/parity_loop.py",
+        "line": 578
+      }
+    ]
+  },
+  {
+    "id": "07",
+    "level": "High",
+    "title": "The batch learning DAG lacks the required code and data handoffs",
+    "evidence": "Source confirmed",
+    "observed": "KFP components use python:3.11-slim and install third-party packages, but do not install this application. Several components import rql_xql or training and catch failures. The event input is a local JSONL path, and gold updates are local files rather than a dataset artifact passed between containers. Terraform creates a pull subscription but does not deploy the documented trigger consumer.",
+    "impact": "The diagram describes an intended workflow, but the repository does not establish an end-to-end executable learning deployment. Ordering tasks does not share their files or application code.",
+    "principle": "Give batch workers versioned application images and explicit input/output artifacts. Make orchestration ownership, event delivery and failed-job visibility part of the architecture.",
+    "refs": [
+      {
+        "path": "backend/kfp_pipeline/vertex_pipeline.py",
+        "line": 51
+      },
+      {
+        "path": "backend/kfp_pipeline/vertex_pipeline.py",
+        "line": 92
+      },
+      {
+        "path": "backend/kfp_pipeline/pubsub_trigger.py",
+        "line": 73
+      },
+      {
+        "path": "deploy/terraform/pubsub.tf",
+        "line": 1
+      },
+      {
+        "path": "deploy/terraform/vertex_ai_pipeline.tf",
+        "line": 1
+      }
+    ]
+  },
+  {
+    "id": "08",
+    "level": "High",
+    "title": "\u201cBlind\u201d evaluation can still retrieve its reference answer",
+    "evidence": "Reproduced",
+    "observed": "The integration fixture clears gold_standard but leaves _gold_index intact. A test translation still returned the gold-standard answer from an index of 652 normalized keys. EvalRunner accepts blind=true but does not pass a lookup/cache-disabling option to the service.",
+    "impact": "Scores from these paths cannot be assumed to measure generalization. Gold examples are also used for in-context prompting and training, so benchmark lineage matters beyond disabling one cache.",
+    "principle": "Separate reference, training and held-out datasets by query family and provenance. Make evaluation isolation enforceable and report exactly which retrieval and model context were enabled.",
+    "refs": [
+      {
+        "path": "backend/tests/integration/test_gold_standard_blind.py",
+        "line": 103
+      },
+      {
+        "path": "backend/rql_xql/engine/core.py",
+        "line": 130
+      },
+      {
+        "path": "backend/eval/vertex_eval.py",
+        "line": 199
+      },
+      {
+        "path": "backend/training/prepare.py",
+        "line": 463
+      }
+    ]
+  },
+  {
+    "id": "09",
+    "level": "High",
+    "title": "Evaluation and model promotion are not a completed release gate",
+    "evidence": "Source confirmed",
+    "observed": "finetune.run_evaluation_and_alias constructs evaluation configuration, then explicitly simulates success and logs alias assignment. The preparation upload helper uploads train and validation files, not the test set referenced by that configuration. The standalone release gate uses lower thresholds than the documentation and can omit the live gate when its metric is absent.",
+    "impact": "A completed tuning job is not evidence of a safe replacement model. This code does not actually promote a production alias; the risk is relying on a release guarantee that has not been implemented.",
+    "principle": "Keep training completion, independent evaluation and production selection as separate auditable decisions. A missing measurement should not satisfy a required gate.",
+    "refs": [
+      {
+        "path": "backend/training/finetune.py",
+        "line": 213
+      },
+      {
+        "path": "backend/training/prepare.py",
+        "line": 502
+      },
+      {
+        "path": "backend/eval/release_gate.py",
+        "line": 45
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "level": "Medium",
+    "title": "Feedback and gold updates are local mutable state",
+    "evidence": "Source confirmed",
+    "observed": "Learning events append to local JSONL; gold examples are rewritten directly to YAML. Writes are not a transaction across events, gold, indexes and caches. save_to_knowledge_base catches write errors, while a caller can interpret its return as success. GCE uses a read-only container with temporary feedback storage; compose persists feedback but not the gold file.",
+    "impact": "Multiple instances can disagree about knowledge, lose learning on restart or keep stale translations after a correction. Concurrent writers risk overwriting one another.",
+    "principle": "Use an authoritative, versioned knowledge store with durable events and explicit write outcomes. Separate proposed corrections from trusted reference material.",
+    "refs": [
+      {
+        "path": "backend/rql_xql/learning/learning_bus.py",
+        "line": 1
+      },
+      {
+        "path": "backend/rql_xql/learning/knowledge_store.py",
+        "line": 113
+      },
+      {
+        "path": "backend/rql_xql/verification/parity_loop.py",
+        "line": 533
+      },
+      {
+        "path": "deploy/terraform/cloud-init.yaml.tftpl",
+        "line": 90
+      },
+      {
+        "path": "deploy/docker-compose.yml",
+        "line": 1
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "level": "Medium",
+    "title": "Parity is a useful diagnostic, but not proof of equivalence",
+    "evidence": "Reproduced + source",
+    "observed": "ResultMatcher returns 1.0 when both result sets are empty. It also uses normalized IDs and heuristic partial matching. A parity-loop gold-cache shortcut can return match_rate=1.0 without a fresh live comparison. Different learning paths accept different parity thresholds.",
+    "impact": "No matching data, truncated result sets and heuristic identity matches can overstate semantic certainty. Tenant, time window, sample size and query limits affect the meaning of a match.",
+    "principle": "Attach the scope and strength of evidence to parity results. Distinguish no data, sample agreement and independently verified semantic coverage.",
+    "refs": [
+      {
+        "path": "backend/rql_xql/verification/unified_validator.py",
+        "line": 397
+      },
+      {
+        "path": "backend/rql_xql/verification/parity_loop.py",
+        "line": 196
+      },
+      {
+        "path": "backend/training/live_feedback.py",
+        "line": 1
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "level": "Medium",
+    "title": "Literal normalization and a prompt rule can change meaning",
+    "evidence": "Reproduced + source",
+    "observed": "Gold lookup normalizes the entire RQL string to lowercase, including quoted values: case-distinct string literals collide. The canonical LLM system contract also states \u201ccontains \u2192 not contains\u201d, reversing a predicate. The prompt defect is static; no model response was generated to measure its effect.",
+    "impact": "These are semantic correctness risks even when the resulting query parses successfully.",
+    "principle": "Normalize syntax while preserving literal values, and use one tested semantic specification for compiler mappings, examples and prompts.",
+    "refs": [
+      {
+        "path": "backend/rql_xql/engine/core.py",
+        "line": 81
+      },
+      {
+        "path": "backend/rql_xql/cognitive/corpus.py",
+        "line": 155
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "level": "Medium",
+    "title": "Shadow and repair paths have interface mismatches",
+    "evidence": "Reproduced + source",
+    "observed": "The shadow submission passes cc_url to a method expecting cc_api_url, so the background cognitive translation never runs in the focused probe. A separate repair call passes cc_api_key as cc_api_url. These branches are easy to miss in happy-path compiler tests.",
+    "impact": "Shadow comparisons may silently disappear, while repair can target the wrong endpoint. The API-key-as-URL assignment also creates a potential logging exposure; no real key was used or leaked in this review.",
+    "principle": "Prefer typed request objects and narrow interfaces across optional branches, and make background failures observable.",
+    "refs": [
+      {
+        "path": "backend/rql_xql/pipeline/translator.py",
+        "line": 404
+      },
+      {
+        "path": "backend/rql_xql/pipeline/translator.py",
+        "line": 670
+      },
+      {
+        "path": "backend/rql_xql/pipeline/translator.py",
+        "line": 1681
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "level": "Medium",
+    "title": "Authentication policy can be too permissive when incomplete",
+    "evidence": "Conditional source finding",
+    "observed": "ID-token verification accepts an optional audience, and an empty principal allowlist permits any identity accepted by that verifier. Terraform leaves the audience empty when api_domain is unset. This is a configuration-dependent finding, not evidence of public access in a deployed environment.",
+    "impact": "Requiring a signed identity is weaker than requiring the intended caller for this API. The frontend/backend authentication mismatch in finding 05 is a separate availability problem.",
+    "principle": "Make audience and authorized-caller policy explicit deployment invariants, with secure configuration validation.",
+    "refs": [
+      {
+        "path": "backend/rql_xql/api/security.py",
+        "line": 150
+      },
+      {
+        "path": "deploy/terraform/compute_engine.tf",
+        "line": 70
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "level": "Medium",
+    "title": "Operational ownership is blurred by large orchestration modules",
+    "evidence": "Design assessment",
+    "observed": "The frontend is 2,467 lines, API server 1,213, pipeline translator 1,976, auto_fix 3,540 and XQL emitter 2,879. Validation, result mutation and credential logic repeat across endpoints. In-memory pending jobs and caches are per process; bulk timeouts stop waiting but do not cancel a running worker thread.",
+    "impact": "Behavior depends on route, process and execution order. Scaling replicas does not make state durable or bound global work. The failing suite also contains shared-cache contamination and stale expectations.",
+    "principle": "Keep the modular monolith for synchronous translation, but sharpen module contracts and state ownership. Isolate batch learning by lifecycle; more microservices alone would add coordination costs.",
+    "refs": [
+      {
+        "path": "backend/rql_xql/api/server.py",
+        "line": 830
+      },
+      {
+        "path": "backend/rql_xql/pipeline/translator.py",
+        "line": 1
+      },
+      {
+        "path": "backend/rql_xql/pipeline/context.py",
+        "line": 1
+      },
+      {
+        "path": ".github/workflows/security_scans.yml",
+        "line": 1
+      }
+    ]
+  }
+]

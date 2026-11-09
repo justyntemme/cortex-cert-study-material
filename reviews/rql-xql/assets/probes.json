@@ -1,0 +1,99 @@
+{
+  "gold_pairs": 673,
+  "gold_without_timestamp": 673,
+  "probes": [
+    {
+      "name": "missing_credentials_report_live_success",
+      "observed": {
+        "live_validation_passed": true,
+        "is_valid": true,
+        "credentials_supplied": false
+      }
+    },
+    {
+      "name": "cache_reuses_tenant_and_policy_context",
+      "observed": {
+        "validation_targets": [
+          "https://tenant-a.invalid"
+        ],
+        "second_cache_hit": true,
+        "same_result_object": true,
+        "first_result_also_mutated_to_cache_hit": true
+      }
+    },
+    {
+      "name": "compiler_review_signal_lost",
+      "observed": {
+        "engine_requires_review": true,
+        "engine_confidence": 0.1,
+        "api_needs_review": false,
+        "pipeline_confidence": 0.75
+      }
+    },
+    {
+      "name": "ephemeral_sft_loader_contract",
+      "observed": {
+        "exception": "TypeError",
+        "message": "can only concatenate tuple (not \"list\") to tuple",
+        "cloud_called": false
+      }
+    },
+    {
+      "name": "untimestamped_examples_recounted",
+      "observed": {
+        "new_pairs_with_future_last_run_marker": 673
+      }
+    },
+    {
+      "name": "blind_fixture_retains_gold_lookup",
+      "observed": {
+        "gold_standard_list_length": 0,
+        "private_index_length": 652,
+        "translation_method": "gold_standard",
+        "matches_reference": true
+      }
+    },
+    {
+      "name": "gold_normalization_folds_literal_case",
+      "observed": {
+        "case_distinct_literal_queries_collide": true
+      }
+    },
+    {
+      "name": "bulk_credential_contract",
+      "observed": {
+        "encrypted": {
+          "status": 200,
+          "credential_kwargs": {
+            "cc_url": null,
+            "cc_api_key": null,
+            "cc_api_key_id": null
+          }
+        },
+        "plaintext_status": 200,
+        "plaintext_forwarded": true
+      }
+    },
+    {
+      "name": "shadow_keyword_mismatch",
+      "observed": {
+        "cognitive_called": false
+      }
+    },
+    {
+      "name": "blind_evaluator_does_not_disable_lookup",
+      "observed": {
+        "service_kwargs": {
+          "target_lang": "XQL"
+        },
+        "method": "gold_standard"
+      }
+    },
+    {
+      "name": "empty_results_count_as_full_match",
+      "observed": {
+        "match_rate": 1.0
+      }
+    }
+  ]
+}
